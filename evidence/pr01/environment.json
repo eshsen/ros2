@@ -1,0 +1,21 @@
+{
+  "launch_method": "native",
+  "os": {
+    "name": "Ubuntu",
+    "version": "24.04.5 LTS",
+    "source": "/etc/os-release"
+  },
+  "ros": {
+    "distribution": "jazzy",
+    "setup_file": "/opt/ros/jazzy/setup.bash",
+    "rmw_implementation": "rmw_fastrtps_cpp"
+  },
+  "gazebo": {
+    "version": "not_installed"
+  },
+  "domains": {
+    "working": 16,
+    "broken_teleop_and_cli": 17,
+    "restored": 16
+  }
+}
