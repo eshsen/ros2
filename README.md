@@ -125,3 +125,69 @@ python3 .course-kit/v1/tools/check_practice.py PR01 --submission .
 ## Вывод
 
 `ROS_DOMAIN_ID` разделяет ROS 2-участников на DDS-домены. Ноды, запущенные в одном домене, обнаруживают друг друга и могут обмениваться сообщениями. Ноды в разных доменах изолированы. Значение `ROS_DOMAIN_ID` применяется при запуске процесса, поэтому для смены домена `turtle_teleop_key` нужно остановить и запустить заново.
+
+---
+
+# ПР02 — Терминал, пакет и запуск turtlesim
+
+## Назначение пакета
+
+`src/turtle_bringup` — пакет типа `ament_python`. Он не содержит собственной ROS-ноды. Его задача — установить launch-файл `sim.launch.py`, который запускает готовую ноду `turtlesim_node` из установленного пакета `turtlesim`.
+
+## Сборка
+
+Из корня workspace:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+cd ~/ros2
+colcon build --symlink-install --packages-select turtle_bringup
+```
+
+## Запуск симулятора
+
+В терминале A:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+cd ~/ros2
+source install/setup.bash
+export ROS_DOMAIN_ID=16
+ros2 launch turtle_bringup sim.launch.py
+```
+
+После запуска появляется нода `/turtlesim` и открывается окно turtlesim.
+
+## Отправка команды движения
+
+В другом терминале:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+cd ~/ros2
+source install/setup.bash
+export ROS_DOMAIN_ID=16
+
+ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist \
+  '{linear: {x: 1.0}, angular: {z: 0.5}}'
+```
+
+## Ошибка имени топика
+
+Неправильный топик:
+
+```bash
+ros2 topic pub --rate 1 --wait-matching-subscriptions 0 \
+  /cmd_vel geometry_msgs/msg/Twist \
+  '{linear: {x: 1.0}, angular: {z: 0.5}}'
+```
+
+Publisher существует, но `/turtlesim` не получает сообщения, так как подписан на `/turtle1/cmd_vel`, а не на `/cmd_vel`.
+
+Исправление — изменить только имя топика:
+
+```bash
+ros2 topic pub --rate 1 --wait-matching-subscriptions 0 \
+  /turtle1/cmd_vel geometry_msgs/msg/Twist \
+  '{linear: {x: 1.0}, angular: {z: 0.5}}'
+```
