@@ -18,7 +18,7 @@ def validate_settings(settings):
     limits = (
         ('linear_speed', settings.linear_speed, 0.0, 1.0),
         ('turn_rate', settings.turn_rate, -1.0, 1.0),
-        ('publish_hz', settings.publish_hz, 1.0, 30.0),
+        # PR04 defect experiment: frequency validation disabled.
     )
 
     for name, value, minimum, maximum in limits:
