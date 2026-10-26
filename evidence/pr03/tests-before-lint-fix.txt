@@ -1,0 +1,90 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/anastasiia/ros2/src/patrol
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collecting ... collected 6 items
+
+src/patrol/test/test_control.py::test_no_pose_returns_zero_command PASSED [ 16%]
+src/patrol/test/test_control.py::test_pose_returns_patrol_command PASSED [ 33%]
+src/patrol/test/test_control.py::test_pose_is_not_modified PASSED        [ 50%]
+src/patrol/test/test_copyright.py::test_copyright SKIPPED (No copyri...) [ 66%]
+src/patrol/test/test_flake8.py::test_flake8 FAILED                       [ 83%]
+src/patrol/test/test_pep257.py::test_pep257 PASSED                       [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+
+    @pytest.mark.flake8
+    @pytest.mark.linter
+    def test_flake8():
+        rc, errors = main_with_errors(argv=[])
+>       assert rc == 0, \
+            'Found %d code style errors / warnings:\n' % len(errors) + \
+            '\n'.join(errors)
+E       AssertionError: Found 5 code style errors / warnings:
+E         ./build/turtle_bringup/setup.py:2:1: I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+E         ./src/patrol/patrol/patrol.py:4:1: I100 Import statements are in the wrong order. 'from geometry_msgs.msg import Twist' should be before 'import rclpy'
+E         ./src/patrol/patrol/patrol.py:9:1: I100 Import statements are in the wrong order. 'from patrol.control import command_from_pose' should be before 'from turtlesim.msg import Pose'
+E         ./src/patrol/test/test_control.py:6:1: I100 Import statements are in the wrong order. 'from patrol.control import command_from_pose' should be before 'from turtlesim.msg import Pose'
+E         ./src/turtle_bringup/setup.py:2:1: I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+E       assert 1 == 0
+
+src/patrol/test/test_flake8.py:23: AssertionError
+----------------------------- Captured stdout call -----------------------------
+
+./build/turtle_bringup/setup.py:2:1: I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+from setuptools import find_packages, setup
+^
+
+./src/patrol/patrol/patrol.py:4:1: I100 Import statements are in the wrong order. 'from geometry_msgs.msg import Twist' should be before 'import rclpy'
+from geometry_msgs.msg import Twist
+^
+
+./src/patrol/patrol/patrol.py:9:1: I100 Import statements are in the wrong order. 'from patrol.control import command_from_pose' should be before 'from turtlesim.msg import Pose'
+from patrol.control import command_from_pose
+^
+
+./src/patrol/test/test_control.py:6:1: I100 Import statements are in the wrong order. 'from patrol.control import command_from_pose' should be before 'from turtlesim.msg import Pose'
+from patrol.control import command_from_pose
+^
+
+./src/turtle_bringup/setup.py:2:1: I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+from setuptools import find_packages, setup
+^
+
+3     I100 Import statements are in the wrong order. 'from geometry_msgs.msg import Twist' should be before 'import rclpy'
+2     I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+
+22 files checked
+5 errors
+
+'I'-type errors: 5
+
+Checked files:
+
+* ./install/_local_setup_util_ps1.py
+* ./install/_local_setup_util_sh.py
+* ./install/turtle_bringup/share/turtle_bringup/launch/sim.launch.py
+* ./build/turtle_bringup/setup.py
+* ./build/turtle_bringup/prefix_override/sitecustomize.py
+* ./build/turtle_bringup/launch/sim.launch.py
+* ./build/patrol/setup.py
+* ./build/patrol/prefix_override/sitecustomize.py
+* ./src/turtle_bringup/setup.py
+* ./src/turtle_bringup/turtle_bringup/__init__.py
+* ./src/turtle_bringup/test/test_pep257.py
+* ./src/turtle_bringup/test/test_copyright.py
+* ./src/turtle_bringup/test/test_flake8.py
+* ./src/turtle_bringup/launch/sim.launch.py
+* ./src/patrol/setup.py
+* ./src/patrol/test/test_pep257.py
+* ./src/patrol/test/test_control.py
+* ./src/patrol/test/test_copyright.py
+* ./src/patrol/test/test_flake8.py
+* ./src/patrol/patrol/patrol.py
+* ./src/patrol/patrol/control.py
+* ./src/patrol/patrol/__init__.py
+=========================== short test summary info ============================
+FAILED src/patrol/test/test_flake8.py::test_flake8 - AssertionError: Found 5 ...
+==================== 1 failed, 4 passed, 1 skipped in 0.61s ====================

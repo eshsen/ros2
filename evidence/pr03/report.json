@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "practice_id": "PR03",
+  "commit": "1cd9bb61e18e21513b641a446a78d733a9ade755",
+  "course_kit": {
+    "version": "v1-w04",
+    "archive_sha256": "fec6b4e886c19146078bf69fbf90a19279a4cd33f656642395350b299efeb226"
+  },
+  "commands": [
+    "source /opt/ros/jazzy/setup.bash",
+    "export ROS_DOMAIN_ID=16",
+    "colcon build --symlink-install --packages-select turtle_bringup patrol",
+    "source install/setup.bash",
+    "python3 -m pytest src/patrol/test -v",
+    "ros2 launch turtle_bringup sim.launch.py",
+    "ros2 run patrol patrol",
+    "ros2 node info /patrol",
+    "ros2 topic info /cmd_vel --verbose",
+    "ros2 topic info /turtle1/cmd_vel --verbose",
+    "timeout 10s ros2 topic echo /cmd_vel geometry_msgs/msg/Twist --once",
+    "timeout 10s ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once",
+    "ros2 run patrol patrol --ros-args -r cmd_vel:=/turtle1/cmd_vel",
+    "timeout 10s ros2 topic echo /turtle1/cmd_vel geometry_msgs/msg/Twist --once",
+    "timeout --signal=INT --kill-after=3s 12s ros2 topic hz /turtle1/cmd_vel",
+    "ros2 node list --no-daemon --spin-time 2"
+  ],
+  "tests": [
+    {
+      "name": "colcon build: turtle_bringup and patrol, exit 0",
+      "status": "passed"
+    },
+    {
+      "name": "pytest: no pose returns zero Twist",
+      "status": "passed"
+    },
+    {
+      "name": "pytest: pose returns linear.x=0.5 and angular.z=0.3",
+      "status": "passed"
+    },
+    {
+      "name": "pytest: input pose is not modified",
+      "status": "passed"
+    },
+    {
+      "name": "pytest: flake8 and pep257",
+      "status": "passed"
+    },
+    {
+      "name": "Without remap: publisher and turtlesim use different topics",
+      "status": "passed"
+    },
+    {
+      "name": "With remap: connected endpoints and nonzero pose velocities",
+      "status": "passed"
+    },
+    {
+      "name": "Command frequency: final estimate 10.000 Hz, window 108",
+      "status": "passed"
+    },
+    {
+      "name": "After patrol shutdown: no publisher and zero pose velocities",
+      "status": "passed"
+    }
+  ],
+  "defect": {
+    "reproducer": "Запустить ros2 run patrol patrol без remap. /cmd_vel: Publisher count=1, Subscription count=0. /turtle1/cmd_vel: Publisher count=0, Subscription count=1. Команда содержит 0.5 и 0.3, но скорости в Pose равны нулю.",
+    "root_cause": "Относительное имя cmd_vel у ноды в корневом namespace разрешается в /cmd_vel. Turtlesim подписан на /turtle1/cmd_vel. Тип сообщения совпадает, полные имена топиков различаются.",
+    "proof_after": "Запуск с --ros-args -r cmd_vel:=/turtle1/cmd_vel. На целевом топике один издатель patrol и один подписчик turtlesim. В Pose linear_velocity=0.5, angular_velocity=0.30000001192092896. Измерение потока ограничено 12 секундами; последняя оценка average rate=10.000 Hz. После Ctrl+C, исчезновения /patrol и ожидания обе скорости равны нулю, Publisher count=0."
+  },
+  "claims": {
+    "public_tests_passed": true,
+    "defect_reproduced": true,
+    "defect_fixed": true
+  },
+  "time": {
+    "contact_academic_hours": 0,
+    "self_study_hours": 1
+  },
+  "ai_used": true
+}
