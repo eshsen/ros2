@@ -1,0 +1,37 @@
+
+$ ros2 param set /patrol linear_speed 0.8
+Set parameter successful
+exit=0
+
+$ ros2 param set /patrol turn_rate -0.4
+Set parameter successful
+exit=0
+
+$ timeout 10s ros2 topic echo /turtle1/cmd_vel geometry_msgs/msg/Twist --once
+linear:
+  x: 0.8
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: -0.4
+---
+exit=0
+
+$ timeout 10s ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once
+x: 7.462220191955566
+y: 4.811798572540283
+theta: -0.8446823954582214
+linear_velocity: 0.800000011920929
+angular_velocity: -0.4000000059604645
+---
+exit=0
+
+$ ros2 param set /patrol linear_speed 0.5
+Set parameter successful
+exit=0
+
+$ ros2 param set /patrol turn_rate 0.3
+Set parameter successful
+exit=0
