@@ -1,0 +1,50 @@
+name: PR04 checks
+
+on:
+  push:
+    branches: [pr04]
+  pull_request:
+    branches: [pr04]
+
+env:
+  COURSE_KIT_URL: https://ros.lms.ci.nsu.ru/downloads/robotics-course-kit-v1-w04-fec6b4e886c1.tar.gz
+  COURSE_KIT_SHA256: fec6b4e886c19146078bf69fbf90a19279a4cd33f656642395350b299efeb226
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: osrf/ros:jazzy-desktop
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download and verify course kit
+        run: |
+          curl -fsSL "$COURSE_KIT_URL" -o /tmp/course-kit.tar.gz
+          printf '%s  %s\n' "$COURSE_KIT_SHA256" /tmp/course-kit.tar.gz | sha256sum -c -
+          mkdir -p .course-kit
+          tar -xzf /tmp/course-kit.tar.gz -C .course-kit
+
+      - name: Build packages
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          colcon build --symlink-install --packages-select turtle_bringup patrol
+          test -f install/turtle_bringup/share/turtle_bringup/launch/sim.launch.py
+          test -f install/patrol/lib/patrol/patrol
+
+      - name: Test patrol
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          source install/setup.bash
+          python3 -m pytest src/patrol/test -v
+
+      - name: Check PR04 submission
+        run: |
+          python3 .course-kit/v1/tools/check_practice.py PR04 --submission .

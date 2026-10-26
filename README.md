@@ -248,3 +248,53 @@ ros2 run patrol patrol --ros-args -r cmd_vel:=/turtle1/cmd_vel
 - `evidence/pr03/tests.txt` — тесты.
 - `evidence/pr03/cmd-hz.txt` — измерение частоты.
 - `evidence/pr03/report.json` — отчёт, создаваемый после коммита реализации.
+
+---
+
+# ПР04 — Параметризуем движение
+
+Нода `patrol` дополнена параметрами:
+
+| Параметр | По умолчанию | Диапазон |
+| --- | --- | --- |
+| linear_speed | 0.5 | 0–1 |
+| turn_rate | 0.3 | −1–1 |
+| publish_hz | 10.0 | 1–30 |
+
+Принимаются только конечные числовые значения.
+Недопустимый запрос не изменяет активные настройки и таймер.
+При смене частоты старый таймер отменяется и уничтожается.
+
+## Проверка
+
+```bash
+colcon build --symlink-install --packages-select patrol
+source install/setup.bash
+python3 -m pytest src/patrol/test -v
+```
+
+После запуска turtlesim и patrol с remap:
+
+```bash
+ros2 param set /patrol publish_hz 5.0
+ros2 param set /patrol publish_hz 0.0
+ros2 param get /patrol publish_hz
+```
+
+Допустимая установка меняет поток примерно с 10 до 5 Гц.
+Ноль отклоняется; прежние 5.0 и поток сохраняются.
+
+## Намеренный дефект
+
+В отдельной ветке `pr04-defect-zero-hz` сохранена версия без проверки
+частоты. Ноль вызывает `ZeroDivisionError`.
+Ветка не слита в исправную `pr04`.
+
+## Результаты
+
+- `evidence/pr04/parameters.md` — описание и реальные команды с выводами.
+- `evidence/pr04/tests.txt` — 25 passed, 1 skipped.
+- `evidence/pr04/patrol-defect.log` — traceback намеренного дефекта.
+- `evidence/pr04/zero-restored-request.txt` — отказ установки нуля после исправления.
+- `evidence/pr04/hz-after-restoration.txt` — сохранённый поток около 5 Гц.
+- `evidence/pr04/report.json` — отчёт сдачи.
