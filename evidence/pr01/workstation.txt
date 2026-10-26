@@ -1,0 +1,48 @@
+
+== Система ==
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+VERSION_CODENAME=noble
+архитектура=x86_64
+ядро=7.0.0-31-generic
+назначенная оболочка=/bin/bash
+текущая оболочка=bash
+
+== Инструменты ==
+GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+git version 2.43.0
+[не найдено] fish
+[не найдено] uv
+1.131.0
+e4c7e7b1d6d060162f4aa7f8225271b67ce1df75
+x64
+Docker version 29.8.0, build 88096ef
+
+== ROS 2 ==
+ROS_DISTRO=jazzy
+ROS_DOMAIN_ID=16
+ros2=/opt/ros/jazzy/bin/ros2
+/opt/ros/jazzy
+
+== Графические адаптеры и драйверы ==
+00:02.0 VGA compatible controller [0300]: Intel Corporation CometLake-H GT2 [UHD Graphics] [8086:9bc4] (rev 05)
+	Subsystem: Lenovo CometLake-H GT2 [UHD Graphics] [17aa:3fa3]
+	Kernel driver in use: i915
+	Kernel modules: i915
+--
+01:00.0 VGA compatible controller [0300]: NVIDIA Corporation TU117M [GeForce GTX 1650 Ti Mobile] [10de:1f95] (rev a1)
+	Subsystem: Lenovo TU117M [GeForce GTX 1650 Ti Mobile] [17aa:3fa3]
+	Kernel driver in use: nvidia
+	Kernel modules: nvidiafb, nouveau, nvidia_drm, nvidia
+
+== OpenGL renderer ==
+[не найдено] glxinfo; установите mesa-utils
+
+== Vulkan ==
+[не найдено] vulkaninfo; установите vulkan-tools
+
+== NVIDIA ==
+NVIDIA GeForce GTX 1650 Ti, 580.173.02
+
+Отчёт завершён. Перед публикацией просмотрите его вручную.
