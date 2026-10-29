@@ -99,7 +99,7 @@
 
   <!-- Сенсоры: parent = base_link (контракт ПР06). -->
   <xacro:sensor_link name="camera_link" xyz="${sensor_x} 0 ${sensor_z}"/>
-  <xacro:sensor_link name="lidar_link" xyz="${sensor_x} 0 ${sensor_z}" parent="base_link"/>
+  <xacro:sensor_link name="lidar_link" xyz="${sensor_x} 0 ${sensor_z}" parent="camera_link"/>
   <xacro:sensor_link name="imu_link" xyz="${sensor_x} 0 ${sensor_z}"/>
 
   <xacro:wheel prefix="front_left" xyz="${wheel_base/2} ${track_width/2} 0"/>
