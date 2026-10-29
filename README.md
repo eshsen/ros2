@@ -298,3 +298,126 @@ ros2 param get /patrol publish_hz
 - `evidence/pr04/zero-restored-request.txt` — отказ установки нуля после исправления.
 - `evidence/pr04/hz-after-restoration.txt` — сохранённый поток около 5 Гц.
 - `evidence/pr04/report.json` — отчёт сдачи.
+
+---
+
+## PR05 — Launch, QoS и повтор записи
+
+### Состав системы
+
+Пакет `course_bringup` запускает один глобальный turtlesim,
+а также patrol, pose_relay и pose_subscriber в заданном namespace.
+
+Имена топиков внутри нод относительные. Launch подключает входы
+patrol и pose_relay к `/turtle1/pose`, а выход patrol — к
+`/turtle1/cmd_vel`. pose_relay публикует `sensor_pose` с best_effort.
+Надёжность отдельного подписчика настраивается аргументом launch.
+
+### Сборка и тесты
+
+```bash
+source /opt/ros/jazzy/setup.bash
+colcon build --symlink-install \
+  --packages-select turtle_bringup patrol course_bringup
+source install/setup.bash
+
+colcon test \
+  --packages-select turtle_bringup patrol course_bringup \
+  --return-code-on-test-failure
+colcon test-result --verbose
+```
+
+Получено: 29 tests, 0 errors, 0 failures, 2 skipped.
+У course_bringup пока нет собственных автоматических тестов;
+его работа проверена функциональными опытами ниже.
+
+### Воспроизведение дефекта
+
+```bash
+ros2 launch course_bringup patrol.launch.py \
+  namespace:=robot_a subscriber_reliability:=reliable record:=false
+```
+
+В другом терминале:
+
+```bash
+timeout 3s ros2 topic echo /robot_a/sensor_pose \
+  --qos-reliability reliable --once
+```
+
+Топик существует, но best_effort-издатель не удовлетворяет
+запрос reliable-подписчика. Получены предупреждение о несовместимой
+политике RELIABILITY и exit=124.
+
+### Исправление и запись
+
+После остановки предыдущего launch:
+
+```bash
+ros2 launch course_bringup patrol.launch.py \
+  namespace:=robot_a subscriber_reliability:=best_effort \
+  record:=true bag_dir:=evidence/pr05/bag
+```
+
+Каталог bag не должен существовать перед новой записью.
+
+```bash
+timeout 5s ros2 topic echo /robot_a/sensor_pose \
+  --qos-reliability best_effort --once
+```
+
+Получено сообщение Pose и exit=0.
+Recorder запускается через IfCondition(record).
+При record:=false процесс recorder не запускается.
+
+После завершения записи через Ctrl+C:
+
+```bash
+ros2 bag info evidence/pr05/bag
+```
+
+Записан один топик `/robot_a/sensor_pose`, тип `turtlesim/msg/Pose`,
+формат MCAP, 2103 сообщения за 33.851547590 секунды.
+
+### Повтор записи
+
+Живой launch должен быть остановлен.
+
+```bash
+ros2 bag play evidence/pr05/bag --loop \
+  --qos-profile-overrides-path config/qos-overrides.yaml
+```
+
+В другом терминале:
+
+```bash
+timeout 5s ros2 topic echo /robot_a/sensor_pose \
+  --qos-reliability reliable --once
+
+timeout 5s ros2 topic echo /robot_a/sensor_pose \
+  --qos-reliability best_effort --once
+```
+
+При единственном издателе rosbag2_player получены:
+reliable — несовместимость и exit=124;
+best_effort — сообщение Pose и exit=0.
+Обе проверки проведены на одной и той же записи.
+После проверки replay останавливается через Ctrl+C.
+
+### Evidence
+
+- `evidence/pr05/qos-before.txt` — несовместимость на живом потоке и replay.
+- `evidence/pr05/qos-after.txt` — доставка на живом потоке и replay, bag info.
+- `evidence/pr05/bag-metadata.yaml` — копия метаданных MCAP.
+- `evidence/pr05/tests.txt` и `test-results.txt` — результаты тестов.
+- `evidence/pr05/report.json` — отчёт с SHA коммита реализации.
+
+Сама запись `evidence/pr05/bag/` хранится локально и исключена из Git.
+Для повторения replay на другом компьютере необходимо перенести этот
+каталог или создать новую запись по приведённым командам.
+
+### Course kit
+
+- Версия: `v1-w08`.
+- SHA-256 архива:
+  `aea8efd0a51668af63f2e475b82bfa28bd76c21f20d8afea6b136d43a56a88fb`.

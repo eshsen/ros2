@@ -56,3 +56,14 @@
   Вызван /clear и найден /turtle1/rotate_absolute.
 - Команды выполнялись пользователем локально; Perplexity анализировал
   присланные результаты. Результат CI проверяется отдельно после push.
+
+---
+
+## PR05 - Launch, QoS и повтор записи
+
+- Использован ИИ: да
+- Модель и версия: Perplexity AI
+- Среда или интерфейс агента: веб-интерфейс Perplexity
+- Компоненты: course_bringup (launch, pose_relay, pose_subscriber), evidence/pr05/*, CI kit v1-w06
+- Характер помощи: namespace/remap/IfCondition record, QoS best_effort vs reliable, MCAP bag + replay overrides
+- Проверка: launch /robot_a; qos-before incompatible; qos-after + bag info один топик; replay best_effort ок

@@ -28,3 +28,6 @@ __pycache__/
 /robotics-course-kit*.sha256.txt
 .pytest_cache/
 *.egg-info/
+
+# PR05 local MCAP recording
+/evidence/pr05/bag/
