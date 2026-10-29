@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "practice_id": "PR06",
+  "commit": "95536eb4db1ed57607492d7ce05e5f3809662cf4",
+  "course_kit": {
+    "version": "v1-w08",
+    "archive_sha256": "aea8efd0a51668af63f2e475b82bfa28bd76c21f20d8afea6b136d43a56a88fb"
+  },
+  "commands": [
+    "colcon build --symlink-install --packages-select course_description",
+    "xacro src/course_description/urdf/vehicle.urdf.xacro > /tmp/vehicle.urdf",
+    "check_urdf /tmp/vehicle.urdf",
+    "colcon test --packages-select course_description --return-code-on-test-failure --event-handlers console_direct+",
+    "ros2 launch course_description display.launch.py use_sim_time:=false",
+    "rviz2",
+    "ros2 topic info /tf_static --verbose",
+    "timeout 4s ros2 topic echo /tf_static --once --qos-durability transient_local --qos-reliability reliable",
+    "timeout 4s ros2 topic echo /tf_static --once --qos-durability volatile --qos-reliability reliable",
+    "timeout 5s ros2 run tf2_ros tf2_echo base_link lidar_link",
+    "ros2 run tf2_tools view_frames",
+    "python3 -m pytest src/course_description/test/test_urdf_tree.py::test_lidar_parent_is_base_link -v"
+  ],
+  "tests": [
+    {
+      "name": "Xacro expansion and check_urdf: exit=0",
+      "status": "passed"
+    },
+    {
+      "name": "course_description structural tests: 5 passed",
+      "status": "passed"
+    },
+    {
+      "name": "RViz RobotModel green after wheel joint states",
+      "status": "passed"
+    },
+    {
+      "name": "Late transient_local subscriber: transforms, exit=0",
+      "status": "passed"
+    },
+    {
+      "name": "Late volatile subscriber: no message, exit=124",
+      "status": "passed"
+    },
+    {
+      "name": "Defect reproduced: parent test fails, lidar at 0.56/0/0.76",
+      "status": "passed"
+    },
+    {
+      "name": "Restored model: parent test passes, lidar at 0.28/0/0.38",
+      "status": "passed"
+    }
+  ],
+  "defect": {
+    "reproducer": "Branch pr06-defect-lidar-parent, commit 0e64ab8233288df0e79ebef54d18503f9757f331. Changed only lidar_link parent from base_link to camera_link while preserving offset 0.28 0 0.38. test_lidar_parent_is_base_link failed with exit=1. check_urdf still accepted the tree. With one robot_state_publisher, tf2_echo measured 0.56 0 0.76.",
+    "root_cause": "The unchanged lidar offset became relative to camera_link instead of base_link. The camera translation was therefore added to the lidar translation. A connected, acyclic URDF tree can still contain a geometrically incorrect parent.",
+    "proof_after": "Stopped the defective publisher and returned to pr06. The same parent test passed, all five package tests passed and check_urdf exited with 0. With one publisher, tf2_echo measured 0.28 0 0.38 and view_frames showed base_link as the parent of lidar_link."
+  },
+  "claims": {
+    "public_tests_passed": true,
+    "defect_reproduced": true,
+    "defect_fixed": true
+  },
+  "time": {
+    "contact_academic_hours": 0.0,
+    "self_study_hours": 2.1
+  },
+  "ai_used": true
+}

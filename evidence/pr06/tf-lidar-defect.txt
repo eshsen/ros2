@@ -1,0 +1,68 @@
+===== DEFECT: PUBLISHER CHECK =====
+Type: tf2_msgs/msg/TFMessage
+
+Publisher count: 1
+
+Node name: robot_state_publisher
+Node namespace: /
+Topic type: tf2_msgs/msg/TFMessage
+Topic type hash: RIHS01_e369d0f05a23ae52508854b66f6aa0437f3449d652e8cbf22d5abe85d020f087
+Endpoint type: PUBLISHER
+GID: 01.0f.2e.53.bf.24.b6.50.00.00.00.00.00.00.15.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+
+===== DEFECT: BASE TO LIDAR =====
+[INFO] [1793307992.160863870] [tf2_echo]: Waiting for transform base_link ->  lidar_link: Invalid frame ID "base_link" passed to canTransform argument target_frame - frame does not exist
+At time 0.0
+- Translation: [0.560, 0.000, 0.760]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  0.560
+  0.000  1.000  0.000  0.000
+  0.000  0.000  1.000  0.760
+  0.000  0.000  0.000  1.000
+At time 0.0
+- Translation: [0.560, 0.000, 0.760]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  0.560
+  0.000  1.000  0.000  0.000
+  0.000  0.000  1.000  0.760
+  0.000  0.000  0.000  1.000
+At time 0.0
+- Translation: [0.560, 0.000, 0.760]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  0.560
+  0.000  1.000  0.000  0.000
+  0.000  0.000  1.000  0.760
+  0.000  0.000  0.000  1.000
+At time 0.0
+- Translation: [0.560, 0.000, 0.760]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  0.560
+  0.000  1.000  0.000  0.000
+  0.000  0.000  1.000  0.760
+  0.000  0.000  0.000  1.000
+[INFO] [1793307996.954798899] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+exit=124
+Timeout is expected because tf2_echo runs continuously.

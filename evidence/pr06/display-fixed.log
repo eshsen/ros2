@@ -1,0 +1,5 @@
+[INFO] [launch]: All log files can be found below /home/anastasiia/.ros/log/2026-10-29-23-52-04-366169-anastasiia-IdeaPad-Gaming-3-15IMH05-8253
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [8260]
+[robot_state_publisher-1] [WARN] [1793307124.601466210] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-1] [INFO] [1793307124.601576089] [robot_state_publisher]: Robot initialized
