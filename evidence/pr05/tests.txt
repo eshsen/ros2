@@ -1,0 +1,45 @@
+Starting >>> patrol
+Starting >>> turtle_bringup
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/anastasiia/ros2/build/patrol/.pytest_cache
+rootdir: /home/anastasiia/ros2/src/patrol
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collected 26 items
+
+test/test_control.py ...                                                 [ 11%]
+test/test_copyright.py s                                                 [ 15%]
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/anastasiia/ros2/build/turtle_bringup/.pytest_cache
+rootdir: /home/anastasiia/ros2/src/turtle_bringup
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collected 3 items
+
+test/test_copyright.py s                                                 [ 33%]
+test/test_flake8.py .                                                    [ 19%]
+test/test_pep257.py .                                                    [ 23%]
+test/test_settings.py ....................                               [100%]
+
+------ generated xml file: /home/anastasiia/ros2/build/patrol/pytest.xml -------
+======================== 25 passed, 1 skipped in 0.40s =========================
+test/test_flake8.py .                                                    [ 66%]
+test/test_pep257.py .                                                    [100%]
+
+-- generated xml file: /home/anastasiia/ros2/build/turtle_bringup/pytest.xml ---
+========================= 2 passed, 1 skipped in 0.22s =========================
+Finished <<< patrol [0.99s]
+Starting >>> course_bringup
+Finished <<< turtle_bringup [1.18s]
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/anastasiia/ros2/build/course_bringup/.pytest_cache
+rootdir: /home/anastasiia/ros2/src/course_bringup
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collected 0 items
+
+-- generated xml file: /home/anastasiia/ros2/build/course_bringup/pytest.xml ---
+============================ no tests ran in 0.01s =============================
+Finished <<< course_bringup [0.50s]
+
+Summary: 3 packages finished [1.63s]

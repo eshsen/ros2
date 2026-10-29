@@ -1,0 +1,106 @@
+===== LIVE: BEST_EFFORT SUBSCRIBER =====
+
+===== NODES =====
+/robot_a/patrol
+/robot_a/pose_relay
+/robot_a/pose_subscriber
+/rosbag2_recorder
+/turtlesim
+
+===== SENSOR TOPIC QOS =====
+Type: turtlesim/msg/Pose
+
+Publisher count: 1
+
+Node name: pose_relay
+Node namespace: /robot_a
+Topic type: turtlesim/msg/Pose
+Topic type hash: RIHS01_739beba26bcba6920404ba722b7b8321348512f92ea5be235c47251940dd8aa9
+Endpoint type: PUBLISHER
+GID: 01.0f.2e.53.ea.17.e1.72.00.00.00.00.00.00.13.03
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 2
+
+Node name: pose_subscriber
+Node namespace: /robot_a
+Topic type: turtlesim/msg/Pose
+Topic type hash: RIHS01_739beba26bcba6920404ba722b7b8321348512f92ea5be235c47251940dd8aa9
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.2e.53.eb.17.7c.c9.00.00.00.00.00.00.13.04
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: rosbag2_recorder
+Node namespace: /
+Topic type: turtlesim/msg/Pose
+Topic type hash: RIHS01_739beba26bcba6920404ba722b7b8321348512f92ea5be235c47251940dd8aa9
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.2e.53.ec.17.95.00.00.00.00.00.00.00.26.04
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+
+===== BEST_EFFORT ECHO: EXPECTED MESSAGE =====
+x: 6.190726280212402
+y: 5.676534175872803
+theta: 0.3984147012233734
+linear_velocity: 0.5
+angular_velocity: 0.30000001192092896
+---
+exit=0
+
+===== BAG INFO =====
+
+Files:             bag_0.mcap
+Bag size:          150.4 KiB
+Storage id:        mcap
+ROS Distro:        jazzy
+Duration:          33.851547590s
+Start:             Oct 29 2026 23:27:35.897482224 (1793305655.897482224)
+End:               Oct 29 2026 23:28:09.749029814 (1793305689.749029814)
+Messages:          2103
+Topic information: Topic: /robot_a/sensor_pose | Type: turtlesim/msg/Pose | Count: 2103 | Serialization Format: cdr
+Service:           0
+Service information: 
+
+===== REPLAY: BEST_EFFORT SUBSCRIBER =====
+Bag: evidence/pr05/bag
+QoS override: config/qos-overrides.yaml
+
+===== BEST_EFFORT ECHO: EXPECTED MESSAGE =====
+x: 5.183201313018799
+y: 8.839038848876953
+theta: -2.9279706478118896
+linear_velocity: 0.5
+angular_velocity: 0.30000001192092896
+---
+exit=0
+
+===== REPLAY: BEST_EFFORT SUBSCRIBER =====
+x: 3.9974186420440674
+y: 6.581144332885742
+theta: -1.1855852603912354
+linear_velocity: 0.5
+angular_velocity: 0.30000001192092896
+---
+exit=0

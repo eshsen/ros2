@@ -1,0 +1,13 @@
+[INFO] [launch]: All log files can be found below /home/anastasiia/.ros/log/2026-10-29-23-26-01-637770-anastasiia-IdeaPad-Gaming-3-15IMH05-5899
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: patrol.launch: namespace=robot_a record=false subscriber_reliability=reliable sensor_topic=/robot_a/sensor_pose
+[INFO] [turtlesim_node-1]: process started with pid [5903]
+[INFO] [patrol-2]: process started with pid [5904]
+[INFO] [pose_relay-3]: process started with pid [5905]
+[INFO] [pose_subscriber-4]: process started with pid [5906]
+[turtlesim_node-1] [INFO] [1793305562.014495298] [turtlesim]: Starting turtlesim with node name /turtlesim
+[turtlesim_node-1] [INFO] [1793305562.024623777] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[pose_relay-3] [WARN] [1793305562.179786867] [robot_a.pose_relay]: New subscription discovered on topic 'sensor_pose', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY
+[pose_subscriber-4] [INFO] [1793305562.189742281] [robot_a.pose_subscriber]: subscribing to sensor_pose with reliable
+[pose_subscriber-4] [WARN] [1793305562.190839319] [robot_a.pose_subscriber]: New publisher discovered on topic 'sensor_pose', offering incompatible QoS. No messages will be received from it. Last incompatible policy: RELIABILITY
+[pose_relay-3] [WARN] [1793305585.691278402] [robot_a.pose_relay]: New subscription discovered on topic 'sensor_pose', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY
