@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/anastasiia/ros2/src/patrol
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collecting ... collected 6 items
+
+src/patrol/test/test_control.py::test_no_pose_returns_zero_command PASSED [ 16%]
+src/patrol/test/test_control.py::test_pose_returns_patrol_command PASSED [ 33%]
+src/patrol/test/test_control.py::test_pose_is_not_modified PASSED        [ 50%]
+src/patrol/test/test_copyright.py::test_copyright SKIPPED (No copyri...) [ 66%]
+src/patrol/test/test_flake8.py::test_flake8 PASSED                       [ 83%]
+src/patrol/test/test_pep257.py::test_pep257 PASSED                       [100%]
+
+========================= 5 passed, 1 skipped in 0.34s =========================

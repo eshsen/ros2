@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/anastasiia/ros2/src/patrol
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collecting ... collected 26 items
+
+src/patrol/test/test_control.py::test_no_pose_returns_zero_command PASSED [  3%]
+src/patrol/test/test_control.py::test_pose_returns_patrol_command PASSED [  7%]
+src/patrol/test/test_control.py::test_pose_is_not_modified PASSED        [ 11%]
+src/patrol/test/test_copyright.py::test_copyright SKIPPED (No copyri...) [ 15%]
+src/patrol/test/test_flake8.py::test_flake8 PASSED                       [ 19%]
+src/patrol/test/test_pep257.py::test_pep257 PASSED                       [ 23%]
+src/patrol/test/test_settings.py::test_frequency_changes_from_ten_to_five PASSED [ 26%]
+src/patrol/test/test_settings.py::test_invalid_frequency_preserves_previous_settings[0.0] PASSED [ 30%]
+src/patrol/test/test_settings.py::test_invalid_frequency_preserves_previous_settings[-1.0] PASSED [ 34%]
+src/patrol/test/test_settings.py::test_invalid_frequency_preserves_previous_settings[nan] PASSED [ 38%]
+src/patrol/test/test_settings.py::test_invalid_frequency_preserves_previous_settings[inf] PASSED [ 42%]
+src/patrol/test/test_settings.py::test_invalid_frequency_preserves_previous_settings[31.0] PASSED [ 46%]
+src/patrol/test/test_settings.py::test_frequency_boundaries[1.0] PASSED  [ 50%]
+src/patrol/test/test_settings.py::test_frequency_boundaries[30.0] PASSED [ 53%]
+src/patrol/test/test_settings.py::test_invalid_settings[linear_speed--0.1] PASSED [ 57%]
+src/patrol/test/test_settings.py::test_invalid_settings[linear_speed-1.1] PASSED [ 61%]
+src/patrol/test/test_settings.py::test_invalid_settings[linear_speed-nan] PASSED [ 65%]
+src/patrol/test/test_settings.py::test_invalid_settings[turn_rate--1.1] PASSED [ 69%]
+src/patrol/test/test_settings.py::test_invalid_settings[turn_rate-1.1] PASSED [ 73%]
+src/patrol/test/test_settings.py::test_invalid_settings[turn_rate-inf] PASSED [ 76%]
+src/patrol/test/test_settings.py::test_invalid_settings[publish_hz-True] PASSED [ 80%]
+src/patrol/test/test_settings.py::test_motion_boundaries[0.0--1.0] PASSED [ 84%]
+src/patrol/test/test_settings.py::test_motion_boundaries[1.0-1.0] PASSED [ 88%]
+src/patrol/test/test_settings.py::test_invalid_batch_does_not_modify_current_settings PASSED [ 92%]
+src/patrol/test/test_settings.py::test_command_uses_configured_speeds PASSED [ 96%]
+src/patrol/test/test_settings.py::test_no_pose_still_returns_zero PASSED [100%]
+
+======================== 25 passed, 1 skipped in 0.37s =========================

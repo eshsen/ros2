@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "practice_id": "PR01",
+  "commit": "e1b1604421092593c1404fd7dd73199b23b18de2",
+  "course_kit": {
+    "version": "v1-w02",
+    "archive_sha256": "5d210c431e32418f45e2cffa9dd2028116c7a9520a36f3c7079c778cd73437a8"
+  },
+  "commands": [
+    "source /opt/ros/jazzy/setup.bash",
+    "export ROS_DOMAIN_ID=16",
+    "ros2 doctor --report > evidence/pr01/doctor.txt 2>&1",
+    "ros2 run turtlesim turtlesim_node",
+    "ros2 run turtlesim turtle_teleop_key",
+    "ros2 node list --no-daemon --spin-time 2",
+    "ros2 topic list -t",
+    "ros2 node info /turtlesim",
+    "ros2 topic type /turtle1/pose",
+    "ros2 topic echo /turtle1/pose --once",
+    "ros2 topic hz /turtle1/pose",
+    "export ROS_DOMAIN_ID=17",
+    "timeout 5s ros2 topic echo /turtle1/pose \"$POSE_TYPE\" --once > evidence/pr01/pose-broken.txt 2>&1",
+    "export ROS_DOMAIN_ID=16",
+    "timeout 5s ros2 topic echo /turtle1/pose \"$POSE_TYPE\" --once > evidence/pr01/pose-fixed.txt 2>&1",
+    "python3 -m json.tool evidence/pr01/environment.json > /dev/null",
+    "python3 .course-kit/v1/tools/check_practice.py PR01 --submission ."
+  ],
+  "tests": [
+    {
+      "name": "turtlesim and keyboard teleoperation in ROS_DOMAIN_ID=16",
+      "status": "passed"
+    },
+    {
+      "name": "ROS graph inspection: nodes, topics, types and /turtlesim information",
+      "status": "passed"
+    },
+    {
+      "name": "/turtle1/pose publication frequency measurement for about 15 seconds",
+      "status": "passed"
+    },
+    {
+      "name": "domain isolation: /turtle1/pose absent in ROS_DOMAIN_ID=17 for 5 seconds, timeout exit=124",
+      "status": "passed"
+    },
+    {
+      "name": "domain restoration: /turtle1/pose received in ROS_DOMAIN_ID=16, timeout exit=0",
+      "status": "passed"
+    }
+  ],
+  "defect": {
+    "reproducer": "Симулятор /turtlesim оставлен в ROS_DOMAIN_ID=16. /teleop_turtle и CLI-подписчик запущены в ROS_DOMAIN_ID=17. Команда timeout 5s ros2 topic echo /turtle1/pose \"$POSE_TYPE\" --once не получила сообщение за 5 секунд; результат exit=124; в домене 17 обнаружена только /teleop_turtle.",
+    "root_cause": "ROS 2 использует DDS-домены для обнаружения нод и обмена сообщениями. Ноды из разных ROS_DOMAIN_ID не обнаруживают друг друга. Значение ROS_DOMAIN_ID применяется при запуске процесса, поэтому уже работающую /teleop_turtle необходимо перезапустить после смены домена.",
+    "proof_after": "/teleop_turtle остановлена и заново запущена с ROS_DOMAIN_ID=16, CLI также возвращён в домен 16. Обнаружены /teleop_turtle и /turtlesim. Команда timeout 5s ros2 topic echo /turtle1/pose \"$POSE_TYPE\" --once получила Pose и завершилась с exit=0."
+  },
+  "claims": {
+    "public_tests_passed": true,
+    "defect_reproduced": true,
+    "defect_fixed": true
+  },
+  "time": {
+    "contact_academic_hours": 2,
+    "self_study_hours": 2
+  },
+  "ai_used": true
+}
