@@ -1,0 +1,54 @@
+[INFO] [launch]: All log files can be found below /home/anastasiia/.ros/log/2026-10-29-23-27-35-103967-anastasiia-IdeaPad-Gaming-3-15IMH05-6116
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: patrol.launch: namespace=robot_a record=true subscriber_reliability=best_effort sensor_topic=/robot_a/sensor_pose
+[INFO] [turtlesim_node-1]: process started with pid [6120]
+[INFO] [patrol-2]: process started with pid [6121]
+[INFO] [pose_relay-3]: process started with pid [6122]
+[INFO] [pose_subscriber-4]: process started with pid [6123]
+[INFO] [ros2-5]: process started with pid [6124]
+[turtlesim_node-1] [INFO] [1793305655.378440417] [turtlesim]: Starting turtlesim with node name /turtlesim
+[turtlesim_node-1] [INFO] [1793305655.389035926] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[pose_subscriber-4] [INFO] [1793305655.620686440] [robot_a.pose_subscriber]: subscribing to sensor_pose with best_effort
+[ros2-5] stdin is not a terminal device. Keyboard handling disabled.[INFO] [1793305655.817604609] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[ros2-5] [INFO] [1793305655.817610677] [rosbag2_recorder]: Event publisher thread: Started
+[ros2-5] [INFO] [1793305655.823239681] [rosbag2_recorder]: Starting recording to 'evidence/pr05/bag'
+[ros2-5] [INFO] [1793305655.827312327] [rosbag2_recorder]: Listening for topics...
+[ros2-5] [INFO] [1793305655.827330377] [rosbag2_recorder]: Recording...
+[ros2-5] [INFO] [1793305655.827339241] [rosbag2_recorder]: Topics discovery started.
+[pose_subscriber-4] [INFO] [1793305655.835290306] [robot_a.pose_subscriber]: pose x=5.54 y=5.54
+[ros2-5] [INFO] [1793305655.889673759] [rosbag2_recorder]: Subscribed to topic '/robot_a/sensor_pose'
+[ros2-5] [INFO] [1793305655.889766426] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[ros2-5] [INFO] [1793305655.889796332] [rosbag2_recorder]: Topics discovery stopped.
+[pose_subscriber-4] [INFO] [1793305656.842682045] [robot_a.pose_subscriber]: pose x=6.02 y=5.61
+[pose_subscriber-4] [INFO] [1793305657.848861997] [robot_a.pose_subscriber]: pose x=6.47 y=5.83
+[pose_subscriber-4] [INFO] [1793305658.997908392] [robot_a.pose_subscriber]: pose x=6.84 y=6.16
+[pose_subscriber-4] [INFO] [1793305660.009246520] [robot_a.pose_subscriber]: pose x=7.12 y=6.67
+[pose_subscriber-4] [INFO] [1793305661.017221602] [robot_a.pose_subscriber]: pose x=7.21 y=7.17
+[pose_subscriber-4] [INFO] [1793305662.025720847] [robot_a.pose_subscriber]: pose x=7.14 y=7.66
+[pose_subscriber-4] [INFO] [1793305663.033223553] [robot_a.pose_subscriber]: pose x=6.94 y=8.12
+[pose_subscriber-4] [INFO] [1793305664.041529460] [robot_a.pose_subscriber]: pose x=6.60 y=8.50
+[pose_subscriber-4] [INFO] [1793305665.052020728] [robot_a.pose_subscriber]: pose x=6.17 y=8.75
+[pose_subscriber-4] [INFO] [1793305666.057298352] [robot_a.pose_subscriber]: pose x=5.68 y=8.87
+[pose_subscriber-4] [INFO] [1793305667.067782251] [robot_a.pose_subscriber]: pose x=5.18 y=8.84
+[pose_subscriber-4] [INFO] [1793305668.075405466] [robot_a.pose_subscriber]: pose x=4.71 y=8.66
+[pose_subscriber-4] [INFO] [1793305669.080788260] [robot_a.pose_subscriber]: pose x=4.32 y=8.35
+[pose_subscriber-4] [INFO] [1793305670.091259256] [robot_a.pose_subscriber]: pose x=4.04 y=7.93
+[pose_subscriber-4] [INFO] [1793305671.102115867] [robot_a.pose_subscriber]: pose x=3.89 y=7.45
+[pose_subscriber-4] [INFO] [1793305672.107662882] [robot_a.pose_subscriber]: pose x=3.89 y=6.95
+[pose_subscriber-4] [INFO] [1793305673.116054984] [robot_a.pose_subscriber]: pose x=4.05 y=6.47
+[pose_subscriber-4] [INFO] [1793305674.123574152] [robot_a.pose_subscriber]: pose x=4.33 y=6.06
+[pose_subscriber-4] [INFO] [1793305675.125607536] [robot_a.pose_subscriber]: pose x=4.71 y=5.77
+[pose_subscriber-4] [INFO] [1793305676.133323502] [robot_a.pose_subscriber]: pose x=5.18 y=5.58
+[pose_subscriber-4] [INFO] [1793305677.141104124] [robot_a.pose_subscriber]: pose x=5.68 y=5.55
+[pose_subscriber-4] [INFO] [1793305678.151565014] [robot_a.pose_subscriber]: pose x=6.17 y=5.67
+[pose_subscriber-4] [INFO] [1793305679.158877479] [robot_a.pose_subscriber]: pose x=6.60 y=5.92
+[pose_subscriber-4] [INFO] [1793305680.165530585] [robot_a.pose_subscriber]: pose x=6.93 y=6.30
+[pose_subscriber-4] [INFO] [1793305681.175078720] [robot_a.pose_subscriber]: pose x=7.14 y=6.76
+[pose_subscriber-4] [INFO] [1793305682.183370666] [robot_a.pose_subscriber]: pose x=7.21 y=7.25
+[pose_subscriber-4] [INFO] [1793305683.190363222] [robot_a.pose_subscriber]: pose x=7.12 y=7.75
+[pose_subscriber-4] [INFO] [1793305684.199022464] [robot_a.pose_subscriber]: pose x=6.89 y=8.19
+[pose_subscriber-4] [INFO] [1793305685.205161977] [robot_a.pose_subscriber]: pose x=6.53 y=8.55
+[pose_subscriber-4] [INFO] [1793305686.213047158] [robot_a.pose_subscriber]: pose x=6.09 y=8.78
+[pose_subscriber-4] [INFO] [1793305687.220792194] [robot_a.pose_subscriber]: pose x=5.60 y=8.88
+[pose_subscriber-4] [INFO] [1793305688.232412785] [robot_a.pose_subscriber]: pose x=5.10 y=8.82
+[pose_subscriber-4] [INFO] [1793305689.239795224] [robot_a.pose_subscriber]: pose x=4.64 y=8.61

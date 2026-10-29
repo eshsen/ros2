@@ -1,0 +1,9 @@
+build/turtle_bringup/pytest.xml: 3 tests, 0 errors, 1 failure, 1 skipped
+- turtle_bringup.test.test_flake8 test_flake8
+  <<< failure message
+    AssertionError: Found 1 code style errors / warnings:
+      ./setup.py:2:1: I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+    assert 1 == 0
+  >>>
+
+Summary: 29 tests, 0 errors, 1 failure, 2 skipped

@@ -1,0 +1,8 @@
+$ timeout 15s ros2 param set /patrol publish_hz 0.0
+Setting parameter failed: publish_hz must be within [1.0, 30.0]
+exit=0
+$ ros2 param get /patrol publish_hz
+Double value is: 5.0
+$ ros2 node list --no-daemon --spin-time 2
+/patrol
+/turtlesim

@@ -1,0 +1,76 @@
+Starting >>> patrol
+Starting >>> turtle_bringup
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/anastasiia/ros2/build/turtle_bringup/.pytest_cache
+rootdir: /home/anastasiia/ros2/src/turtle_bringup
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collected 3 items
+
+test/test_copyright.py s                                                 [ 33%]
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/anastasiia/ros2/build/patrol/.pytest_cache
+rootdir: /home/anastasiia/ros2/src/patrol
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collected 26 items
+
+test/test_control.py ...                                                 [ 11%]
+test/test_copyright.py s                                                 [ 15%]
+test/test_flake8.py F                                                    [ 66%]
+test/test_pep257.py .                                                    [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+test/test_flake8.py:23: in test_flake8
+    assert rc == 0, \
+E   AssertionError: Found 1 code style errors / warnings:
+E     ./setup.py:2:1: I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+E   assert 1 == 0
+----------------------------- Captured stdout call -----------------------------
+
+./setup.py:2:1: I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+from setuptools import find_packages, setup
+^
+
+1     I201 Missing newline between import groups. 'from setuptools import find_packages, setup' is identified as Third Party and 'from glob import glob' is identified as Stdlib.
+
+6 files checked
+1 errors
+
+'I'-type errors: 1
+
+Checked files:
+
+* ./setup.py
+* ./turtle_bringup/__init__.py
+* ./test/test_pep257.py
+* ./test/test_copyright.py
+* ./test/test_flake8.py
+* ./launch/sim.launch.py
+-- generated xml file: /home/anastasiia/ros2/build/turtle_bringup/pytest.xml ---
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 1 code style ...
+==================== 1 failed, 1 passed, 1 skipped in 0.28s ====================
+test/test_flake8.py .                                                    [ 19%]
+Finished <<< turtle_bringup [1.17s]	[ with test failures ]
+test/test_pep257.py .                                                    [ 23%]
+test/test_settings.py ....................                               [100%]
+
+------ generated xml file: /home/anastasiia/ros2/build/patrol/pytest.xml -------
+======================== 25 passed, 1 skipped in 0.61s =========================
+Finished <<< patrol [1.28s]
+Starting >>> course_bringup
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/anastasiia/ros2/build/course_bringup/.pytest_cache
+rootdir: /home/anastasiia/ros2/src/course_bringup
+plugins: ament-xmllint-0.17.5, launch-testing-ros-0.26.12, ament-lint-0.17.5, ament-flake8-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-pep257-0.17.5, cov-4.1.0, colcon-core-0.21.1
+collected 0 items
+
+-- generated xml file: /home/anastasiia/ros2/build/course_bringup/pytest.xml ---
+============================ no tests ran in 0.01s =============================
+Finished <<< course_bringup [0.52s]
+
+Summary: 3 packages finished [2.04s]
+  1 package had test failures: turtle_bringup
