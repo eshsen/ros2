@@ -421,3 +421,134 @@ best_effort — сообщение Pose и exit=0.
 - Версия: `v1-w08`.
 - SHA-256 архива:
   `aea8efd0a51668af63f2e475b82bfa28bd76c21f20d8afea6b136d43a56a88fb`.
+
+---
+
+## PR06 — Модель робота, tf2 и QoS преобразований
+
+### Описание
+
+Пакет `course_description` содержит модель `urdf/vehicle.urdf.xacro`,
+launch-файл `display.launch.py` и пять структурных тестов.
+
+Источник размеров — `.course-kit/v1/models/course_ackermann/model.sdf`.
+Корпус: 1.05 × 0.52 × 0.22 м; колёсная база: 0.80 м;
+колея: 0.62 м; радиус колеса: 0.12 м.
+
+URDF — учебное упрощённое описание: четыре колеса подключены напрямую
+к base_link, без рулевых кулаков и плагинов Gazebo.
+Модель параметризована Xacro-переменными, visual и collision заданы отдельно.
+Единицы СИ, оси X вперёд, Y влево, Z вверх.
+
+### Подготовка и проверка
+
+```bash
+sudo apt install ros-jazzy-xacro
+source /opt/ros/jazzy/setup.bash
+
+colcon build --symlink-install --packages-select course_description
+source install/setup.bash
+
+xacro src/course_description/urdf/vehicle.urdf.xacro > /tmp/vehicle.urdf
+check_urdf /tmp/vehicle.urdf
+
+colcon test --packages-select course_description \
+  --return-code-on-test-failure --event-handlers console_direct+
+```
+
+Результат: check_urdf exit=0, 5 passed.
+Тесты проверяют развёртывание Xacro, наличие сенсоров, parent лидара,
+связность и отсутствие циклов, положения сенсоров.
+
+### Запуск
+
+```bash
+ros2 launch course_description display.launch.py use_sim_time:=false
+```
+
+В другом терминале:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+source install/setup.bash
+rviz2
+```
+
+Настройки RViz:
+Fixed Frame=base_link;
+RobotModel Description Source=Topic;
+Description Topic=/robot_description;
+Durability=Transient Local;
+Reliability=Reliable.
+Добавлен Display TF.
+
+Для отображения колёс в отдельном терминале:
+
+```bash
+ros2 topic pub -r 10 /joint_states sensor_msgs/msg/JointState \
+  "{header: auto, name: [front_left_wheel_joint, front_right_wheel_joint, rear_left_wheel_joint, rear_right_wheel_joint], position: [0.0, 0.0, 0.0, 0.0]}"
+```
+
+После публикации состояний четырёх колёс RobotModel имеет зелёный статус.
+Для обязательного опыта с фиксированными сенсорами joint_states не нужен.
+
+### QoS преобразований
+
+На работающем robot_state_publisher:
+
+```bash
+ros2 topic info /tf_static --verbose
+
+timeout 4s ros2 topic echo /tf_static --once \
+  --qos-durability transient_local --qos-reliability reliable
+
+timeout 4s ros2 topic echo /tf_static --once \
+  --qos-durability volatile --qos-reliability reliable
+```
+
+Подтверждён профиль RELIABLE + TRANSIENT_LOCAL.
+Поздняя transient_local-подписка получила три преобразования, exit=0.
+Поздняя volatile-подписка не получила сообщение, exit=124.
+Во время опыта publisher не перезапускался.
+
+### Дефект и исправление
+
+Ветка: pr06-defect-lidar-parent.
+Коммит дефекта: 0e64ab8233288df0e79ebef54d18503f9757f331.
+
+У lidar_link parent изменён с base_link на camera_link,
+а прежний offset 0.28 0 0.38 сохранён.
+
+Результат:
+- тест test_lidar_parent_is_base_link упал;
+- check_urdf принял структурно допустимое дерево;
+- tf2_echo base_link lidar_link показал 0.56 0 0.76;
+- view_frames показал цепочку base_link -> camera_link -> lidar_link.
+
+После остановки дефектного publisher и возврата в pr06:
+- тот же тест прошёл;
+- все пять тестов прошли;
+- check_urdf завершился с exit=0;
+- tf2_echo показал 0.28 0 0.38;
+- дерево восстановлено: base_link -> lidar_link.
+
+Дефектная ветка не сливается в pr06.
+
+### Evidence
+
+Каталог `evidence/pr06/` содержит:
+- frames.md — связи, ожидаемые преобразования и владельцы;
+- model-check.txt — проверка исправной модели;
+- tf-qos.txt — профили /tf_static и результаты позднего чтения;
+- test-parent-defect.txt и test-parent-restored.txt — тот же тест до/после;
+- tf-lidar-defect.txt и tf-lidar-restored.txt — измерения до/после;
+- view-frames-*.txt и frames_*.pdf — деревья;
+- tests.txt — финальные тесты;
+- defect-commit.txt — SHA дефекта;
+- report.json — итоговый отчёт.
+
+### Course kit
+
+Версия: v1-w08.
+SHA-256:
+aea8efd0a51668af63f2e475b82bfa28bd76c21f20d8afea6b136d43a56a88fb.

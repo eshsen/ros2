@@ -1,0 +1,68 @@
+name: PR06 checks
+
+on:
+  push:
+    branches: [pr06]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  COURSE_KIT_URL: https://ros.lms.ci.nsu.ru/downloads/robotics-course-kit-v1-w08-aea8efd0a516.tar.gz
+  COURSE_KIT_SHA256: aea8efd0a51668af63f2e475b82bfa28bd76c21f20d8afea6b136d43a56a88fb
+
+jobs:
+  test:
+    if: github.event_name != 'pull_request' || github.head_ref == 'pr06'
+    runs-on: ubuntu-latest
+    container:
+      image: osrf/ros:jazzy-desktop
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download and verify course kit
+        run: |
+          curl -fsSL "$COURSE_KIT_URL" -o /tmp/course-kit.tar.gz
+          printf '%s  %s\n' "$COURSE_KIT_SHA256" /tmp/course-kit.tar.gz | sha256sum -c -
+          mkdir -p .course-kit
+          tar -xzf /tmp/course-kit.tar.gz -C .course-kit
+
+      - name: Install Xacro
+        run: |
+          apt-get update
+          apt-get install -y ros-jazzy-xacro
+
+      - name: Build packages
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          colcon build --symlink-install \
+            --packages-select course_description
+          test -f install/course_description/share/course_description/urdf/vehicle.urdf.xacro
+
+      - name: Test packages
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          source install/setup.bash
+          colcon test \
+            --packages-select course_description \
+            --return-code-on-test-failure \
+            --event-handlers console_direct+
+          colcon test-result --verbose
+
+      - name: Check launch arguments
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          source install/setup.bash
+          ros2 launch course_description display.launch.py --show-args
+          xacro src/course_description/urdf/vehicle.urdf.xacro > /tmp/vehicle.urdf
+          check_urdf /tmp/vehicle.urdf
+
+      - name: Check PR06 submission
+        run: |
+          python3 .course-kit/v1/tools/check_practice.py PR06 --submission .

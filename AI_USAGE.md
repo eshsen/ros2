@@ -67,3 +67,23 @@
 - Компоненты: course_bringup (launch, pose_relay, pose_subscriber), evidence/pr05/*, CI kit v1-w06
 - Характер помощи: namespace/remap/IfCondition record, QoS best_effort vs reliable, MCAP bag + replay overrides
 - Проверка: launch /robot_a; qos-before incompatible; qos-after + bag info один топик; replay best_effort ок
+
+---
+
+## PR06 - Модель робота, tf2 и QoS преобразований
+
+- Использован ИИ: да
+- Модель и версия: Perplexity AI
+- Среда или интерфейс агента: веб-интерфейс Perplexity
+- Компоненты: `course_description` (Xacro/URDF, display.launch, тесты),
+  `evidence/pr06/*`, README и CI под course kit v1-w08
+- Характер помощи: адаптация параметризованной модели по размерам SDF,
+  настройка отображения RViz, опыт QoS /tf_static, тест parent лидара,
+  отдельная ветка дефекта camera_link, диагностика и оформление результатов.
+- Проверка: пользователь самостоятельно выполнил сборку, check_urdf
+  и colcon test (5 passed). Поздняя transient_local-подписка получила
+  преобразования с exit=0, volatile-подписка завершилась с exit=124.
+  Модель открыта в RViz; после публикации состояний колёс статус зелёный.
+  В дефектной ветке тест parent упал, но check_urdf принял дерево;
+  tf2_echo показал 0.56/0/0.76. После возврата в pr06 тот же тест прошёл,
+  tf2_echo показал 0.28/0/0.38. Деревья сохранены через view_frames.
