@@ -1,0 +1,97 @@
+[32m(2026-11-20 04:22:05.414) [info] [gz.cc:407] Gazebo Sim Server v10.4.0
+[m[32m(2026-11-20 04:22:05.427) [info] [ServerPrivate.cc:697] Loading SDF world file[/course-kit/worlds/mcity-minimal.sdf].
+[m[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="camera_link"]/sensor[@name="front_camera"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L88]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="lidar_link"]/sensor[@name="lidar"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L100]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="imu_link"]/sensor[@name="imu"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L110]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[32m(2026-11-20 04:22:07.416) [info] [SystemManager.cc:54] Serving entity system service on [/entity/system/add]
+[m[32m(2026-11-20 04:22:07.421) [info] [SimulationRunner.cc:347] Serving world controls on [/world/mcity_minimal/control], [/world/mcity_minimal/control/state] and [/world/mcity_minimal/playback/control]
+[m[32m(2026-11-20 04:22:07.421) [info] [SimulationRunner.cc:373] Serving GUI information on [/world/mcity_minimal/gui/info]
+[m[32m(2026-11-20 04:22:07.421) [info] [SimulationRunner.cc:376] World [mcity_minimal] initialized with [step] physics profile.
+[m[32m(2026-11-20 04:22:07.421) [info] [SimulationRunner.cc:383] Serving world SDF generation service on [/world/mcity_minimal/generate_world_sdf]
+[m[32m(2026-11-20 04:22:07.422) [info] [ServerPrivate.cc:357] Serving world names on [/gazebo/worlds]
+[m[32m(2026-11-20 04:22:07.422) [info] [ServerPrivate.cc:370] Resource path add service on [/gazebo/resource_paths/add].
+[m[32m(2026-11-20 04:22:07.422) [info] [ServerPrivate.cc:383] Resource path get service on [/gazebo/resource_paths/get].
+[m[32m(2026-11-20 04:22:07.423) [info] [ServerPrivate.cc:398] Resource path resolve service on [/gazebo/resource_paths/resolve].
+[m[32m(2026-11-20 04:22:07.423) [info] [ServerPrivate.cc:412] Resource paths published on [/gazebo/resource_paths].
+[m[32m(2026-11-20 04:22:07.423) [info] [ServerPrivate.cc:425] Server control service on [/server_control].
+[m[32m(2026-11-20 04:22:07.424) [info] [SimulationRunner.cc:865] Found no publishers on /stats, adding root stats topic
+[m[32m(2026-11-20 04:22:07.425) [info] [SimulationRunner.cc:899] Found no publishers on /clock, adding root clock topic
+[m[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="camera_link"]/sensor[@name="front_camera"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L88]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="lidar_link"]/sensor[@name="lidar"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L100]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="imu_link"]/sensor[@name="imu"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L110]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[36m(2026-11-20 04:22:07.628) [debug] [Physics.cc:994] Loaded [gz::physics::dartsim::Plugin] from library [/opt/ros/lyrical/opt/gz_physics_vendor/lib/gz-physics-9/engine-plugins/libgz-physics-dartsim-plugin.so]
+[m[36m(2026-11-20 04:22:07.629) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Physics] for entity [1]
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:751] Create service on [/world/mcity_minimal/create_multiple] (async)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:753] Create service on [/world/mcity_minimal/create_multiple/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:751] Remove service on [/world/mcity_minimal/remove] (async)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:753] Remove service on [/world/mcity_minimal/remove/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:751] Pose service on [/world/mcity_minimal/set_pose] (async)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:753] Pose service on [/world/mcity_minimal/set_pose/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:751] Pose service on [/world/mcity_minimal/set_pose_vector] (async)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:753] Pose service on [/world/mcity_minimal/set_pose_vector/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:751] Light configuration service on [/world/mcity_minimal/light_config] (async)
+[m[32m(2026-11-20 04:22:07.631) [info] [UserCommands.cc:753] Light configuration service on [/world/mcity_minimal/light_config/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:751] Physics service on [/world/mcity_minimal/set_physics] (async)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:753] Physics service on [/world/mcity_minimal/set_physics/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:751] SphericalCoordinates service on [/world/mcity_minimal/set_spherical_coordinates] (async)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:753] SphericalCoordinates service on [/world/mcity_minimal/set_spherical_coordinates/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:751] Enable collision service on [/world/mcity_minimal/enable_collision] (async)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:753] Enable collision service on [/world/mcity_minimal/enable_collision/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:751] Disable collision service on [/world/mcity_minimal/disable_collision] (async)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:753] Disable collision service on [/world/mcity_minimal/disable_collision/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:751] Material service on [/world/mcity_minimal/visual_config] (async)
+[m[32m(2026-11-20 04:22:07.632) [info] [UserCommands.cc:753] Material service on [/world/mcity_minimal/visual_config/blocking] (blocking)
+[m[32m(2026-11-20 04:22:07.633) [info] [UserCommands.cc:751] Material service on [/world/mcity_minimal/wheel_slip] (async)
+[m[32m(2026-11-20 04:22:07.633) [info] [UserCommands.cc:753] Material service on [/world/mcity_minimal/wheel_slip/blocking] (blocking)
+[m[36m(2026-11-20 04:22:07.633) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::UserCommands] for entity [1]
+[m[36m(2026-11-20 04:22:07.634) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::SceneBroadcaster] for entity [1]
+[m[36m(2026-11-20 04:22:07.642) [debug] [Sensors.cc:697] Configuring Sensors system
+[m[36m(2026-11-20 04:22:07.642) [debug] [Sensors.cc:557] SensorsPrivate::Run
+[m[36m(2026-11-20 04:22:07.642) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Sensors] for entity [1]
+[m[36m(2026-11-20 04:22:07.642) [debug] [Sensors.cc:532] SensorsPrivate::RenderThread started
+[m[36m(2026-11-20 04:22:07.642) [debug] [Sensors.cc:337] Waiting for init
+[m[36m(2026-11-20 04:22:07.643) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Imu] for entity [1]
+[m[32m(2026-11-20 04:22:07.644) [info] [AckermannSteering.cc:452] AckermannSteering subscribing to twist messages on [/model/course_ackermann/cmd_vel]
+[m[36m(2026-11-20 04:22:07.644) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::AckermannSteering] for entity [49]
+[m[32m(2026-11-20 04:22:07.645) [info] [LevelManager.cc:646] Loaded level [default]
+[m[32m(2026-11-20 04:22:07.645) [info] [ServerConfig.cc:1027] Copied installed config [/opt/ros/lyrical/opt/gz_sim_vendor/share/gz/gz-sim/server.config] to default config [/root/.gz/sim/10/server.config].
+[m[36m(2026-11-20 04:22:07.645) [debug] [ServerConfig.cc:1042] Loading (3) plugins from file [/root/.gz/sim/10/server.config]
+[m[36m(2026-11-20 04:22:07.645) [debug] [SimulationRunner.cc:1919] Additional plugins to load:
+[m[36m(2026-11-20 04:22:07.646) [debug] [SimulationRunner.cc:652] Creating PostUpdate worker threads: 5
+[m[36m(2026-11-20 04:22:07.648) [debug] [SimulationRunner.cc:663] Creating postupdate worker thread (0)
+[m[36m(2026-11-20 04:22:07.648) [debug] [SimulationRunner.cc:663] Creating postupdate worker thread (1)
+[m[36m(2026-11-20 04:22:07.648) [debug] [SimulationRunner.cc:663] Creating postupdate worker thread (2)
+[m[36m(2026-11-20 04:22:07.648) [debug] [SimulationRunner.cc:663] Creating postupdate worker thread (3)
+[m[36m(2026-11-20 04:22:07.657) [debug] [ImuSensor.cc:150] IMU data for [course_ackermann::imu_link::imu] advertised on [/vehicle/imu]
+[m[32m(2026-11-20 04:22:07.658) [info] [SceneBroadcaster.cc:634] Serving scene information on [/world/mcity_minimal/scene/info]
+[m[36m(2026-11-20 04:22:07.657) [debug] [Sensors.cc:953] Initialization needed
+[m[32m(2026-11-20 04:22:07.658) [info] [SceneBroadcaster.cc:643] Serving graph information on [/world/mcity_minimal/scene/graph]
+[m[32m(2026-11-20 04:22:07.658) [info] [SceneBroadcaster.cc:654] Serving full state on [/world/mcity_minimal/state]
+[m[32m(2026-11-20 04:22:07.658) [info] [SceneBroadcaster.cc:663] Serving full state (async) on [/world/mcity_minimal/state_async]
+[m[32m(2026-11-20 04:22:07.659) [info] [SceneBroadcaster.cc:671] Publishing scene information on [/world/mcity_minimal/scene/info]
+[m[36m(2026-11-20 04:22:07.659) [debug] [Sensors.cc:349] Initializing render context
+[m[32m(2026-11-20 04:22:07.659) [info] [SceneBroadcaster.cc:680] Publishing entity deletions on [/world/mcity_minimal/scene/deletion]
+[m[32m(2026-11-20 04:22:07.659) [info] [SceneBroadcaster.cc:689] Publishing state changes on [/world/mcity_minimal/state]
+[m[32m(2026-11-20 04:22:07.659) [info] [SceneBroadcaster.cc:700] Publishing pose messages on [/world/mcity_minimal/pose/info]
+[m[32m(2026-11-20 04:22:07.659) [info] [RenderEngineManager.cc:514] Loading plugin [gz-rendering-ogre2]
+[m[32m(2026-11-20 04:22:07.660) [info] [SceneBroadcaster.cc:711] Publishing dynamic pose messages on [/world/mcity_minimal/dynamic_pose/info]
+[m[36m(2026-11-20 04:22:07.917) [debug] [RenderUtil.cc:2646] Create scene [scene]
+[m[36m(2026-11-20 04:22:07.950) [debug] [Sensors.cc:391] Rendering Thread initialized
+[m[36m(2026-11-20 04:22:07.950) [debug] [Sensors.cc:953] Initialization needed
+[m[36m(2026-11-20 04:22:07.961) [debug] [CameraSensor.cc:339] Camera images for [course_ackermann::camera_link::front_camera] advertised on [/vehicle/camera/image_raw]
+[m[36m(2026-11-20 04:22:07.962) [debug] [CameraSensor.cc:629] Camera info for [course_ackermann::camera_link::front_camera] advertised on [/vehicle/camera/camera_info]
+[m[33m[1m(2026-11-20 04:22:07.962) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[m[36m(2026-11-20 04:22:07.963) [debug] [Lidar.cc:139] Laser scans for [course_ackermann::lidar_link::lidar] advertised on [/vehicle/scan]
+[m[36m(2026-11-20 04:22:07.963) [debug] [GpuLidarSensor.cc:159] Lidar points for [course_ackermann::lidar_link::lidar] advertised on [/vehicle/scan/points]
+[m[36m(2026-11-20 04:23:04.094) [debug] [CameraSensor.cc:438] Enabling camera sensor: 'course_ackermann::camera_link::front_camera' data generation.
+[m[36m(2026-11-20 04:29:36.948) [debug] [SignalHandler.cc:278] Received signal[15].
+[m[36m(2026-11-20 04:29:36.948) [debug] [ServerPrivate.cc:129] Server received signal[15]
+[m[36m(2026-11-20 04:29:36.948) [debug] [Sensors.cc:565] SensorsPrivate::Stop
+[m[36m(2026-11-20 04:29:36.972) [debug] [Sensors.cc:551] SensorsPrivate::RenderThread stopped
+[m[36m(2026-11-20 04:29:36.972) [debug] [sim_main.cc:584] Shutting down gz-sim-server
+[m[36m(2026-11-20 04:29:36.977) [debug] [SimulationRunner.cc:679] Exiting postupdate worker thread (2)
+[m[36m(2026-11-20 04:29:36.977) [debug] [SimulationRunner.cc:679] Exiting postupdate worker thread (0)
+[m[36m(2026-11-20 04:29:36.977) [debug] [SimulationRunner.cc:679] Exiting postupdate worker thread (3)
+[m[36m(2026-11-20 04:29:36.977) [debug] [SimulationRunner.cc:679] Exiting postupdate worker thread (1)
+[m[36m(2026-11-20 04:29:36.985) [debug] [Sensors.cc:565] SensorsPrivate::Stop
+[m

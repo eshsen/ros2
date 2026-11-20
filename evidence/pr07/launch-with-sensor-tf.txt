@@ -1,0 +1,110 @@
+[INFO] [launch]: All log files can be found below /tmp/.ros/log/2026-11-20-04-35-14-758537-107b62b4fa45-1
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gz-1]: process started with pid [36]
+[INFO] [parameter_bridge-2]: process started with pid [37]
+[INFO] [odom_adapter.py-3]: process started with pid [38]
+[INFO] [drive_adapter.py-4]: process started with pid [39]
+[INFO] [static_transform_publisher-5]: process started with pid [40]
+[INFO] [static_transform_publisher-6]: process started with pid [41]
+[INFO] [static_transform_publisher-7]: process started with pid [42]
+[static_transform_publisher-7] [INFO] [1795149314.939090356] [imu_link_static_tf]: Spinning until stopped - publishing transform
+[static_transform_publisher-7] translation: ('0.280000', '0.000000', '0.380000')
+[static_transform_publisher-7] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-7] from 'base_link' to 'imu_link'
+[static_transform_publisher-6] [INFO] [1795149314.939093077] [lidar_link_static_tf]: Spinning until stopped - publishing transform
+[static_transform_publisher-6] translation: ('0.280000', '0.000000', '0.380000')
+[static_transform_publisher-6] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-6] from 'base_link' to 'lidar_link'
+[static_transform_publisher-5] [INFO] [1795149314.939093364] [camera_link_static_tf]: Spinning until stopped - publishing transform
+[static_transform_publisher-5] translation: ('0.280000', '0.000000', '0.380000')
+[static_transform_publisher-5] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-5] from 'base_link' to 'camera_link'
+[gz-1] (2026-11-20 04:35:15.217) [info] [gz.cc:407] Gazebo Sim Server v10.4.0
+[gz-1] (2026-11-20 04:35:15.232) [info] [ServerPrivate.cc:697] Loading SDF world file[/work/install-pr07/course_simulation/share/course_simulation/worlds/mcity-minimal.sdf].
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="camera_link"]/sensor[@name="front_camera"]/gz_frame_id:/work/install-pr07/course_simulation/share/course_simulation/models/course_ackermann/model.sdf:L88]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="lidar_link"]/sensor[@name="lidar"]/gz_frame_id:/work/install-pr07/course_simulation/share/course_simulation/models/course_ackermann/model.sdf:L100]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="imu_link"]/sensor[@name="imu"]/gz_frame_id:/work/install-pr07/course_simulation/share/course_simulation/models/course_ackermann/model.sdf:L110]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[drive_adapter.py-4] [INFO] [1795149315.416025488] [drive_adapter]: Drive adapter started
+[odom_adapter.py-3] [INFO] [1795149315.560343926] [odom_adapter]: Odometry adapter started
+[parameter_bridge-2] [INFO] [1795149315.943351671] [pr07_bridge]: Creating ROS->GZ Bridge: [/vehicle/gz_cmd_vel (geometry_msgs/msg/Twist) -> /model/course_ackermann/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795149315.954192478] [pr07_bridge]: Creating GZ->ROS Bridge: [/model/course_ackermann/odometry (gz.msgs.Odometry) -> /vehicle/odom_gz (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795149315.961118931] [pr07_bridge]: Creating GZ->ROS Bridge: [/vehicle/scan (gz.msgs.LaserScan) -> /vehicle/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795149315.966944719] [pr07_bridge]: Creating GZ->ROS Bridge: [/vehicle/imu (gz.msgs.IMU) -> /vehicle/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795149315.967906545] [pr07_bridge]: Creating GZ->ROS Bridge: [/vehicle/camera/image_raw (gz.msgs.Image) -> /vehicle/camera/image_raw (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1795149315.969408108] [pr07_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[gz-1] (2026-11-20 04:35:17.219) [info] [SystemManager.cc:54] Serving entity system service on [/entity/system/add]
+[gz-1] (2026-11-20 04:35:17.241) [info] [SimulationRunner.cc:347] Serving world controls on [/world/mcity_minimal/control], [/world/mcity_minimal/control/state] and [/world/mcity_minimal/playback/control]
+[gz-1] (2026-11-20 04:35:17.241) [info] [SimulationRunner.cc:373] Serving GUI information on [/world/mcity_minimal/gui/info]
+[gz-1] (2026-11-20 04:35:17.241) [info] [SimulationRunner.cc:376] World [mcity_minimal] initialized with [step] physics profile.
+[gz-1] (2026-11-20 04:35:17.242) [info] [SimulationRunner.cc:383] Serving world SDF generation service on [/world/mcity_minimal/generate_world_sdf]
+[gz-1] (2026-11-20 04:35:17.242) [info] [ServerPrivate.cc:357] Serving world names on [/gazebo/worlds]
+[gz-1] (2026-11-20 04:35:17.242) [info] [ServerPrivate.cc:370] Resource path add service on [/gazebo/resource_paths/add].
+[gz-1] (2026-11-20 04:35:17.243) [info] [ServerPrivate.cc:383] Resource path get service on [/gazebo/resource_paths/get].
+[gz-1] (2026-11-20 04:35:17.243) [info] [ServerPrivate.cc:398] Resource path resolve service on [/gazebo/resource_paths/resolve].
+[gz-1] (2026-11-20 04:35:17.243) [info] [ServerPrivate.cc:412] Resource paths published on [/gazebo/resource_paths].
+[gz-1] (2026-11-20 04:35:17.244) [info] [ServerPrivate.cc:425] Server control service on [/server_control].
+[gz-1] (2026-11-20 04:35:17.244) [info] [SimulationRunner.cc:865] Found no publishers on /stats, adding root stats topic
+[gz-1] (2026-11-20 04:35:17.245) [info] [SimulationRunner.cc:899] Found no publishers on /clock, adding root clock topic
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="camera_link"]/sensor[@name="front_camera"]/gz_frame_id:/work/install-pr07/course_simulation/share/course_simulation/models/course_ackermann/model.sdf:L88]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="lidar_link"]/sensor[@name="lidar"]/gz_frame_id:/work/install-pr07/course_simulation/share/course_simulation/models/course_ackermann/model.sdf:L100]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="imu_link"]/sensor[@name="imu"]/gz_frame_id:/work/install-pr07/course_simulation/share/course_simulation/models/course_ackermann/model.sdf:L110]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] (2026-11-20 04:35:17.446) [info] [UserCommands.cc:751] Create service on [/world/mcity_minimal/create_multiple] (async)
+[gz-1] (2026-11-20 04:35:17.446) [info] [UserCommands.cc:753] Create service on [/world/mcity_minimal/create_multiple/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.446) [info] [UserCommands.cc:751] Remove service on [/world/mcity_minimal/remove] (async)
+[gz-1] (2026-11-20 04:35:17.446) [info] [UserCommands.cc:753] Remove service on [/world/mcity_minimal/remove/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] Pose service on [/world/mcity_minimal/set_pose] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] Pose service on [/world/mcity_minimal/set_pose/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] Pose service on [/world/mcity_minimal/set_pose_vector] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] Pose service on [/world/mcity_minimal/set_pose_vector/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] Light configuration service on [/world/mcity_minimal/light_config] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] Light configuration service on [/world/mcity_minimal/light_config/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] Physics service on [/world/mcity_minimal/set_physics] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] Physics service on [/world/mcity_minimal/set_physics/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] SphericalCoordinates service on [/world/mcity_minimal/set_spherical_coordinates] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] SphericalCoordinates service on [/world/mcity_minimal/set_spherical_coordinates/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] Enable collision service on [/world/mcity_minimal/enable_collision] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] Enable collision service on [/world/mcity_minimal/enable_collision/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] Disable collision service on [/world/mcity_minimal/disable_collision] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] Disable collision service on [/world/mcity_minimal/disable_collision/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] Material service on [/world/mcity_minimal/visual_config] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] Material service on [/world/mcity_minimal/visual_config/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:751] Material service on [/world/mcity_minimal/wheel_slip] (async)
+[gz-1] (2026-11-20 04:35:17.447) [info] [UserCommands.cc:753] Material service on [/world/mcity_minimal/wheel_slip/blocking] (blocking)
+[gz-1] (2026-11-20 04:35:17.461) [info] [AckermannSteering.cc:452] AckermannSteering subscribing to twist messages on [/model/course_ackermann/cmd_vel]
+[gz-1] (2026-11-20 04:35:17.462) [info] [LevelManager.cc:646] Loaded level [default]
+[gz-1] (2026-11-20 04:35:17.463) [info] [ServerConfig.cc:1027] Copied installed config [/opt/ros/lyrical/opt/gz_sim_vendor/share/gz/gz-sim/server.config] to default config [/tmp/.gz/sim/10/server.config].
+[gz-1] (2026-11-20 04:35:17.475) [info] [RenderEngineManager.cc:514] Loading plugin [gz-rendering-ogre2]
+[gz-1] (2026-11-20 04:35:17.476) [info] [SceneBroadcaster.cc:634] Serving scene information on [/world/mcity_minimal/scene/info]
+[gz-1] (2026-11-20 04:35:17.477) [info] [SceneBroadcaster.cc:643] Serving graph information on [/world/mcity_minimal/scene/graph]
+[gz-1] (2026-11-20 04:35:17.477) [info] [SceneBroadcaster.cc:654] Serving full state on [/world/mcity_minimal/state]
+[gz-1] (2026-11-20 04:35:17.477) [info] [SceneBroadcaster.cc:663] Serving full state (async) on [/world/mcity_minimal/state_async]
+[gz-1] (2026-11-20 04:35:17.478) [info] [SceneBroadcaster.cc:671] Publishing scene information on [/world/mcity_minimal/scene/info]
+[gz-1] (2026-11-20 04:35:17.478) [info] [SceneBroadcaster.cc:680] Publishing entity deletions on [/world/mcity_minimal/scene/deletion]
+[gz-1] (2026-11-20 04:35:17.479) [info] [SceneBroadcaster.cc:689] Publishing state changes on [/world/mcity_minimal/state]
+[gz-1] (2026-11-20 04:35:17.479) [info] [SceneBroadcaster.cc:700] Publishing pose messages on [/world/mcity_minimal/pose/info]
+[gz-1] (2026-11-20 04:35:17.479) [info] [SceneBroadcaster.cc:711] Publishing dynamic pose messages on [/world/mcity_minimal/dynamic_pose/info]
+[gz-1] (2026-11-20 04:35:17.696) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[parameter_bridge-2] [INFO] [1795149617.014586431] [pr07_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[drive_adapter.py-4] [INFO] [1795149617.014839777] [drive_adapter]: drive_status=ok
+[drive_adapter.py-4] [WARN] [1795149621.052484723] [drive_adapter]: drive_status=command_timeout
+[drive_adapter.py-4] [INFO] [1795149820.284167577] [drive_adapter]: drive_status=ok
+[drive_adapter.py-4] [WARN] [1795149820.755926836] [drive_adapter]: drive_status=command_timeout
+[drive_adapter.py-4] [INFO] [1795149901.265504799] [drive_adapter]: drive_status=ok
+[drive_adapter.py-4] [WARN] [1795149905.294081243] [drive_adapter]: drive_status=command_timeout
+[drive_adapter.py-4] [INFO] [1795150096.526724468] [drive_adapter]: drive_status=ok
+[drive_adapter.py-4] [WARN] [1795150098.869326863] [drive_adapter]: drive_status=command_timeout
+[drive_adapter.py-4] [WARN] [1795150098.919414649] [drive_adapter]: drive_status=stale_command
+[drive_adapter.py-4] [INFO] [1795150098.970361835] [drive_adapter]: drive_status=ok
+[drive_adapter.py-4] [WARN] [1795150100.551899116] [drive_adapter]: drive_status=command_timeout
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[static_transform_publisher-6] [INFO] [1795150504.616344339] [rclcpp]: signal_handler(signum=2)
+[static_transform_publisher-5] [INFO] [1795150504.616345532] [rclcpp]: signal_handler(signum=2)
+[parameter_bridge-2] [INFO] [1795150504.616828222] [rclcpp]: signal_handler(signum=2)
+[static_transform_publisher-7] [INFO] [1795150504.616930995] [rclcpp]: signal_handler(signum=2)
+[INFO] [static_transform_publisher-7]: process has finished cleanly [pid 42]
+[INFO] [static_transform_publisher-6]: process has finished cleanly [pid 41]
+[INFO] [static_transform_publisher-5]: process has finished cleanly [pid 40]
+[INFO] [odom_adapter.py-3]: process has finished cleanly [pid 38]
+[INFO] [drive_adapter.py-4]: process has finished cleanly [pid 39]
+[INFO] [gz-1]: process has finished cleanly [pid 36]
+[ERROR] [parameter_bridge-2]: process has died [pid 37, exit code -11, cmd '/opt/ros/lyrical/lib/ros_gz_bridge/parameter_bridge --ros-args -r __node:=pr07_bridge --params-file /tmp/launch_params_iobfsz5z'].

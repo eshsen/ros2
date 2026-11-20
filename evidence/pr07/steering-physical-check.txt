@@ -1,0 +1,5 @@
+front_left_knuckle: samples=580; peak_yaw_change_rad=0.191220
+front_right_knuckle: samples=580; peak_yaw_change_rad=0.163396
+physical_body_heading_change_rad=0.063352
+PASS: both front steering links turned
+PASS: physical model heading changed to the left

@@ -1,0 +1,45 @@
+===== УСТАНОВЛЕННЫЕ ВЕРСИИ =====
+ros-lyrical-ackermann-msgs	2.0.2-7resolute.20260915.044443
+ros-lyrical-builtin-interfaces	2.4.5-1resolute.20260605.174229
+ros-lyrical-rosidl-runtime-c	5.2.1-1resolute.20260605.171552
+ros-lyrical-rosidl-typesupport-fastrtps-c	3.9.5-3resolute.20260605.173622
+ros-lyrical-std-msgs	5.9.2-3resolute.20260606.003418
+Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+Get:3 http://packages.ros.org/ros2/ubuntu resolute InRelease [4679 B]
+Get:4 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [278 kB]
+Get:5 http://packages.ros.org/ros2/ubuntu resolute/main Sources [719 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [885 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [352 kB]
+Get:10 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [723 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1874 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [24.6 kB]
+Get:13 http://packages.ros.org/ros2/ubuntu resolute/main amd64 Packages [666 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [189 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [20.1 MB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [497 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [773 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [1110 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [26.1 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [3308 B]
+Fetched 28.8 MB in 2min 0s (239 kB/s)
+Reading package lists...
+===== ПЛАН ОБНОВЛЕНИЯ, БЕЗ УСТАНОВКИ =====
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following packages will be upgraded:
+  ros-lyrical-builtin-interfaces ros-lyrical-rosidl-runtime-c
+  ros-lyrical-rosidl-typesupport-fastrtps-c ros-lyrical-std-msgs
+4 upgraded, 0 newly installed, 0 to remove and 546 not upgraded.
+Inst ros-lyrical-builtin-interfaces [2.4.5-1resolute.20260605.174229] (2.4.5-1resolute.20260915.031157 ROS resolute:resolute [amd64])
+Inst ros-lyrical-rosidl-runtime-c [5.2.1-1resolute.20260605.171552] (5.2.1-1resolute.20260831.170154 ROS resolute:resolute [amd64])
+Inst ros-lyrical-rosidl-typesupport-fastrtps-c [3.9.5-3resolute.20260605.173622] (3.9.7-1resolute.20260915.025611 ROS resolute:resolute [amd64])
+Inst ros-lyrical-std-msgs [5.9.2-3resolute.20260606.003418] (5.9.3-1resolute.20260915.043001 ROS resolute:resolute [amd64])
+Conf ros-lyrical-builtin-interfaces (2.4.5-1resolute.20260915.031157 ROS resolute:resolute [amd64])
+Conf ros-lyrical-rosidl-runtime-c (5.2.1-1resolute.20260831.170154 ROS resolute:resolute [amd64])
+Conf ros-lyrical-rosidl-typesupport-fastrtps-c (3.9.7-1resolute.20260915.025611 ROS resolute:resolute [amd64])
+Conf ros-lyrical-std-msgs (5.9.3-1resolute.20260915.043001 ROS resolute:resolute [amd64])

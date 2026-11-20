@@ -1,0 +1,6 @@
+displacement_m=0.401390
+peak_odom_speed_mps=0.200000
+final_odom_speed_mps=0.000000
+final_odom_age_s=0.017000
+PASS: motion and stop observed in odometry
+turn_motion_exit=0

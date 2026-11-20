@@ -1,0 +1,43 @@
+{
+  "format": "pr07-local-sensor-report-v1",
+  "measurement_source": "sensor-rates-frames-after.txt",
+  "qos_evidence": "sensor-qos.txt",
+  "rate_time_basis": "message header stamps, simulation seconds",
+  "sensors": [
+    {
+      "topic": "/vehicle/camera/image_raw",
+      "frames": [
+        "camera_link"
+      ],
+      "messages_received": 179,
+      "stamp_span_s": 11.814,
+      "received_hz_sim": 15.067,
+      "expected_hz": 15.0,
+      "stamps_strictly_increasing": true,
+      "image_details": "640x360; encoding=rgb8; bytes=691200"
+    },
+    {
+      "topic": "/vehicle/scan",
+      "frames": [
+        "lidar_link"
+      ],
+      "messages_received": 119,
+      "stamp_span_s": 11.8,
+      "received_hz_sim": 10.0,
+      "expected_hz": 10.0,
+      "stamps_strictly_increasing": true,
+      "scan_details": "360; range_min=0.11999999731779099; range_max=20.0"
+    },
+    {
+      "topic": "/vehicle/imu",
+      "frames": [
+        "imu_link"
+      ],
+      "messages_received": 1188,
+      "stamp_span_s": 11.87,
+      "received_hz_sim": 100.0,
+      "expected_hz": 100.0,
+      "stamps_strictly_increasing": true
+    }
+  ]
+}

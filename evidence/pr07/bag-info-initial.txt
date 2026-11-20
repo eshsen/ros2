@@ -1,0 +1,22 @@
+
+Files:             0_run_20261120_044315_2026_11_20-04_43_15.mcap
+Bag size:          531.2 MiB
+Storage id:        mcap
+ROS Distro:        lyrical
+Duration:          41.534000000s
+Start:             Jan  1 1970 00:07:54.753000000 (474.753000000)
+End:               Jan  1 1970 00:08:36.287000000 (516.287000000)
+Messages:          51055
+Topic information: Topic: /clock | Type: rosgraph_msgs/msg/Clock | Count: 41529 | Serialization Format: cdr
+                   Topic: /drive/safe | Type: ackermann_msgs/msg/AckermannDriveStamped | Count: 5 | Serialization Format: cdr
+                   Topic: /tf | Type: tf2_msgs/msg/TFMessage | Count: 2076 | Serialization Format: cdr
+                   Topic: /tf_static | Type: tf2_msgs/msg/TFMessage | Count: 3 | Serialization Format: cdr
+                   Topic: /vehicle/camera/image_raw | Type: sensor_msgs/msg/Image | Count: 795 | Serialization Format: cdr
+                   Topic: /vehicle/gz_cmd_vel | Type: geometry_msgs/msg/Twist | Count: 6 | Serialization Format: cdr
+                   Topic: /vehicle/imu | Type: sensor_msgs/msg/Imu | Count: 4151 | Serialization Format: cdr
+                   Topic: /vehicle/odom | Type: nav_msgs/msg/Odometry | Count: 2075 | Serialization Format: cdr
+                   Topic: /vehicle/scan | Type: sensor_msgs/msg/LaserScan | Count: 415 | Serialization Format: cdr
+Services:          0
+Service information: 
+Actions:           0
+Action information: 

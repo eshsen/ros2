@@ -1,0 +1,13 @@
+model_samples=576
+model_start_xyz=(2.655746108214682e-11, -9.492979819616111e-11, 0.11999989379543007)
+model_finish_xyz=(0.4030665239526001, 2.586451714247943e-10, 0.12000000130374376)
+physical_displacement_m=0.403067
+front_left_wheel: relative_angle_rad=2.924298; abs_axis_y=1.000000
+front_right_wheel: relative_angle_rad=2.924298; abs_axis_y=1.000000
+rear_left_wheel: relative_angle_rad=2.924298; abs_axis_y=1.000000
+rear_right_wheel: relative_angle_rad=2.924298; abs_axis_y=1.000000
+ROS: messages=76; commands_at_0.2_mps=40; final_speed=0.0
+Gazebo: messages=76; commands_at_0.2_mps=40; final_speed=0.0
+PASS: 0.2 m/s command observed on ROS and Gazebo sides
+PASS: physical model displacement verified
+PASS: all four wheels rotated about transverse axes

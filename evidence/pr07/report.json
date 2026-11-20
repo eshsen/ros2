@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "practice_id": "PR07",
+  "commit": "e221728a18a8d764900c08cdfc05969d331db439",
+  "course_kit": {
+    "version": "v1-w10",
+    "archive_sha256": "7a91d388d7bd3def7e058c8da48c32ff27ea6f14dc880a2da169c4102d456874"
+  },
+  "commands": [
+    "ros2 launch course_simulation simulation.launch.py headless:=true namespace:=pr07 bridge_config:=/work/src/course_simulation/config/bridge.yaml",
+    "python3 /work/src/course_simulation/test/check_motion_live.py",
+    "ros2 bag info /work/fixtures/pr07-sensors",
+    "python3 /work/src/course_simulation/test/check_bag.py /work/fixtures/pr07-sensors"
+  ],
+  "tests": [
+    {
+      "name": "test_odom_adapter",
+      "status": "passed",
+      "details": "262 pytest cases; evidence/pr07/colcon-tests.txt"
+    },
+    {
+      "name": "test_drive_adapter",
+      "status": "passed",
+      "details": "27 pytest cases; evidence/pr07/colcon-tests.txt"
+    },
+    {
+      "name": "sensor_frames_and_rates",
+      "status": "passed",
+      "details": "Camera 15.067 Hz, lidar 10 Hz, IMU 100 Hz; sensor-rates-frames-after.txt"
+    },
+    {
+      "name": "fixture_content_check",
+      "status": "passed",
+      "details": "43.958 s; motion and final stop; 2197 matched odometry/TF pairs; all sensor static transforms"
+    },
+    {
+      "name": "fixture_replay",
+      "status": "skipped",
+      "details": "Replay of the final fixture has not been verified"
+    }
+  ],
+  "defect": {
+    "reproducer": "Запуск simulation.launch.py с bridge_config, указывающим на bridge-broken-imu.yaml. ROS IMU не поступает: ограниченный echo завершился с кодом 124. См. defect.md и defect-before.txt.",
+    "root_cause": "Для ROS /vehicle/imu мост подписан на ошибочный Gazebo-топик /vehicle/imu_typo вместо /vehicle/imu.",
+    "proof_after": "После перезапуска с основным bridge.yaml получена ROS IMU с frame_id=imu_link; echo завершился с кодом 0. См. defect-after.txt."
+  },
+  "claims": {
+    "public_tests_passed": true,
+    "defect_reproduced": true,
+    "defect_fixed": true,
+    "headless_verified": true,
+    "recording_verified": true,
+    "odometry_tf_owned": true
+  },
+  "time": {
+    "contact_academic_hours": 0,
+    "self_study_hours": 2
+  },
+  "ai_used": true,
+  "limitations": [
+    "Headless operation and sensor output were verified, but headless.txt records bridge exit code -11 during shutdown; clean shutdown is not claimed.",
+    "Replay of the final fixture has not been verified.",
+    "Large bag recordings are retained locally; their transfer is separate from Git evidence."
+  ]
+}

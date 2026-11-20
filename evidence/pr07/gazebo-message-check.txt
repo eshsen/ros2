@@ -1,0 +1,171 @@
+
+===== /clock =====
+system {
+  sec: 1795148574
+  nsec: 542198251
+}
+real {
+  sec: 47
+  nsec: 117898422
+}
+sim {
+  sec: 46
+  nsec: 557000000
+}
+
+system {
+  sec: 1795148574
+  nsec: 543198251
+}
+real {
+  sec: 47
+  nsec: 118898514
+}
+sim {
+  sec: 46
+  nsec: 558000000
+}
+
+system {
+  sec: 1795148574
+  nsec: 544198334
+}
+real {
+  sec: 47
+  nsec: 119898462
+}
+sim {
+  sec: 46
+  nsec: 559000000
+}
+
+system {
+  sec: 1795148574
+  nsec: 545198141
+}
+real {
+  sec: 47
+  nsec: 120898446
+}
+sim {
+  sec: 46
+  nsec: 560000000
+}
+
+system {
+  sec: 1795148574
+  nsec: 546198084
+
+===== /model/course_ackermann/odometry =====
+header {
+  stamp {
+    sec: 46
+    nsec: 764000000
+  }
+  data {
+    key: "frame_id"
+    value: "course_ackermann/odom"
+  }
+  data {
+    key: "child_frame_id"
+    value: "course_ackermann/base_link"
+  }
+}
+pose {
+  position {
+    x: -4.8982576677567707e-16
+    y: 9.0881115168778531e-41
+  }
+  orientation {
+    z: -2.010998496305534e-25
+    w: 1
+  }
+}
+twist {
+  linear {
+    x: -6.067729736108014e-20
+  }
+  angular {
+    z: -6.0677297367822346e-29
+  }
+}
+
+header {
+  stamp {
+    sec: 46
+    nsec: 784000000
+  }
+  data {
+    key: "frame_id"
+    value: "course_ackermann/odom"
+  }
+  data {
+    key: "child_frame_id"
+    value: "course_ackermann/base_link"
+  }
+}
+pose {
+  position {
+    x: -4.8983277430240025e-16
+    y: 9.0883933624973188e-41
+  }
+  orientation {
+    z: -2.011033533939154e-25
+    w: 1
+
+===== /vehicle/imu =====
+header {
+  stamp {
+    sec: 46
+    nsec: 965000000
+  }
+  data {
+    key: "frame_id"
+    value: "imu_link"
+  }
+  data {
+    key: "seq"
+    value: "0"
+  }
+}
+entity_name: "course_ackermann::imu_link::imu"
+orientation {
+  x: 3.9606948539738417e-10
+  y: 1.0018653468552873e-10
+  z: -1.8624246652154383e-13
+  w: 1
+}
+orientation_covariance {
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+}
+angular_velocity {
+  x: -2.163914111093991e-12
+  y: 6.5292129775104672e-13
+  z: 1.3515275667489938e-19
+}
+angular_velocity_covariance {
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+}
+linear_acceleration {
+  x: -1.4493652656350326e-09
+  y: 9.62977428418017e-09
+  z: 9.80999999951454
+}
+linear_acceleration_covariance {
+  data: 0

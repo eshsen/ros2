@@ -1,0 +1,20 @@
+bag=/work/fixtures/pr07-sensors
+/clock: 43958 messages
+/drive/safe: 70 messages
+/tf: 2198 messages
+/tf_static: 1 messages
+/vehicle/camera/image_raw: 652 messages
+/vehicle/gz_cmd_vel: 71 messages
+/vehicle/imu: 4394 messages
+/vehicle/odom: 2197 messages
+/vehicle/scan: 439 messages
+displacement_m=0.402267
+peak_odom_speed_mps=0.200000
+final_odom_speed_mps=0.000000
+matched_odom_tf_pairs=2197
+odom_tf_match_fraction=1.000000
+odom_without_tf=0
+tf_without_odom=1
+PASS: recorded motion and final stop verified
+PASS: matched odometry/TF stamps and poses agree
+PASS: all sensor static transforms recorded

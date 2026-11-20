@@ -1,0 +1,11 @@
+<stdin>:39: DeprecationWarning: Use read_next_ext() which returns both send and receive timestamps instead of just receive timestamp.
+odom_unique_stamps=2075
+tf_unique_stamps=2076
+matched_odom_tf_pairs=2075
+odom_without_tf=0
+tf_without_odom=1
+static_edges=[('base_link', 'camera_link'), ('base_link', 'imu_link'), ('base_link', 'lidar_link')]
+drive_commands=[(0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0), (0.0, 0.0)]
+nonzero_speed_commands=0
+PASS: matched odometry/TF poses and stamps agree
+PASS: all three sensor static transforms are recorded

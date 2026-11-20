@@ -1,0 +1,5 @@
+clock:
+  sec: 443
+  nanosec: 726000000
+---
+recorder_exit=15

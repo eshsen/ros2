@@ -1,0 +1,119 @@
+===== ROS NODES =====
+/pr07/bridge
+/pr07/drive_adapter
+/pr07/odom_adapter
+/pr07/robot_state_publisher
+===== YAML =====
+- ros_topic_name: /vehicle/gz_cmd_vel
+  gz_topic_name: /model/course_ackermann/cmd_vel
+  ros_type_name: geometry_msgs/msg/Twist
+  gz_type_name: gz.msgs.Twist
+  direction: ROS_TO_GZ
+- ros_topic_name: /vehicle/odom_gz
+  gz_topic_name: /model/course_ackermann/odometry
+  ros_type_name: nav_msgs/msg/Odometry
+  gz_type_name: gz.msgs.Odometry
+  direction: GZ_TO_ROS
+- ros_topic_name: /vehicle/scan
+  gz_topic_name: /vehicle/scan
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: gz.msgs.LaserScan
+  direction: GZ_TO_ROS
+  qos_profile: SENSOR_DATA
+- ros_topic_name: /vehicle/imu
+  gz_topic_name: /vehicle/imu_typo
+  ros_type_name: sensor_msgs/msg/Imu
+  gz_type_name: gz.msgs.IMU
+  direction: GZ_TO_ROS
+  qos_profile: SENSOR_DATA
+- ros_topic_name: /vehicle/camera/image_raw
+  gz_topic_name: /vehicle/camera/image_raw
+  ros_type_name: sensor_msgs/msg/Image
+  gz_type_name: gz.msgs.Image
+  direction: GZ_TO_ROS
+  qos_profile: SENSOR_DATA
+- ros_topic_name: /clock
+  gz_topic_name: /clock
+  ros_type_name: rosgraph_msgs/msg/Clock
+  gz_type_name: gz.msgs.Clock
+  direction: GZ_TO_ROS
+  qos_profile: CLOCK
+===== ROS IMU ENDPOINTS =====
+Type: sensor_msgs/msg/Imu
+
+Publisher count: 1
+
+Node name: bridge
+Node namespace: /pr07
+Topic type: sensor_msgs/msg/Imu
+Topic type hash: RIHS01_7d9a00ff131080897a5ec7e26e315954b8eae3353c3f995c55faf71574000b5b
+Endpoint type: PUBLISHER
+GID: 01.0f.eb.7d.25.00.64.b5.00.00.00.00.00.00.17.03
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): KEEP_LAST (5)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+===== ROS IMU DATA: EXPECT TIMEOUT =====
+!rclpy.ok()
+imu_echo_exit=124
+===== REAL GAZEBO IMU SOURCE =====
+Publishers [Address, Message Type]:
+  tcp://172.17.0.2:43515, gz.msgs.IMU
+No subscribers on topic [/vehicle/imu]
+===== WRONG GAZEBO TOPIC =====
+No publishers on topic [/vehicle/imu_typo]
+Subscribers [Address, Message Type]:
+  tcp://172.17.0.2:44873, gz.msgs.IMU
+===== REAL GAZEBO IMU DATA =====
+header {
+  stamp {
+    sec: 19
+    nsec: 726000000
+  }
+  data {
+    key: "frame_id"
+    value: "imu_link"
+  }
+  data {
+    key: "seq"
+    value: "0"
+  }
+}
+entity_name: "course_ackermann::imu_link::imu"
+orientation {
+  x: 3.9607002444151393e-10
+  y: 1.0018637636495446e-10
+  z: -1.8623494432529163e-13
+  w: 1
+}
+orientation_covariance {
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+}
+angular_velocity {
+  x: 1.5538644719301641e-12
+  y: -3.7965619797912072e-13
+  z: -1.6173268692011376e-18
+}
+angular_velocity_covariance {
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0

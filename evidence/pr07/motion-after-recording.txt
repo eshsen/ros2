@@ -1,0 +1,40 @@
+===== NODES =====
+/camera_link_static_tf
+/drive_adapter
+/imu_link_static_tf
+/lidar_link_static_tf
+/odom_adapter
+/pr07_bridge
+===== DRIVE SUBSCRIBERS =====
+Type: ackermann_msgs/msg/AckermannDriveStamped
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: drive_adapter
+Node namespace: /
+Topic type: ackermann_msgs/msg/AckermannDriveStamped
+Topic type hash: RIHS01_48ca7612a08d3bb72744fd98b71b7cf2ea24c6ad50fa4e1aa0bbad963c90d8cf
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.eb.7d.27.00.bb.5f.00.00.00.00.00.00.15.04
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+===== CLOCK =====
+clock:
+  sec: 575
+  nanosec: 376000000
+---
+===== MOTION CHECK =====
+displacement_m=0.402867
+peak_odom_speed_mps=0.200000
+final_odom_speed_mps=0.000000
+final_odom_age_s=0.009000
+PASS: motion and stop observed in odometry

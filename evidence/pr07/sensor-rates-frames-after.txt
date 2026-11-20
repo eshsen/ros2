@@ -1,0 +1,28 @@
+
+===== /vehicle/camera/image_raw =====
+messages_received=179
+frames=['camera_link']
+stamp_span_s=11.814000
+received_hz_sim=15.067
+expected_hz=15.0
+stamps_strictly_increasing=True
+image=640x360; encoding=rgb8; bytes=691200
+
+===== /vehicle/scan =====
+messages_received=119
+frames=['lidar_link']
+stamp_span_s=11.800000
+received_hz_sim=10.000
+expected_hz=10.0
+stamps_strictly_increasing=True
+rays=360; range_min=0.11999999731779099; range_max=20.0
+
+===== /vehicle/imu =====
+messages_received=1188
+frames=['imu_link']
+stamp_span_s=11.870000
+received_hz_sim=100.000
+expected_hz=100.0
+stamps_strictly_increasing=True
+
+PASS: sensor frames and received rates verified

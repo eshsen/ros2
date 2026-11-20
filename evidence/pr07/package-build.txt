@@ -1,0 +1,8 @@
+Starting >>> course_simulation
+Finished <<< course_simulation [1.25s]
+
+Summary: 1 package finished [1.38s]
+===== PACKAGE =====
+/work/install-pr07/course_simulation
+===== EXECUTABLES =====
+course_simulation odom_adapter.py

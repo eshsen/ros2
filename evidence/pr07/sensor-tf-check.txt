@@ -1,0 +1,4 @@
+PASS: base_link -> camera_link; odom chain available
+PASS: base_link -> imu_link; odom chain available
+PASS: base_link -> lidar_link; odom chain available
+PASS: all sensor transforms verified

@@ -1,0 +1,16 @@
+===== NODES WITHOUT DAEMON =====
+/pr07/bridge
+/pr07/drive_adapter
+/pr07/odom_adapter
+/pr07/robot_state_publisher
+===== GAZEBO COMMAND ENDPOINTS =====
+Publishers [Address, Message Type]:
+  tcp://172.17.0.2:42749, gz.msgs.Twist
+Subscribers [Address, Message Type]:
+  tcp://172.17.0.2:37305, gz.msgs.Twist
+displacement_m=0.403067
+peak_odom_speed_mps=0.200000
+final_odom_speed_mps=0.000000
+final_odom_age_s=0.008000
+PASS: motion and stop observed in odometry
+motion_check_exit=0

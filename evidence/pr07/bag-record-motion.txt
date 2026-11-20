@@ -1,0 +1,28 @@
+Recording to: /work/bags/pr07/motion_20261120_044812
+[0m[INFO] [1795150093.084886793] [rosbag2_recorder]: Press SPACE for pausing/resuming[0m
+[0m[INFO] [1795150093.084889325] [rosbag2_recorder]: Event publisher thread: Started[0m
+[0m[INFO] [1795150093.094260792] [rosbag2_recorder]: Starting recording to '/work/bags/pr07/motion_20261120_044812'[0m
+[33m[WARN] [1795150093.094316895] [rosbag2_recorder]: No input serialization format specified, using default rmw serialization format: 'cdr'.[0m
+[0m[INFO] [1795150093.112008524] [rosbag2_recorder]: Listening for topics...[0m
+[0m[INFO] [1795150093.112055729] [rosbag2_recorder]: Recording...[0m
+[0m[INFO] [1795150093.112043813] [rosbag2_recorder]: Topics discovery started.[0m
+[0m[INFO] [1795150093.112099285] [rosbag2_recorder]: use_sim_time set, waiting for /clock before starting recording...[0m
+[0m[INFO] [1795150093.182872157] [rosbag2_recorder]: Sim time /clock found, starting recording.[0m
+[0m[INFO] [1795150093.187386139] [rosbag2_recorder]: Subscribed to topic '/clock'[0m
+[0m[INFO] [1795150093.198090984] [rosbag2_recorder]: Subscribed to topic '/tf'[0m
+[0m[INFO] [1795150093.198705827] [rosbag2_recorder]: Overriding subscription profile for /tf_static[0m
+[0m[INFO] [1795150093.199720235] [rosbag2_recorder]: Subscribed to topic '/tf_static'[0m
+[0m[INFO] [1795150093.207430720] [rosbag2_recorder]: Subscribed to topic '/vehicle/odom'[0m
+[0m[INFO] [1795150093.208679003] [rosbag2_recorder]: Overriding subscription profile for /vehicle/scan[0m
+[0m[INFO] [1795150093.213030978] [rosbag2_recorder]: Subscribed to topic '/vehicle/scan'[0m
+[0m[INFO] [1795150093.213981247] [rosbag2_recorder]: Overriding subscription profile for /vehicle/camera/image_raw[0m
+[0m[INFO] [1795150093.216142548] [rosbag2_recorder]: Subscribed to topic '/vehicle/camera/image_raw'[0m
+[0m[INFO] [1795150093.216956376] [rosbag2_recorder]: Overriding subscription profile for /vehicle/imu[0m
+[0m[INFO] [1795150093.217921965] [rosbag2_recorder]: Subscribed to topic '/vehicle/imu'[0m
+[0m[INFO] [1795150093.253475878] [rosbag2_recorder]: Subscribed to topic '/vehicle/gz_cmd_vel'[0m
+[0m[INFO] [1795150096.474890520] [rosbag2_recorder]: Subscribed to topic '/drive/safe'[0m
+[0m[INFO] [1795150096.474941226] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...[0m
+[0m[INFO] [1795150096.474954709] [rosbag2_recorder]: Topics discovery stopped.[0m
+[0m[INFO] [1795150104.606483760] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while[0m
+[0m[INFO] [1795150104.612805046] [rosbag2_recorder]: Recording stopped[0m
+[0m[INFO] [1795150104.613557134] [rosbag2_recorder]: Event publisher thread: Exited[0m

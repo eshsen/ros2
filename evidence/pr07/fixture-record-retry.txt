@@ -1,0 +1,27 @@
+[INFO] [1795151690.015172869] [rosbag2_recorder]: Event publisher thread: Started
+[INFO] [1795151690.024914002] [rosbag2_recorder]: Starting recording to '/work/fixtures/pr07-sensors'
+[WARN] [1795151690.024957761] [rosbag2_recorder]: No input serialization format specified, using default rmw serialization format: 'cdr'.
+[INFO] [1795151690.032118795] [rosbag2_recorder]: Listening for topics...
+[INFO] [1795151690.032149643] [rosbag2_recorder]: Recording...
+[INFO] [1795151690.032155291] [rosbag2_recorder]: Topics discovery started.
+[INFO] [1795151690.032178075] [rosbag2_recorder]: use_sim_time set, waiting for /clock before starting recording...
+[INFO] [1795151690.132289786] [rosbag2_recorder]: Sim time /clock found, starting recording.
+[INFO] [1795151690.133731183] [rosbag2_recorder]: Subscribed to topic '/clock'
+[INFO] [1795151690.140133807] [rosbag2_recorder]: Subscribed to topic '/tf'
+[INFO] [1795151690.140741198] [rosbag2_recorder]: Overriding subscription profile for /vehicle/camera/image_raw
+[INFO] [1795151690.145127106] [rosbag2_recorder]: Subscribed to topic '/vehicle/camera/image_raw'
+[INFO] [1795151690.145657595] [rosbag2_recorder]: Overriding subscription profile for /tf_static
+[INFO] [1795151690.148118339] [rosbag2_recorder]: Subscribed to topic '/tf_static'
+[INFO] [1795151690.151382089] [rosbag2_recorder]: Subscribed to topic '/vehicle/gz_cmd_vel'
+[INFO] [1795151690.151800878] [rosbag2_recorder]: Overriding subscription profile for /vehicle/imu
+[INFO] [1795151690.153191299] [rosbag2_recorder]: Subscribed to topic '/vehicle/imu'
+[INFO] [1795151690.157060033] [rosbag2_recorder]: Subscribed to topic '/vehicle/odom'
+[INFO] [1795151690.157647273] [rosbag2_recorder]: Overriding subscription profile for /vehicle/scan
+[INFO] [1795151690.158499107] [rosbag2_recorder]: Subscribed to topic '/vehicle/scan'
+[INFO] [1795151699.518202636] [rosbag2_recorder]: Subscribed to topic '/drive/safe'
+[INFO] [1795151699.518248510] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1795151699.518257746] [rosbag2_recorder]: Topics discovery stopped.
+[INFO] [1795151734.472582312] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1795151734.480729150] [rosbag2_recorder]: Recording stopped
+[INFO] [1795151734.482709573] [rosbag2_recorder]: Event publisher thread: Exited
+recorder_exit=0

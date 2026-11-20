@@ -1,0 +1,166 @@
+===== NORMALIZED ODOMETRY =====
+header:
+  stamp:
+    sec: 272
+    nanosec: 464000000
+  frame_id: odom
+child_frame_id: base_link
+pose:
+  pose:
+    position:
+      x: -5.8897848888036e-16
+      y: 1.3567601499066124e-40
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: -2.506762106883804e-25
+      w: 1.0
+  covariance:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+twist:
+  twist:
+    linear:
+      x: -1.532365512508154e-18
+      y: 0.0
+      z: 0.0
+    angular:
+      x: 0.0
+      y: 0.0
+      z: -1.5323655126794982e-27
+  covariance:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+---
+===== DYNAMIC TF =====
+transforms:
+- header:
+    stamp:
+      sec: 273
+      nanosec: 644000000
+    frame_id: odom
+  child_frame_id: base_link
+  transform:
+    translation:
+      x: -5.89477544465731e-16
+      y: 1.3592634261325252e-40
+      z: 0.0
+    rotation:
+      x: 0.0
+      y: 0.0
+      z: -2.509257384810934e-25
+      w: 1.0
+---
+===== ODOMETRY ENDPOINTS =====
+Type: nav_msgs/msg/Odometry
+
+Publisher count: 1
+
+Node name: odom_adapter
+Node namespace: /
+Topic type: nav_msgs/msg/Odometry
+Topic type hash: RIHS01_3cc97dc7fb7502f8714462c526d369e35b603cfc34d946e3f2eda2766dfec6e0
+Endpoint type: PUBLISHER
+GID: 01.0f.eb.7d.73.01.1c.69.00.00.00.00.00.00.14.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+===== TF ENDPOINTS =====
+Type: tf2_msgs/msg/TFMessage
+
+Publisher count: 1
+
+Node name: odom_adapter
+Node namespace: /
+Topic type: tf2_msgs/msg/TFMessage
+Topic type hash: RIHS01_e369d0f05a23ae52508854b66f6aa0437f3449d652e8cbf22d5abe85d020f087
+Endpoint type: PUBLISHER
+GID: 01.0f.eb.7d.73.01.1c.69.00.00.00.00.00.00.15.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (100)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+

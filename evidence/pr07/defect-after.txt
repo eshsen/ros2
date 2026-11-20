@@ -1,0 +1,135 @@
+===== ROS NODES =====
+===== ACTIVE CONFIG =====
+String value is: /work/src/course_simulation/config/bridge.yaml
+===== IMU YAML ENTRY =====
+ros_topic_name: /vehicle/imu
+gz_topic_name: /vehicle/imu
+ros_type_name: sensor_msgs/msg/Imu
+gz_type_name: gz.msgs.IMU
+direction: GZ_TO_ROS
+qos_profile: SENSOR_DATA
+
+===== ROS IMU ENDPOINTS =====
+Type: sensor_msgs/msg/Imu
+
+Publisher count: 1
+
+Node name: bridge
+Node namespace: /pr07
+Topic type: sensor_msgs/msg/Imu
+Topic type hash: RIHS01_7d9a00ff131080897a5ec7e26e315954b8eae3353c3f995c55faf71574000b5b
+Endpoint type: PUBLISHER
+GID: 01.0f.eb.7d.25.00.10.2a.00.00.00.00.00.00.17.03
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): KEEP_LAST (5)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 0
+
+===== ROS IMU DATA =====
+header:
+  stamp:
+    sec: 9
+    nanosec: 220000000
+  frame_id: imu_link
+orientation:
+  x: 3.960691630717018e-10
+  y: 1.0018630295382512e-10
+  z: -1.8622911626906906e-13
+  w: 1.0
+orientation_covariance:
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+angular_velocity:
+  x: -7.935485267699027e-13
+  y: -2.865806680570314e-13
+  z: -4.704063066568464e-18
+angular_velocity_covariance:
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+linear_acceleration:
+  x: -2.9877731690375404e-09
+  y: 7.649435026952172e-09
+  z: 9.809999999753789
+linear_acceleration_covariance:
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+---
+imu_echo_exit=0
+===== GAZEBO IMU ENDPOINTS =====
+Publishers [Address, Message Type]:
+  tcp://172.17.0.2:37305, gz.msgs.IMU
+Subscribers [Address, Message Type]:
+  tcp://172.17.0.2:42749, gz.msgs.IMU
+===== GAZEBO IMU DATA =====
+header {
+  stamp {
+    sec: 11
+    nsec: 740000000
+  }
+  data {
+    key: "frame_id"
+    value: "imu_link"
+  }
+  data {
+    key: "seq"
+    value: "1167"
+  }
+}
+entity_name: "course_ackermann::imu_link::imu"
+orientation {
+  x: 3.9606996253525935e-10
+  y: 1.0018659566664036e-10
+  z: -1.8623406166509156e-13
+  w: 1
+}
+orientation_covariance {
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+}
+angular_velocity {
+  x: 1.963856913179439e-13
+  y: -1.062515090674137e-12
+  z: 3.8952876564610113e-21
+}
+angular_velocity_covariance {
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0
+  data: 0

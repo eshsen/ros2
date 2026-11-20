@@ -1,0 +1,3 @@
+version=v1-w10
+archive=robotics-course-kit-v1-w10-7a91d388d7bd.tar.gz
+sha256=7a91d388d7bd3def7e058c8da48c32ff27ea6f14dc880a2da169c4102d456874

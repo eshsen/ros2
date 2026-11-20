@@ -1,0 +1,34 @@
+
+===== /vehicle/camera/image_raw =====
+  stamp {
+    sec: 56
+    nsec: 77000000
+    key: "frame_id"
+width: 640
+height: 360
+pixel_format_type: RGB_INT8
+  stamp {
+    sec: 56
+    nsec: 100000000
+    key: "frame_id"
+width: 640
+height: 360
+pixel_format_type: RGB_INT8
+  stamp {
+
+===== /vehicle/scan =====
+  stamp {
+    sec: 56
+    nsec: 400000000
+    key: "frame_id"
+angle_min: -3.14159
+angle_max: 3.14159
+range_min: 0.12
+range_max: 20
+ranges: 2.0301241874694824
+ranges: 2.0306196212768555
+ranges: 2.0316104888916016
+ranges: 2.0330953598022461
+ranges: 2.03507399559021
+ranges: 2.0375442504882812
+ranges: 2.0405046939849854

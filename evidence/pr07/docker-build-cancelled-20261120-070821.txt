@@ -1,0 +1,610 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 694B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/course-pr07-base:local
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/3] FROM docker.io/library/course-pr07-base:local@sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe
+#4 resolve docker.io/library/course-pr07-base:local@sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe 0.0s done
+#4 DONE 0.2s
+
+#5 [2/3] RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get upgrade -y --with-new-pkgs     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends        ros-lyrical-ackermann-msgs        ros-lyrical-ros-gz        ros-lyrical-xacro        ros-lyrical-robot-state-publisher        ros-lyrical-tf2-tools        ros-lyrical-rosbag2-storage-mcap        python3-colcon-common-extensions        python3-pytest        python3-yaml        liburdfdom-tools     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#5 1.175 Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+#5 1.934 Get:2 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+#5 2.137 Get:3 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [885 kB]
+#5 2.720 Get:4 http://packages.ros.org/ros2/ubuntu resolute InRelease [4679 B]
+#5 3.929 Get:5 http://packages.ros.org/ros2/ubuntu resolute/main Sources [719 kB]
+#5 3.971 Get:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+#5 4.887 Get:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+#5 5.137 Get:8 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [24.6 kB]
+#5 5.146 Get:9 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [278 kB]
+#5 5.287 Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [189 kB]
+#5 5.640 Get:11 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [20.1 MB]
+#5 7.307 Get:12 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [723 kB]
+#5 9.173 Get:13 http://packages.ros.org/ros2/ubuntu resolute/main amd64 Packages [666 kB]
+#5 113.3 Get:14 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [352 kB]
+#5 114.3 Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1874 kB]
+#5 119.7 Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [773 kB]
+#5 124.5 Get:17 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [1110 kB]
+#5 126.6 Get:18 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [26.1 kB]
+#5 126.7 Get:19 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [497 kB]
+#5 127.8 Get:20 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [3308 B]
+#5 127.8 Fetched 28.8 MB in 2min 7s (226 kB/s)
+#5 127.8 Reading package lists...
+#5 128.4 Reading package lists...
+#5 129.1 Building dependency tree...
+#5 129.2 Reading state information...
+#5 129.3 Calculating upgrade...
+#5 129.8 The following NEW packages will be installed:
+#5 129.8   qt6-svg-plugins
+#5 129.8 The following packages will be upgraded:
+#5 129.8   apt base-files bsdutils bubblewrap bzip2 ca-certificates
+#5 129.8   ca-certificates-java curl diffutils dirmngr gir1.2-glib-2.0
+#5 129.8   gir1.2-glib-2.0-dev girepository-tools git git-man glycin-loaders
+#5 129.8   glycin-thumbnailers gnu-coreutils gnupg gnupg2 gpg gpg-agent gpgconf gpgsm
+#5 129.8   gpgv gtk-update-icon-cache libaom-dev libaom3 libapparmor1 libapt-pkg7.0
+#5 129.8   libarchive-dev libarchive13t64 libattr1 libattr1-dev libaudit-common
+#5 129.8   libaudit1 libblkid-dev libblkid1 libbrotli-dev libbrotli1 libbz2-1.0
+#5 129.8   libbz2-dev libc-bin libc-dev-bin libc-gconv-modules-extra libc6 libc6-dev
+#5 129.8   libcurl3t64-gnutls libcurl4-openssl-dev libcurl4t64 libegl-mesa0
+#5 129.8   libevent-2.1-7t64 libevent-core-2.1-7t64 libevent-dev
+#5 129.8   libevent-extra-2.1-7t64 libevent-openssl-2.1-7t64 libevent-pthreads-2.1-7t64
+#5 129.8   libexpat1 libexpat1-dev libfreetype-dev libfreetype6 libgbm-dev libgbm1
+#5 129.8   libgcrypt20 libgio-2.0-dev libgio-2.0-dev-bin libgirepository-2.0-0
+#5 129.8   libgl1-mesa-dev libgl1-mesa-dri libglib2.0-0t64 libglib2.0-bin
+#5 129.8   libglib2.0-data libglib2.0-dev libglib2.0-dev-bin libglx-mesa0 libglycin-2-0
+#5 129.8   libgphoto2-6t64 libgphoto2-dev libgphoto2-port12t64
+#5 129.8   libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 libheif-dev
+#5 129.8   libheif-plugin-aomdec libheif1 libinput-bin libinput-dev libinput10
+#5 129.8   liblzma-dev liblzma5 libminizip-dev libminizip1t64 libmount-dev libmount1
+#5 129.8   libmp3lame0 libmysqlclient-dev libmysqlclient24 libnss3 libnss3-dev
+#5 129.8   libpam-modules libpam-modules-bin libpam-runtime libpam-systemd libpam0g
+#5 129.8   libpcap0.8t64 libpcre2-16-0 libpcre2-32-0 libpcre2-8-0 libpcre2-dev
+#5 129.8   libpcre2-posix3 libperl5.40 libpng-dev libpng16-16t64 libpoppler-dev
+#5 129.8   libpoppler-private-dev libpoppler156 libpq-dev libpq5 libprotobuf-dev
+#5 129.8   libprotobuf-lite32t64 libprotobuf32t64 libprotoc-dev libprotoc32t64
+#5 129.8   libpython3.14 libpython3.14-dev libpython3.14-minimal libpython3.14-stdlib
+#5 129.8   librabbitmq4 librsvg2-2 libruby3.3 libsmartcols1 libsqlite3-0 libsqlite3-dev
+#5 129.8   libssh-4 libssh2-1-dev libssh2-1t64 libssl-dev libssl3t64 libsystemd-dev
+#5 129.8   libsystemd-shared libsystemd0 libtiff-dev libtiff6 libtiffxx6 libudev-dev
+#5 129.8   libudev1 libunbound8 libuuid1 libwebsockets-dev libwebsockets-evlib-ev
+#5 129.8   libwebsockets-evlib-glib libwebsockets-evlib-uv libwebsockets19t64 libx11-6
+#5 129.8   libx11-data libx11-dev libx11-xcb-dev libx11-xcb1 libxml2-16 libxml2-dev
+#5 129.8   libxml2-utils libxpm-dev libxpm4 libxtst6 linux-libc-dev login
+#5 129.8   mesa-libgallium mount openjdk-25-jdk openjdk-25-jdk-headless openjdk-25-jre
+#5 129.8   openjdk-25-jre-headless openssh-client openssl openssl-provider-legacy perl
+#5 129.8   perl-base perl-modules-5.40 protobuf-compiler python3-brotli
+#5 129.8   python3-catkin-pkg-modules python3-colcon-core python3-colcon-metadata
+#5 129.8   python3-colcon-mixin python3-colcon-notification python3-cryptography
+#5 129.8   python3-lxml python3-pil python3-pil.imagetk python3-protobuf python3-rosdep
+#5 129.8   python3-rosdep-modules python3-rosdistro-modules python3-rospkg-modules
+#5 129.8   python3.14 python3.14-dev python3.14-minimal python3.14-tk
+#5 129.8   ros-lyrical-action-msgs ros-lyrical-action-tutorials-cpp
+#5 129.8   ros-lyrical-action-tutorials-py ros-lyrical-actuator-msgs
+#5 129.8   ros-lyrical-ament-cmake ros-lyrical-ament-cmake-auto
+#5 129.8   ros-lyrical-ament-cmake-copyright ros-lyrical-ament-cmake-core
+#5 129.8   ros-lyrical-ament-cmake-cppcheck ros-lyrical-ament-cmake-cpplint
+#5 129.8   ros-lyrical-ament-cmake-export-definitions
+#5 129.8   ros-lyrical-ament-cmake-export-dependencies
+#5 129.8   ros-lyrical-ament-cmake-export-include-directories
+#5 129.8   ros-lyrical-ament-cmake-export-libraries
+#5 129.8   ros-lyrical-ament-cmake-export-link-flags
+#5 129.8   ros-lyrical-ament-cmake-export-targets ros-lyrical-ament-cmake-flake8
+#5 129.8   ros-lyrical-ament-cmake-gen-version-h ros-lyrical-ament-cmake-gmock
+#5 129.8   ros-lyrical-ament-cmake-gtest ros-lyrical-ament-cmake-include-directories
+#5 129.8   ros-lyrical-ament-cmake-libraries ros-lyrical-ament-cmake-lint-cmake
+#5 129.8   ros-lyrical-ament-cmake-mypy ros-lyrical-ament-cmake-pep257
+#5 129.8   ros-lyrical-ament-cmake-pytest ros-lyrical-ament-cmake-python
+#5 129.8   ros-lyrical-ament-cmake-ros ros-lyrical-ament-cmake-ros-core
+#5 129.8   ros-lyrical-ament-cmake-target-dependencies ros-lyrical-ament-cmake-test
+#5 129.8   ros-lyrical-ament-cmake-uncrustify ros-lyrical-ament-cmake-version
+#5 129.8   ros-lyrical-ament-cmake-xmllint ros-lyrical-ament-copyright
+#5 129.8   ros-lyrical-ament-cppcheck ros-lyrical-ament-cpplint
+#5 129.8   ros-lyrical-ament-flake8 ros-lyrical-ament-index-cpp
+#5 129.8   ros-lyrical-ament-index-python ros-lyrical-ament-lint
+#5 129.8   ros-lyrical-ament-lint-auto ros-lyrical-ament-lint-cmake
+#5 129.8   ros-lyrical-ament-lint-common ros-lyrical-ament-mypy
+#5 129.8   ros-lyrical-ament-pep257 ros-lyrical-ament-uncrustify
+#5 129.8   ros-lyrical-ament-xmllint ros-lyrical-angles ros-lyrical-builtin-interfaces
+#5 129.8   ros-lyrical-camera-calibration ros-lyrical-camera-calibration-parsers
+#5 129.8   ros-lyrical-camera-info-manager ros-lyrical-class-loader
+#5 129.8   ros-lyrical-common-interfaces ros-lyrical-composition
+#5 129.8   ros-lyrical-composition-interfaces
+#5 129.8   ros-lyrical-compressed-depth-image-transport
+#5 129.8   ros-lyrical-compressed-image-transport ros-lyrical-console-bridge-vendor
+#5 129.8   ros-lyrical-cv-bridge ros-lyrical-demo-nodes-cpp
+#5 129.8   ros-lyrical-demo-nodes-cpp-native ros-lyrical-demo-nodes-py
+#5 129.8   ros-lyrical-depth-image-proc ros-lyrical-depthimage-to-laserscan
+#5 129.8   ros-lyrical-desktop ros-lyrical-desktop-full ros-lyrical-diagnostic-msgs
+#5 129.8   ros-lyrical-diagnostic-updater ros-lyrical-dummy-map-server
+#5 129.8   ros-lyrical-dummy-robot-bringup ros-lyrical-dummy-sensors
+#5 129.8   ros-lyrical-eigen3-cmake-module ros-lyrical-example-interfaces
+#5 129.8   ros-lyrical-examples-rclcpp-minimal-action-client
+#5 129.8   ros-lyrical-examples-rclcpp-minimal-action-server
+#5 129.8   ros-lyrical-examples-rclcpp-minimal-client
+#5 129.8   ros-lyrical-examples-rclcpp-minimal-composition
+#5 129.8   ros-lyrical-examples-rclcpp-minimal-publisher
+#5 129.8   ros-lyrical-examples-rclcpp-minimal-service
+#5 129.8   ros-lyrical-examples-rclcpp-minimal-subscriber
+#5 129.8   ros-lyrical-examples-rclcpp-minimal-timer
+#5 129.8   ros-lyrical-examples-rclcpp-multithreaded-executor
+#5 129.8   ros-lyrical-examples-rclpy-executors
+#5 129.8   ros-lyrical-examples-rclpy-minimal-action-client
+#5 129.8   ros-lyrical-examples-rclpy-minimal-action-server
+#5 129.8   ros-lyrical-examples-rclpy-minimal-client
+#5 129.8   ros-lyrical-examples-rclpy-minimal-publisher
+#5 129.8   ros-lyrical-examples-rclpy-minimal-service
+#5 129.8   ros-lyrical-examples-rclpy-minimal-subscriber ros-lyrical-fastcdr
+#5 129.8   ros-lyrical-fastdds ros-lyrical-filters ros-lyrical-foonathan-memory-vendor
+#5 129.8   ros-lyrical-geometry-msgs ros-lyrical-geometry2 ros-lyrical-gps-msgs
+#5 129.8   ros-lyrical-gz-cmake-vendor ros-lyrical-gz-common-vendor
+#5 129.8   ros-lyrical-gz-dartsim-vendor ros-lyrical-gz-fuel-tools-vendor
+#5 129.8   ros-lyrical-gz-gui-vendor ros-lyrical-gz-math-vendor
+#5 129.8   ros-lyrical-gz-msgs-vendor ros-lyrical-gz-ogre-next-vendor
+#5 129.8   ros-lyrical-gz-physics-vendor ros-lyrical-gz-plugin-vendor
+#5 129.8   ros-lyrical-gz-rendering-vendor ros-lyrical-gz-sensors-vendor
+#5 129.8   ros-lyrical-gz-sim-vendor ros-lyrical-gz-tools-vendor
+#5 129.8   ros-lyrical-gz-transport-vendor ros-lyrical-gz-utils-vendor
+#5 129.8   ros-lyrical-image-common ros-lyrical-image-geometry
+#5 129.8   ros-lyrical-image-pipeline ros-lyrical-image-proc
+#5 129.8   ros-lyrical-image-publisher ros-lyrical-image-rotate ros-lyrical-image-tools
+#5 129.8   ros-lyrical-image-transport ros-lyrical-image-transport-plugins
+#5 129.8   ros-lyrical-image-view ros-lyrical-interactive-markers
+#5 129.8   ros-lyrical-intra-process-demo ros-lyrical-joy ros-lyrical-kdl-parser
+#5 129.8   ros-lyrical-keyboard-handler ros-lyrical-laser-filters
+#5 129.8   ros-lyrical-laser-geometry ros-lyrical-launch ros-lyrical-launch-ros
+#5 129.8   ros-lyrical-launch-testing ros-lyrical-launch-testing-ament-cmake
+#5 129.8   ros-lyrical-launch-testing-ros ros-lyrical-launch-xml
+#5 129.8   ros-lyrical-launch-yaml ros-lyrical-libstatistics-collector
+#5 129.8   ros-lyrical-libyaml-vendor ros-lyrical-lifecycle ros-lyrical-lifecycle-msgs
+#5 129.8   ros-lyrical-logging-demo ros-lyrical-lz4-cmake-module ros-lyrical-map-msgs
+#5 129.8   ros-lyrical-marine-acoustic-msgs ros-lyrical-mcap-vendor
+#5 129.8   ros-lyrical-message-filters ros-lyrical-nav-msgs ros-lyrical-pcl-conversions
+#5 129.8   ros-lyrical-pcl-msgs ros-lyrical-pcl-ros ros-lyrical-pendulum-control
+#5 129.8   ros-lyrical-pendulum-msgs ros-lyrical-perception ros-lyrical-perception-pcl
+#5 129.8   ros-lyrical-pluginlib ros-lyrical-point-cloud-transport
+#5 129.8   ros-lyrical-python-qt-binding ros-lyrical-qt-dotgraph ros-lyrical-qt-gui
+#5 129.8   ros-lyrical-qt-gui-cpp ros-lyrical-qt-gui-py-common
+#5 129.8   ros-lyrical-quality-of-service-demo-cpp
+#5 129.8   ros-lyrical-quality-of-service-demo-py ros-lyrical-rcl
+#5 129.8   ros-lyrical-rcl-action ros-lyrical-rcl-interfaces ros-lyrical-rcl-lifecycle
+#5 129.8   ros-lyrical-rcl-logging-implementation ros-lyrical-rcl-logging-interface
+#5 129.8   ros-lyrical-rcl-logging-spdlog ros-lyrical-rcl-yaml-param-parser
+#5 129.8   ros-lyrical-rclcpp ros-lyrical-rclcpp-action ros-lyrical-rclcpp-components
+#5 129.8   ros-lyrical-rclcpp-lifecycle ros-lyrical-rclpy ros-lyrical-rcpputils
+#5 129.8   ros-lyrical-rcutils ros-lyrical-resource-retriever
+#5 129.8   ros-lyrical-resource-retriever-interfaces
+#5 129.8   ros-lyrical-resource-retriever-service-plugin ros-lyrical-rmw
+#5 129.8   ros-lyrical-rmw-dds-common ros-lyrical-rmw-fastrtps-cpp
+#5 129.8   ros-lyrical-rmw-fastrtps-shared-cpp ros-lyrical-rmw-implementation
+#5 129.8   ros-lyrical-rmw-implementation-cmake ros-lyrical-rmw-security-common
+#5 129.8   ros-lyrical-rmw-test-fixture ros-lyrical-rmw-test-fixture-implementation
+#5 129.8   ros-lyrical-robot-state-publisher ros-lyrical-ros-base ros-lyrical-ros-core
+#5 129.8   ros-lyrical-ros-environment ros-lyrical-ros-gz-bridge
+#5 129.8   ros-lyrical-ros-gz-image ros-lyrical-ros-gz-interfaces
+#5 129.8   ros-lyrical-ros-gz-sim ros-lyrical-ros-gz-sim-demos
+#5 129.8   ros-lyrical-ros-workspace ros-lyrical-ros2action ros-lyrical-ros2bag
+#5 129.8   ros-lyrical-ros2cli ros-lyrical-ros2cli-common-extensions
+#5 129.8   ros-lyrical-ros2component ros-lyrical-ros2doctor ros-lyrical-ros2interface
+#5 129.8   ros-lyrical-ros2launch ros-lyrical-ros2lifecycle ros-lyrical-ros2multicast
+#5 129.8   ros-lyrical-ros2node ros-lyrical-ros2param ros-lyrical-ros2pkg
+#5 129.8   ros-lyrical-ros2plugin ros-lyrical-ros2run ros-lyrical-ros2service
+#5 129.8   ros-lyrical-ros2topic ros-lyrical-rosbag2 ros-lyrical-rosbag2-compression
+#5 129.8   ros-lyrical-rosbag2-compression-zstd ros-lyrical-rosbag2-cpp
+#5 129.8   ros-lyrical-rosbag2-interfaces ros-lyrical-rosbag2-py
+#5 129.8   ros-lyrical-rosbag2-storage ros-lyrical-rosbag2-storage-default-plugins
+#5 129.8   ros-lyrical-rosbag2-storage-mcap ros-lyrical-rosbag2-storage-sqlite3
+#5 129.8   ros-lyrical-rosbag2-transport ros-lyrical-rosgraph-msgs
+#5 129.8   ros-lyrical-rosidl-adapter ros-lyrical-rosidl-buffer
+#5 129.8   ros-lyrical-rosidl-buffer-backend ros-lyrical-rosidl-buffer-backend-registry
+#5 129.8   ros-lyrical-rosidl-buffer-py ros-lyrical-rosidl-cli ros-lyrical-rosidl-cmake
+#5 129.8   ros-lyrical-rosidl-core-generators ros-lyrical-rosidl-core-runtime
+#5 129.8   ros-lyrical-rosidl-default-generators ros-lyrical-rosidl-default-runtime
+#5 129.8   ros-lyrical-rosidl-dynamic-typesupport
+#5 129.8   ros-lyrical-rosidl-dynamic-typesupport-fastrtps
+#5 129.8   ros-lyrical-rosidl-generator-c ros-lyrical-rosidl-generator-cpp
+#5 129.8   ros-lyrical-rosidl-generator-py ros-lyrical-rosidl-generator-rs
+#5 129.8   ros-lyrical-rosidl-generator-type-description ros-lyrical-rosidl-parser
+#5 129.8   ros-lyrical-rosidl-pycommon ros-lyrical-rosidl-runtime-c
+#5 129.8   ros-lyrical-rosidl-runtime-cpp ros-lyrical-rosidl-runtime-py
+#5 129.8   ros-lyrical-rosidl-typesupport-c ros-lyrical-rosidl-typesupport-cpp
+#5 129.8   ros-lyrical-rosidl-typesupport-fastrtps-c
+#5 129.8   ros-lyrical-rosidl-typesupport-fastrtps-cpp
+#5 129.8   ros-lyrical-rosidl-typesupport-interface
+#5 129.8   ros-lyrical-rosidl-typesupport-introspection-c
+#5 129.8   ros-lyrical-rosidl-typesupport-introspection-cpp ros-lyrical-rpyutils
+#5 129.8   ros-lyrical-rqt-action ros-lyrical-rqt-bag ros-lyrical-rqt-bag-plugins
+#5 129.8   ros-lyrical-rqt-common-plugins ros-lyrical-rqt-console ros-lyrical-rqt-graph
+#5 129.8   ros-lyrical-rqt-gui ros-lyrical-rqt-gui-cpp ros-lyrical-rqt-gui-py
+#5 129.8   ros-lyrical-rqt-image-view ros-lyrical-rqt-msg ros-lyrical-rqt-plot
+#5 129.8   ros-lyrical-rqt-publisher ros-lyrical-rqt-py-common
+#5 129.8   ros-lyrical-rqt-py-console ros-lyrical-rqt-reconfigure
+#5 129.8   ros-lyrical-rqt-service-caller ros-lyrical-rqt-shell ros-lyrical-rqt-srv
+#5 129.8   ros-lyrical-rqt-topic ros-lyrical-rttest ros-lyrical-rviz-common
+#5 129.8   ros-lyrical-rviz-default-plugins ros-lyrical-rviz-imu-plugin
+#5 129.8   ros-lyrical-rviz-ogre-vendor ros-lyrical-rviz-rendering ros-lyrical-rviz2
+#5 129.8   ros-lyrical-sdformat-urdf ros-lyrical-sdformat-vendor
+#5 129.8   ros-lyrical-sdl2-vendor ros-lyrical-sensor-msgs ros-lyrical-sensor-msgs-py
+#5 129.8   ros-lyrical-service-msgs ros-lyrical-shape-msgs ros-lyrical-simulation
+#5 129.8   ros-lyrical-simulation-interfaces ros-lyrical-spdlog-vendor
+#5 129.8   ros-lyrical-sros2 ros-lyrical-sros2-cmake ros-lyrical-statistics-msgs
+#5 129.8   ros-lyrical-std-msgs ros-lyrical-std-srvs ros-lyrical-stereo-image-proc
+#5 129.8   ros-lyrical-stereo-msgs ros-lyrical-tango-icons-vendor
+#5 129.8   ros-lyrical-teleop-twist-joy ros-lyrical-teleop-twist-keyboard
+#5 129.8   ros-lyrical-tf2 ros-lyrical-tf2-bullet ros-lyrical-tf2-eigen
+#5 129.8   ros-lyrical-tf2-eigen-kdl ros-lyrical-tf2-geometry-msgs ros-lyrical-tf2-kdl
+#5 129.8   ros-lyrical-tf2-msgs ros-lyrical-tf2-py ros-lyrical-tf2-ros
+#5 129.8   ros-lyrical-tf2-ros-py ros-lyrical-tf2-sensor-msgs ros-lyrical-tf2-tools
+#5 129.8   ros-lyrical-theora-image-transport ros-lyrical-tlsf ros-lyrical-tlsf-cpp
+#5 129.8   ros-lyrical-topic-monitor ros-lyrical-tracetools
+#5 129.8   ros-lyrical-tracetools-image-pipeline ros-lyrical-trajectory-msgs
+#5 129.8   ros-lyrical-turtlesim ros-lyrical-turtlesim-msgs
+#5 129.8   ros-lyrical-type-description-interfaces ros-lyrical-uncrustify-vendor
+#5 129.8   ros-lyrical-unique-identifier-msgs ros-lyrical-urdf
+#5 129.8   ros-lyrical-urdf-parser-plugin ros-lyrical-urdfdom
+#5 129.8   ros-lyrical-urdfdom-headers ros-lyrical-vision-msgs
+#5 129.8   ros-lyrical-vision-opencv ros-lyrical-visualization-msgs ros-lyrical-xacro
+#5 129.8   ros-lyrical-yaml-cpp-vendor ros-lyrical-zenoh-cpp-vendor
+#5 129.8   ros-lyrical-zstd-cmake-module ros-lyrical-zstd-image-transport
+#5 129.8   ros2-apt-source ruby3.3 rust-coreutils sudo systemd systemd-sysv tzdata
+#5 129.8   util-linux uuid-dev xz-utils zlib1g zlib1g-dev
+#5 133.0 554 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+#5 133.0 Need to get 384 MB of archives.
+#5 133.0 After this operation, 5807 kB of additional disk space will be used.
+#5 133.0 Get:1 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros2-apt-source all 1.3.0~resolute [4546 B]
+#5 133.6 Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libc-dev-bin amd64 2.43-2ubuntu2.7 [23.3 kB]
+#5 133.9 Get:3 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-catkin-pkg-modules all 1.1.1-1 [43.4 kB]
+#5 134.3 Get:4 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libc6-dev amd64 2.43-2ubuntu2.7 [2295 kB]
+#5 134.8 Get:5 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-colcon-core all 0.21.3+upstream-1 [78.7 kB]
+#5 136.1 Get:6 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-colcon-metadata all 0.3.1+upstream-1 [9676 B]
+#5 136.1 Get:7 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-colcon-mixin all 0.3.2+upstream-1 [12.5 kB]
+#5 136.1 Get:8 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-colcon-notification all 0.3.3+upstream-1 [11.0 kB]
+#5 136.6 Get:9 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-rospkg-modules all 1.6.3-1 [24.6 kB]
+#5 137.5 Get:10 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-rosdistro-modules all 1.1.0-1 [37.9 kB]
+#5 137.5 Get:11 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-rosdep-modules all 0.27.0-1 [55.0 kB]
+#5 137.5 Get:12 http://packages.ros.org/ros2/ubuntu resolute/main amd64 python3-rosdep all 0.27.0-1 [3560 B]
+#5 137.5 Get:13 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ros-workspace amd64 1.0.3-9resolute.20260728.162902 [16.6 kB]
+#5 141.9 Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libc-gconv-modules-extra amd64 2.43-2ubuntu2.7 [1363 kB]
+#5 142.3 Get:15 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-fastcdr amd64 2.3.6-1resolute.20260728.172850 [62.6 kB]
+#5 146.7 Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libc6 amd64 2.43-2ubuntu2.7 [2104 kB]
+#5 151.8 Get:17 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-buffer amd64 5.2.1-1resolute.20260728.210115 [15.1 kB]
+#5 153.5 Get:18 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-buffer-py amd64 5.2.1-1resolute.20260728.210209 [85.4 kB]
+#5 155.2 Get:19 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 linux-libc-dev amd64 7.0.0-44.44 [1893 kB]
+#5 158.3 Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 base-files amd64 14ubuntu6.3 [74.7 kB]
+#5 158.3 Get:21 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 diffutils amd64 1:3.12-1ubuntu0.1 [176 kB]
+#5 158.5 Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libperl5.40 amd64 5.40.1-7ubuntu0.4 [4888 kB]
+#5 161.5 Get:23 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-core amd64 2.8.8-1resolute.20260728.162608 [25.2 kB]
+#5 162.6 Get:24 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-export-definitions amd64 2.8.8-1resolute.20260728.173325 [7138 B]
+#5 163.4 Get:25 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-libraries amd64 2.8.8-1resolute.20260728.173352 [6852 B]
+#5 164.0 Get:26 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-export-dependencies amd64 2.8.8-1resolute.20260728.173500 [7972 B]
+#5 164.5 Get:27 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-export-include-directories amd64 2.8.8-1resolute.20260728.172444 [7460 B]
+#5 164.9 Get:28 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-export-libraries amd64 2.8.8-1resolute.20260728.173328 [9222 B]
+#5 165.7 Get:29 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-export-link-flags amd64 2.8.8-1resolute.20260728.173334 [7076 B]
+#5 166.1 Get:30 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-export-targets amd64 2.8.8-1resolute.20260728.173432 [7876 B]
+#5 166.5 Get:31 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-gen-version-h amd64 2.8.8-1resolute.20260728.173325 [8684 B]
+#5 166.8 Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 perl amd64 5.40.1-7ubuntu0.4 [262 kB]
+#5 167.5 Get:33 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 perl-base amd64 5.40.1-7ubuntu0.4 [1851 kB]
+#5 167.6 Get:34 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-python amd64 2.8.8-1resolute.20260728.173021 [10.2 kB]
+#5 172.1 Get:35 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-include-directories amd64 2.8.8-1resolute.20260728.173227 [7038 B]
+#5 173.3 Get:36 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-target-dependencies amd64 2.8.8-1resolute.20260728.173503 [7346 B]
+#5 173.7 Get:37 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-test amd64 2.8.8-1resolute.20260728.175319 [12.9 kB]
+#5 177.1 Get:38 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-version amd64 2.8.8-1resolute.20260728.173013 [6870 B]
+#5 178.4 Get:39 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 perl-modules-5.40 all 5.40.1-7ubuntu0.4 [3213 kB]
+#5 178.5 Get:40 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake amd64 2.8.8-1resolute.20260728.175713 [7074 B]
+#5 180.1 Get:41 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cppcheck amd64 0.20.6-1resolute.20260728.173125 [15.2 kB]
+#5 182.0 Get:42 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-cppcheck amd64 0.20.6-1resolute.20260728.204151 [8258 B]
+#5 183.0 Get:43 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cpplint amd64 0.20.6-1resolute.20260728.173508 [151 kB]
+#5 185.3 Get:44 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 bzip2 amd64 1.0.8-6ubuntu0.1 [34.3 kB]
+#5 185.3 Get:45 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libbz2-dev amd64 1.0.8-6ubuntu0.1 [36.2 kB]
+#5 185.3 Get:46 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libbz2-1.0 amd64 1.0.8-6ubuntu0.1 [36.2 kB]
+#5 185.3 Get:47 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 zlib1g-dev amd64 1:1.3.dfsg+really1.3.1-1ubuntu3.2 [895 kB]
+#5 186.2 Get:48 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 zlib1g amd64 1:1.3.dfsg+really1.3.1-1ubuntu3.2 [61.8 kB]
+#5 186.3 Get:49 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 uuid-dev amd64 2.41.3-3ubuntu2.2 [49.1 kB]
+#5 186.4 Get:50 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libmount-dev amd64 2.41.3-3ubuntu2.2 [29.2 kB]
+#5 186.5 Get:51 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libblkid1 amd64 2.41.3-3ubuntu2.2 [126 kB]
+#5 187.3 Get:52 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-cpplint amd64 0.20.6-1resolute.20260728.204159 [7878 B]
+#5 187.5 Get:53 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libmount1 amd64 2.41.3-3ubuntu2.2 [159 kB]
+#5 187.8 Get:54 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsmartcols1 amd64 2.41.3-3ubuntu2.2 [84.9 kB]
+#5 187.8 Get:55 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 mount amd64 2.41.3-3ubuntu2.2 [136 kB]
+#5 188.1 Get:56 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-lint amd64 0.20.6-1resolute.20260728.172451 [4302 B]
+#5 188.3 Get:57 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libblkid-dev amd64 2.41.3-3ubuntu2.2 [226 kB]
+#5 188.7 Get:58 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libuuid1 amd64 2.41.3-3ubuntu2.2 [36.7 kB]
+#5 188.7 Get:59 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 util-linux amd64 2.41.3-3ubuntu2.2 [1070 kB]
+#5 189.3 Get:60 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-flake8 amd64 0.20.6-1resolute.20260728.172702 [16.6 kB]
+#5 190.2 Get:61 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-flake8 amd64 0.20.6-1resolute.20260728.204007 [7544 B]
+#5 190.4 Get:62 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libc-bin amd64 2.43-2ubuntu2.7 [701 kB]
+#5 190.9 Get:63 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-mypy amd64 0.20.6-1resolute.20260728.173532 [13.5 kB]
+#5 191.0 Get:64 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 liblzma-dev amd64 5.8.3-1ubuntu0.1 [179 kB]
+#5 191.2 Get:65 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 liblzma5 amd64 5.8.3-1ubuntu0.1 [146 kB]
+#5 191.4 Get:66 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libssl-dev amd64 3.5.5-1ubuntu3.7 [2937 kB]
+#5 191.7 Get:67 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-mypy amd64 0.20.6-1resolute.20260728.204152 [7386 B]
+#5 192.1 Get:68 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-pep257 amd64 0.20.6-1resolute.20260728.172706 [14.0 kB]
+#5 193.3 Get:69 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-pep257 amd64 0.20.6-1resolute.20260728.204012 [7186 B]
+#5 193.6 Get:70 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-uncrustify-vendor amd64 3.2.0-3resolute.20260728.210418 [6060 B]
+#5 193.8 Get:71 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-uncrustify amd64 0.20.6-1resolute.20260728.210701 [50.5 kB]
+#5 196.5 Get:72 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-uncrustify amd64 0.20.6-1resolute.20260728.210813 [8040 B]
+#5 196.8 Get:73 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 openssl-provider-legacy amd64 3.5.5-1ubuntu3.7 [39.7 kB]
+#5 196.8 Get:74 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libssl3t64 amd64 3.5.5-1ubuntu3.7 [2368 kB]
+#5 197.4 Get:75 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-index-python amd64 1.13.3-3resolute.20260728.172618 [15.1 kB]
+#5 197.8 Get:76 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-ros-core amd64 0.15.8-1resolute.20260728.173607 [9096 B]
+#5 198.3 Get:77 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcutils amd64 7.1.3-1resolute.20260831.165446 [90.3 kB]
+#5 203.8 Get:78 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd-sysv amd64 259.9-0ubuntu0.1 [9420 B]
+#5 203.8 Get:79 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpam-systemd amd64 259.9-0ubuntu0.1 [273 kB]
+#5 203.8 Get:80 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsystemd-shared amd64 259.9-0ubuntu0.1 [2473 kB]
+#5 204.2 Get:81 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-typesupport-interface amd64 5.2.1-1resolute.20260728.210128 [8698 B]
+#5 208.0 Get:82 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-runtime-c amd64 5.2.1-1resolute.20260831.170154 [55.9 kB]
+#5 209.4 Get:83 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd amd64 259.9-0ubuntu0.1 [3137 kB]
+#5 215.8 Get:84 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-dynamic-typesupport amd64 0.4.1-3resolute.20260831.170948 [37.7 kB]
+#5 216.9 Get:85 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw amd64 7.10.2-3resolute.20260901.091148 [72.6 kB]
+#5 218.8 Get:86 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaudit-common all 1:4.1.2-1ubuntu0.1 [4958 B]
+#5 218.8 Get:87 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaudit1 amd64 1:4.1.2-1ubuntu0.1 [55.1 kB]
+#5 218.9 Get:88 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpam0g amd64 1.7.0-5ubuntu3.2 [65.0 kB]
+#5 218.9 Get:89 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-cli amd64 5.2.1-1resolute.20260728.173046 [31.4 kB]
+#5 219.0 Get:90 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpam-runtime all 1.7.0-5ubuntu3.2 [149 kB]
+#5 219.2 Get:91 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpam-modules-bin amd64 1.7.0-5ubuntu3.2 [45.6 kB]
+#5 219.2 Get:92 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-adapter amd64 5.2.1-1resolute.20260728.204010 [20.2 kB]
+#5 219.3 Get:93 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpam-modules amd64 1.7.0-5ubuntu3.2 [193 kB]
+#5 219.6 Get:94 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-parser amd64 5.2.1-1resolute.20260728.210114 [21.0 kB]
+#5 220.2 Get:95 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsystemd-dev amd64 259.9-0ubuntu0.1 [1366 kB]
+#5 220.2 Get:96 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-pycommon amd64 5.2.1-1resolute.20260728.210228 [14.9 kB]
+#5 220.5 Get:97 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-cmake amd64 5.2.1-1resolute.20260728.210427 [15.5 kB]
+#5 220.9 Get:98 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-generator-type-description amd64 5.2.1-1resolute.20260728.210206 [15.5 kB]
+#5 221.2 Get:99 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-generator-c amd64 5.2.1-1resolute.20260831.170131 [24.4 kB]
+#5 222.0 Get:100 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcpputils amd64 2.14.5-1resolute.20260831.170316 [48.5 kB]
+#5 222.6 Get:101 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsystemd0 amd64 259.9-0ubuntu0.1 [481 kB]
+#5 222.7 Get:102 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-typesupport-c amd64 3.4.2-3resolute.20260831.171238 [23.9 kB]
+#5 223.3 Get:103 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rpyutils amd64 0.7.2-3resolute.20260728.174949 [7674 B]
+#5 223.5 Get:104 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libudev-dev amd64 259.9-0ubuntu0.1 [22.0 kB]
+#5 223.5 Get:105 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libudev1 amd64 259.9-0ubuntu0.1 [151 kB]
+#5 223.6 Get:106 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-generator-py amd64 0.27.2-3resolute.20260901.091938 [31.4 kB]
+#5 223.7 Get:107 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libapt-pkg7.0 amd64 3.2.1ubuntu0.1 [1139 kB]
+#5 224.0 Get:108 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-runtime-cpp amd64 5.2.1-1resolute.20260831.170544 [19.7 kB]
+#5 225.3 Get:109 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-typesupport-cpp amd64 3.4.2-3resolute.20260831.173017 [22.9 kB]
+#5 225.7 Get:110 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-buffer-backend amd64 5.2.1-1resolute.20260901.091711 [10.7 kB]
+#5 226.2 Get:111 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-generator-cpp amd64 5.2.1-1resolute.20260831.171349 [22.0 kB]
+#5 226.3 Get:112 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgcrypt20 amd64 1.12.0-2ubuntu1.1 [675 kB]
+#5 226.7 Get:113 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-typesupport-fastrtps-cpp amd64 3.9.7-1resolute.20260915.025317 [29.9 kB]
+#5 227.4 Get:114 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-typesupport-fastrtps-c amd64 3.9.7-1resolute.20260915.025611 [25.9 kB]
+#5 228.1 Get:115 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpgv amd64 2.4.8-4ubuntu3.1 [155 kB]
+#5 228.1 Get:116 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 apt amd64 3.2.1ubuntu0.1 [1507 kB]
+#5 228.6 Get:117 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-typesupport-introspection-c amd64 5.2.1-1resolute.20260831.170823 [23.9 kB]
+#5 229.5 Get:118 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-typesupport-introspection-cpp amd64 5.2.1-1resolute.20260831.172258 [23.9 kB]
+#5 231.1 Get:119 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-core-runtime amd64 0.4.3-3resolute.20260915.030238 [6402 B]
+#5 231.3 Get:120 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gnu-coreutils amd64 9.7-3ubuntu2.1 [1339 kB]
+#5 231.5 Get:121 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-builtin-interfaces amd64 2.4.5-1resolute.20260915.031157 [49.9 kB]
+#5 232.8 Get:122 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-service-msgs amd64 2.4.5-1resolute.20260915.032658 [49.0 kB]
+#5 233.8 Get:123 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-unique-identifier-msgs amd64 2.8.1-3resolute.20260915.030702 [43.6 kB]
+#5 233.9 Get:124 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 login amd64 1:4.16.0-2+really2.41.3-3ubuntu2.2 [85.9 kB]
+#5 234.0 Get:125 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libexpat1-dev amd64 2.7.4-1ubuntu0.2 [149 kB]
+#5 234.2 Get:126 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libexpat1 amd64 2.7.4-1ubuntu0.2 [98.8 kB]
+#5 234.3 Get:127 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-dev amd64 3.14.4-1ubuntu0.2 [510 kB]
+#5 234.9 Get:128 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-action-msgs amd64 2.4.5-1resolute.20260915.041037 [108 kB]
+#5 235.1 Get:129 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-dev amd64 3.14.4-1ubuntu0.2 [5986 kB]
+#5 236.9 Get:130 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-default-runtime amd64 1.8.1-3resolute.20260915.042259 [6752 B]
+#5 237.5 Get:131 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-example-interfaces amd64 0.14.1-3resolute.20260915.044603 [430 kB]
+#5 245.1 Get:132 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-index-cpp amd64 1.13.3-3resolute.20260728.204744 [33.0 kB]
+#5 245.6 Get:133 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14 amd64 3.14.4-1ubuntu0.2 [2579 kB]
+#5 246.6 Get:134 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-libyaml-vendor amd64 1.8.1-3resolute.20260728.205613 [7000 B]
+#5 247.6 Get:135 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcl-interfaces amd64 2.4.5-1resolute.20260915.045418 [452 kB]
+#5 255.5 Get:136 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14 amd64 3.14.4-1ubuntu0.2 [830 kB]
+#5 258.0 Get:137 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-stdlib amd64 3.14.4-1ubuntu0.2 [2415 kB]
+#5 264.4 Get:138 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 python3.14-minimal amd64 3.14.4-1ubuntu0.2 [2579 kB]
+#5 270.1 Get:139 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcl-logging-interface amd64 3.4.1-3resolute.20260915.055121 [13.4 kB]
+#5 270.9 Get:140 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-spdlog-vendor amd64 1.8.0-3resolute.20260728.210243 [6042 B]
+#5 271.4 Get:141 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpython3.14-minimal amd64 3.14.4-1ubuntu0.2 [916 kB]
+#5 272.0 Get:142 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcl-logging-spdlog amd64 3.4.1-3resolute.20260915.055418 [24.7 kB]
+#5 273.5 Get:143 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcl-logging-implementation amd64 3.4.1-3resolute.20260915.055807 [18.5 kB]
+#5 274.5 Get:144 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcl-yaml-param-parser amd64 10.4.5-1resolute.20260915.055121 [30.0 kB]
+#5 275.0 Get:145 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 tzdata all 2026e-0ubuntu0.26.04.1 [193 kB]
+#5 275.3 Get:146 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-dev amd64 3.46.1-9ubuntu0.3 [932 kB]
+#5 275.6 Get:147 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw-implementation-cmake amd64 7.10.2-3resolute.20260901.091219 [8928 B]
+#5 276.1 Get:148 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-foonathan-memory-vendor amd64 1.4.1-1resolute.20260728.173726 [782 kB]
+#5 278.2 Get:149 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-0 amd64 3.46.1-9ubuntu0.3 [720 kB]
+#5 280.8 Get:150 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libapparmor1 amd64 5.0.2-0ubuntu1~26.04.1 [51.3 kB]
+#5 281.1 Get:151 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 sudo amd64 1.9.17p2-1ubuntu3.2 [955 kB]
+#5 283.3 Get:152 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libattr1-dev amd64 1:2.5.2-4ubuntu0.1 [23.1 kB]
+#5 283.3 Get:153 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libattr1 amd64 1:2.5.2-4ubuntu0.1 [12.0 kB]
+#5 283.3 Get:154 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpcre2-dev amd64 10.46-1ubuntu0.1 [825 kB]
+#5 285.0 Get:155 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpcre2-16-0 amd64 10.46-1ubuntu0.1 [241 kB]
+#5 285.8 Get:156 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpcre2-32-0 amd64 10.46-1ubuntu0.1 [228 kB]
+#5 286.1 Get:157 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpcre2-posix3 amd64 10.46-1ubuntu0.1 [7182 B]
+#5 286.1 Get:158 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpcre2-8-0 amd64 10.46-1ubuntu0.1 [257 kB]
+#5 286.7 Get:159 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 rust-coreutils amd64 0.10.0-1ubuntu2~26.04.1 [4515 kB]
+#5 288.7 Get:160 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-fastdds amd64 3.6.2-1resolute.20260728.174239 [3686 kB]
+#5 297.5 Get:161 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 bsdutils amd64 1:2.41.3-3ubuntu2.2 [80.7 kB]
+#5 297.5 Get:162 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 openssl amd64 3.5.5-1ubuntu3.7 [1243 kB]
+#5 299.5 Get:163 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ca-certificates all 20260816ubuntu0.26.04.2 [138 kB]
+#5 299.7 Get:164 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gir1.2-glib-2.0-dev amd64 2.88.0-1ubuntu0.1 [867 kB]
+#5 301.7 Get:165 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgio-2.0-dev amd64 2.88.0-1ubuntu0.1 [1826 kB]
+#5 304.6 Get:166 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libglib2.0-dev-bin amd64 2.88.0-1ubuntu0.1 [18.1 kB]
+#5 304.6 Get:167 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgio-2.0-dev-bin amd64 2.88.0-1ubuntu0.1 [130 kB]
+#5 304.7 Get:168 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libglib2.0-dev amd64 2.88.0-1ubuntu0.1 [18.8 kB]
+#5 304.8 Get:169 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 girepository-tools amd64 2.88.0-1ubuntu0.1 [111 kB]
+#5 304.9 Get:170 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgirepository-2.0-0 amd64 2.88.0-1ubuntu0.1 [76.1 kB]
+#5 305.2 Get:171 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libglib2.0-data all 2.88.0-1ubuntu0.1 [38.5 kB]
+#5 305.3 Get:172 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libglib2.0-bin amd64 2.88.0-1ubuntu0.1 [99.4 kB]
+#5 305.4 Get:173 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gir1.2-glib-2.0 amd64 2.88.0-1ubuntu0.1 [183 kB]
+#5 305.6 Get:174 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libglib2.0-0t64 amd64 2.88.0-1ubuntu0.1 [1598 kB]
+#5 307.9 Get:175 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libxml2-dev amd64 2.15.2+dfsg-0.1ubuntu0.3 [712 kB]
+#5 309.2 Get:176 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libxml2-16 amd64 2.15.2+dfsg-0.1ubuntu0.3 [607 kB]
+#5 310.2 Get:177 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpcap0.8t64 amd64 1.10.6-1ubuntu1.1 [160 kB]
+#5 310.4 Get:178 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpng-dev amd64 1.6.57-1ubuntu0.1 [274 kB]
+#5 311.1 Get:179 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpng16-16t64 amd64 1.6.57-1ubuntu0.1 [195 kB]
+#5 311.3 Get:180 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libx11-dev amd64 2:1.8.13-1ubuntu0.1 [739 kB]
+#5 312.7 Get:181 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libx11-xcb-dev amd64 2:1.8.13-1ubuntu0.1 [9950 B]
+#5 312.7 Get:182 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libx11-6 amd64 2:1.8.13-1ubuntu0.1 [658 kB]
+#5 313.5 Get:183 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libx11-xcb1 amd64 2:1.8.13-1ubuntu0.1 [7980 B]
+#5 313.5 Get:184 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libx11-data all 2:1.8.13-1ubuntu0.1 [115 kB]
+#5 313.5 Get:185 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libbrotli-dev amd64 1.2.0-3ubuntu0.1 [364 kB]
+#5 313.8 Get:186 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libbrotli1 amd64 1.2.0-3ubuntu0.1 [343 kB]
+#5 314.3 Get:187 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libssh2-1-dev amd64 1.11.1-1ubuntu0.26.04.4 [283 kB]
+#5 317.5 Get:188 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libssh2-1t64 amd64 1.11.1-1ubuntu0.26.04.4 [138 kB]
+#5 317.5 Get:189 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libcurl3t64-gnutls amd64 8.18.0-1ubuntu2.8 [421 kB]
+#5 318.7 Get:190 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 git-man all 1:2.53.0-1ubuntu1.1 [1197 kB]
+#5 322.1 Get:191 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 git amd64 1:2.53.0-1ubuntu1.1 [4223 kB]
+#5 330.3 Get:192 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw-security-common amd64 7.10.2-3resolute.20260901.091646 [26.5 kB]
+#5 330.7 Get:193 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw-dds-common amd64 6.0.0-3resolute.20260915.045630 [124 kB]
+#5 333.2 Get:194 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-tracetools amd64 8.10.2-1resolute.20260728.204752 [41.8 kB]
+#5 333.3 Get:195 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 openssh-client amd64 1:10.2p1-2ubuntu3.8 [936 kB]
+#5 335.4 Get:196 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw-fastrtps-shared-cpp amd64 9.4.10-1resolute.20260915.051845 [183 kB]
+#5 335.8 Get:197 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 xz-utils amd64 5.8.3-1ubuntu0.1 [406 kB]
+#5 336.5 Get:198 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 bubblewrap amd64 0.11.1-1ubuntu0.3 [51.0 kB]
+#5 336.5 Get:199 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ca-certificates-java all 20260311ubuntu0.26.04.2 [12.1 kB]
+#5 336.5 Get:200 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libcurl4-openssl-dev amd64 8.18.0-1ubuntu2.8 [546 kB]
+#5 338.8 Get:201 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 curl amd64 8.18.0-1ubuntu2.8 [273 kB]
+#5 339.3 Get:202 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libcurl4t64 amd64 8.18.0-1ubuntu2.8 [430 kB]
+#5 340.1 Get:203 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-console-bridge-vendor amd64 1.9.1-3resolute.20260728.205113 [5972 B]
+#5 340.7 Get:204 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 dirmngr amd64 2.4.8-4ubuntu3.1 [327 kB]
+#5 341.3 Get:205 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-class-loader amd64 2.9.4-3resolute.20260831.171005 [51.5 kB]
+#5 341.9 Get:206 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpg-agent amd64 2.4.8-4ubuntu3.1 [236 kB]
+#5 342.7 Get:207 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-pluginlib amd64 5.8.5-1resolute.20260831.172534 [65.9 kB]
+#5 344.8 Get:208 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpg amd64 2.4.8-4ubuntu3.1 [637 kB]
+#5 346.0 Get:209 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpgconf amd64 2.4.8-4ubuntu3.1 [106 kB]
+#5 346.3 Get:210 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gnupg all 2.4.8-4ubuntu3.1 [311 kB]
+#5 347.1 Get:211 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpgsm amd64 2.4.8-4ubuntu3.1 [239 kB]
+#5 347.3 Get:212 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-buffer-backend-registry amd64 5.2.1-1resolute.20260901.091931 [60.2 kB]
+#5 347.6 Get:213 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 libheif-dev amd64 1.21.2-3ubuntu0.7 [59.3 kB]
+#5 347.6 Get:214 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaom-dev amd64 3.13.1-2ubuntu0.1 [2308 kB]
+#5 350.4 Get:215 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-dynamic-typesupport-fastrtps amd64 0.5.1-3resolute.20260831.171643 [56.1 kB]
+#5 352.8 Get:216 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw-fastrtps-cpp amd64 9.4.10-1resolute.20260915.053043 [155 kB]
+#5 355.7 Get:217 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaom3 amd64 3.13.1-2ubuntu0.1 [1969 kB]
+#5 360.8 Get:218 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw-implementation amd64 3.1.6-1resolute.20260915.053750 [23.1 kB]
+#5 361.8 Get:219 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-type-description-interfaces amd64 2.4.5-1resolute.20260915.033102 [179 kB]
+#5 364.5 Get:220 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libheif1 amd64 1.21.2-3ubuntu0.7 [551 kB]
+#5 365.3 Get:221 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcl amd64 10.4.5-1resolute.20260915.060844 [161 kB]
+#5 366.5 Get:222 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libheif-plugin-aomdec amd64 1.21.2-3ubuntu0.7 [15.6 kB]
+#5 366.5 Get:223 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 librsvg2-2 amd64 2.61.3+dfsg-3ubuntu0.1 [1850 kB]
+#5 367.6 Get:224 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-statistics-msgs amd64 2.4.5-1resolute.20260915.043006 [75.2 kB]
+#5 369.8 Get:225 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-libstatistics-collector amd64 2.1.2-1resolute.20260915.061028 [26.4 kB]
+#5 373.4 Get:226 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosgraph-msgs amd64 2.4.5-1resolute.20260915.050401 [184 kB]
+#5 374.7 Get:227 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 glycin-loaders amd64 2.1.5+ds-0ubuntu0.2 [2984 kB]
+#5 379.5 Get:228 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rclcpp amd64 32.0.3-1resolute.20260915.061505 [827 kB]
+#5 385.8 Get:229 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libglycin-2-0 amd64 2.1.5+ds-0ubuntu0.2 [1487 kB]
+#5 393.5 Get:230 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 glycin-thumbnailers amd64 2.1.5+ds-0ubuntu0.2 [223 kB]
+#5 395.2 Get:231 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gtk-update-icon-cache amd64 4.22.4+ds-0ubuntu0.2 [42.7 kB]
+#5 395.7 Get:232 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libarchive-dev amd64 3.8.5-1ubuntu2.3 [606 kB]
+#5 398.9 Get:233 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libarchive13t64 amd64 3.8.5-1ubuntu2.3 [397 kB]
+#5 402.0 Get:234 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgl1-mesa-dri amd64 26.0.8-1ubuntu0.3 [38.2 kB]
+#5 402.0 Get:235 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgbm-dev amd64 26.0.8-1ubuntu0.3 [11.9 kB]
+#5 402.0 Get:236 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libglx-mesa0 amd64 26.0.8-1ubuntu0.3 [126 kB]
+#5 402.6 Get:237 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libegl-mesa0 amd64 26.0.8-1ubuntu0.3 [134 kB]
+#5 403.3 Get:238 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgbm1 amd64 26.0.8-1ubuntu0.3 [49.2 kB]
+#5 403.5 Get:239 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 mesa-libgallium amd64 26.0.8-1ubuntu0.3 [11.2 MB]
+#5 434.4 Get:240 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcl-action amd64 10.4.5-1resolute.20260915.061100 [54.7 kB]
+#5 437.7 Get:241 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rclcpp-action amd64 32.0.3-1resolute.20260915.064317 [100 kB]
+#5 441.8 Get:242 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-composition-interfaces amd64 2.4.5-1resolute.20260915.050451 [174 kB]
+#5 463.7 Get:243 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rclcpp-components amd64 32.0.3-1resolute.20260915.065011 [110 kB]
+#5 466.3 Get:244 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-action-tutorials-cpp amd64 0.37.9-1resolute.20260915.071207 [81.8 kB]
+#5 467.4 Get:245 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-lifecycle-msgs amd64 2.4.5-1resolute.20260915.045218 [202 kB]
+#5 470.6 Get:246 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rcl-lifecycle amd64 10.4.5-1resolute.20260915.061109 [29.9 kB]
+#5 471.4 Get:247 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rclpy amd64 10.0.11-1resolute.20260915.061807 [533 kB]
+#5 478.9 Get:248 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-action-tutorials-py amd64 0.37.9-1resolute.20260915.071209 [11.8 kB]
+#5 481.2 Get:249 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-std-msgs amd64 5.9.3-1resolute.20260915.043001 [273 kB]
+#5 493.8 Get:250 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libevent-dev amd64 2.1.12-stable-10ubuntu0.2 [276 kB]
+#5 495.3 Get:251 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libevent-pthreads-2.1-7t64 amd64 2.1.12-stable-10ubuntu0.2 [8170 B]
+#5 495.3 Get:252 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libevent-openssl-2.1-7t64 amd64 2.1.12-stable-10ubuntu0.2 [15.9 kB]
+#5 495.5 Get:253 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libevent-extra-2.1-7t64 amd64 2.1.12-stable-10ubuntu0.2 [64.8 kB]
+#5 495.5 Get:254 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-actuator-msgs amd64 0.0.1-5resolute.20260915.044428 [114 kB]
+#5 495.7 Get:255 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libevent-core-2.1-7t64 amd64 2.1.12-stable-10ubuntu0.2 [92.6 kB]
+#5 497.4 Get:256 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libevent-2.1-7t64 amd64 2.1.12-stable-10ubuntu0.2 [145 kB]
+#5 498.2 Get:257 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libfreetype-dev amd64 2.14.2+dfsg-1ubuntu0.2 [586 kB]
+#5 499.3 Get:258 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-gtest amd64 2.8.8-1resolute.20260728.175609 [8536 B]
+#5 499.7 Get:259 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-gmock amd64 2.8.8-1resolute.20260728.175747 [8514 B]
+#5 500.2 Get:260 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-auto amd64 2.8.8-1resolute.20260728.210738 [11.4 kB]
+#5 502.2 Get:261 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libfreetype6 amd64 2.14.2+dfsg-1ubuntu0.2 [409 kB]
+#5 502.7 Get:262 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-copyright amd64 0.20.6-1resolute.20260728.172704 [50.0 kB]
+#5 504.4 Get:263 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-copyright amd64 0.20.6-1resolute.20260728.204014 [7246 B]
+#5 504.8 Get:264 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgphoto2-dev amd64 2.5.33-1ubuntu1.2 [33.2 kB]
+#5 504.9 Get:265 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-lint-cmake amd64 0.20.6-1resolute.20260728.173508 [24.8 kB]
+#5 505.2 Get:266 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgphoto2-port12t64 amd64 2.5.33-1ubuntu1.2 [58.4 kB]
+#5 505.2 Get:267 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgphoto2-6t64 amd64 2.5.33-1ubuntu1.2 [760 kB]
+#5 505.7 Get:268 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-lint-cmake amd64 0.20.6-1resolute.20260728.204241 [7192 B]
+#5 506.5 Get:269 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-pytest amd64 2.8.8-1resolute.20260728.175653 [8984 B]
+#5 506.9 Get:270 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw-test-fixture amd64 0.15.8-1resolute.20260901.092020 [9462 B]
+#5 507.5 Get:271 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rmw-test-fixture-implementation amd64 0.15.8-1resolute.20260915.054330 [22.3 kB]
+#5 508.8 Get:272 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-ros amd64 0.15.8-1resolute.20260915.054806 [8524 B]
+#5 509.1 Get:273 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-xmllint amd64 0.20.6-1resolute.20260728.172708 [14.9 kB]
+#5 509.5 Get:274 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgstreamer1.0-0 amd64 1.28.2-1ubuntu0.1 [1218 kB]
+#5 509.6 Get:275 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-cmake-xmllint amd64 0.20.6-1resolute.20260728.204019 [7248 B]
+#5 509.8 Get:276 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-lint-auto amd64 0.20.6-1resolute.20260728.204247 [7078 B]
+#5 510.1 Get:277 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ament-lint-common amd64 0.20.6-1resolute.20260728.211054 [7114 B]
+#5 510.4 Get:278 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-angles amd64 1.16.1-3resolute.20260728.204755 [13.9 kB]
+#5 510.8 Get:279 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-geometry-msgs amd64 5.9.3-1resolute.20260915.045122 [289 kB]
+#5 514.2 Get:280 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgstreamer-plugins-base1.0-0 amd64 1.28.2-1ubuntu0.3 [922 kB]
+#5 515.4 Get:281 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-sensor-msgs amd64 5.9.3-1resolute.20260915.051912 [441 kB]
+#5 517.2 Get:282 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libinput-bin amd64 1.31.1-1ubuntu1.2 [24.5 kB]
+#5 517.3 Get:283 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libinput-dev amd64 1.31.1-1ubuntu1.2 [36.3 kB]
+#5 517.3 Get:284 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libinput10 amd64 1.31.1-1ubuntu1.2 [161 kB]
+#5 518.5 Get:285 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 libminizip-dev amd64 1:1.3.dfsg+really1.3.1-1ubuntu3.2 [30.6 kB]
+#5 518.7 Get:286 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 libminizip1t64 amd64 1:1.3.dfsg+really1.3.1-1ubuntu3.2 [22.7 kB]
+#5 518.7 Get:287 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libmp3lame0 amd64 3.101~svn6525+dfsg-2ubuntu0.1 [121 kB]
+#5 518.7 Get:288 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libmysqlclient-dev amd64 8.4.13-0ubuntu0.26.04.2 [1656 kB]
+#5 519.0 Get:289 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-cv-bridge amd64 4.1.0-3resolute.20260915.073513 [127 kB]
+#5 520.7 Get:290 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-image-geometry amd64 4.1.0-3resolute.20260915.055055 [33.1 kB]
+#5 521.5 Get:291 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-message-filters amd64 7.4.2-1resolute.20260915.064044 [48.3 kB]
+#5 523.0 Get:292 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-std-srvs amd64 5.9.3-1resolute.20260915.045802 [122 kB]
+#5 524.8 Get:293 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-camera-calibration amd64 7.1.7-1resolute.20260915.074429 [79.7 kB]
+#5 526.8 Get:294 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libmysqlclient24 amd64 8.4.13-0ubuntu0.26.04.2 [1257 kB]
+#5 527.2 Get:295 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-yaml-cpp-vendor amd64 9.2.1-3resolute.20260728.210605 [7032 B]
+#5 528.3 Get:296 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-camera-calibration-parsers amd64 6.4.10-1resolute.20260915.073520 [64.3 kB]
+#5 533.5 Get:297 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rclcpp-lifecycle amd64 32.0.3-1resolute.20260915.064713 [79.6 kB]
+#5 535.2 Get:298 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnss3-dev amd64 2:3.120-1ubuntu2.2 [260 kB]
+#5 536.0 Get:299 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnss3 amd64 2:3.120-1ubuntu2.2 [1514 kB]
+#5 541.9 Get:300 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-camera-info-manager amd64 6.4.10-1resolute.20260915.073940 [51.0 kB]
+#5 543.6 Get:301 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-diagnostic-msgs amd64 5.9.3-1resolute.20260915.051854 [158 kB]
+#5 545.1 Get:302 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpoppler-private-dev amd64 26.01.0-2ubuntu0.3 [187 kB]
+#5 546.5 Get:303 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libtiff-dev amd64 4.7.0-3ubuntu5 [357 kB]
+#5 547.1 Get:304 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-nav-msgs amd64 5.9.3-1resolute.20260915.051911 [266 kB]
+#5 548.9 Get:305 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libtiffxx6 amd64 4.7.0-3ubuntu5 [5760 B]
+#5 548.9 Get:306 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libtiff6 amd64 4.7.0-3ubuntu5 [206 kB]
+#5 550.3 Get:307 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpoppler-dev amd64 26.01.0-2ubuntu0.3 [5354 B]
+#5 550.3 Get:308 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpoppler156 amd64 26.01.0-2ubuntu0.3 [1238 kB]
+#5 556.3 Get:309 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpq-dev amd64 18.6-0ubuntu0.26.04.1 [176 kB]
+#5 556.6 Get:310 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-shape-msgs amd64 5.9.3-1resolute.20260915.050607 [88.4 kB]
+#5 557.9 Get:311 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libpq5 amd64 18.6-0ubuntu0.26.04.1 [163 kB]
+#5 558.6 Get:312 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libprotoc-dev amd64 3.21.12-15ubuntu1.1 [1121 kB]
+#5 559.1 Get:313 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-stereo-msgs amd64 5.9.3-1resolute.20260915.052917 [54.2 kB]
+#5 560.9 Get:314 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-trajectory-msgs amd64 5.9.3-1resolute.20260915.051919 [112 kB]
+#5 562.8 Get:315 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 protobuf-compiler amd64 3.21.12-15ubuntu1.1 [29.1 kB]
+#5 562.8 Get:316 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libprotobuf-dev amd64 3.21.12-15ubuntu1.1 [1443 kB]
+#5 563.4 Get:317 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-visualization-msgs amd64 5.9.3-1resolute.20260915.052651 [307 kB]
+#5 569.1 Get:318 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libprotobuf32t64 amd64 3.21.12-15ubuntu1.1 [954 kB]
+#5 571.6 Get:319 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-common-interfaces amd64 5.9.3-1resolute.20260915.053335 [6436 B]
+#5 572.1 Get:320 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-launch amd64 3.9.8-1resolute.20260728.172811 [241 kB]
+#5 573.3 Get:321 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libprotoc32t64 amd64 3.21.12-15ubuntu1.1 [702 kB]
+#5 577.1 Get:322 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libprotobuf-lite32t64 amd64 3.21.12-15ubuntu1.1 [249 kB]
+#5 577.9 Get:323 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 librabbitmq4 amd64 0.15.0-1ubuntu0.26.04.2 [37.7 kB]
+#5 578.0 Get:324 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libruby3.3 amd64 3.3.8-2ubuntu3.2 [5860 kB]
+#5 582.9 Get:325 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-launch-ros amd64 0.29.9-1resolute.20260915.064616 [97.3 kB]
+#5 604.3 Get:326 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-composition amd64 0.37.9-1resolute.20260915.071707 [236 kB]
+#5 612.4 Get:327 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-image-transport amd64 6.4.10-1resolute.20260915.073117 [389 kB]
+#5 622.9 Get:328 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libssh-4 amd64 0.11.3-1ubuntu2.1 [208 kB]
+#5 625.4 Get:329 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libunbound8 amd64 1.24.2-1ubuntu2.4 [461 kB]
+#5 626.7 Get:330 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-compressed-depth-image-transport amd64 6.2.6-1resolute.20260915.074341 [210 kB]
+#5 630.3 Get:331 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 libwebsockets-dev amd64 4.3.5-3ubuntu1.1 [591 kB]
+#5 637.5 Get:332 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 libwebsockets-evlib-uv amd64 4.3.5-3ubuntu1.1 [12.5 kB]
+#5 637.5 Get:333 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 libwebsockets-evlib-glib amd64 4.3.5-3ubuntu1.1 [9618 B]
+#5 637.5 Get:334 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 libwebsockets-evlib-ev amd64 4.3.5-3ubuntu1.1 [9470 B]
+#5 637.5 Get:335 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 libwebsockets19t64 amd64 4.3.5-3ubuntu1.1 [227 kB]
+#5 640.6 Get:336 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libxml2-utils amd64 2.15.2+dfsg-0.1ubuntu0.3 [43.0 kB]
+#5 641.0 Get:337 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libxpm-dev amd64 1:3.5.17-1ubuntu0.26.04.2 [110 kB]
+#5 643.0 Get:338 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libxpm4 amd64 1:3.5.17-1ubuntu0.26.04.2 [37.2 kB]
+#5 644.2 Get:339 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libxtst6 amd64 2:1.2.5-1ubuntu0.1 [13.2 kB]
+#5 644.2 Get:340 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 openjdk-25-jdk amd64 25.0.5.1+2-1~26.04.1 [1791 kB]
+#5 647.9 Get:341 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-compressed-image-transport amd64 6.2.6-1resolute.20260915.081411 [186 kB]
+#5 654.9 Get:342 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-launch-xml amd64 3.9.8-1resolute.20260728.175211 [11.5 kB]
+#5 655.8 Get:343 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-demo-nodes-cpp amd64 0.37.9-1resolute.20260915.065629 [982 kB]
+#5 663.8 Get:344 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 openjdk-25-jdk-headless amd64 25.0.5.1+2-1~26.04.1 [89.5 MB]
+#5 680.2 Get:345 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-demo-nodes-cpp-native amd64 0.37.9-1resolute.20260915.065404 [67.4 kB]
+#5 681.5 Get:346 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-demo-nodes-py amd64 0.37.9-1resolute.20260915.064940 [30.4 kB]
+#5 682.1 Get:347 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-tf2 amd64 0.45.10-1resolute.20260915.134323 [95.9 kB]
+#5 684.0 Get:348 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-tf2-msgs amd64 0.45.10-1resolute.20260915.134604 [198 kB]
+#5 687.1 Get:349 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-tf2-ros amd64 0.45.10-1resolute.20260915.140307 [340 kB]
+#5 709.6 Get:350 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-tf2-py amd64 0.45.10-1resolute.20260915.135155 [30.4 kB]

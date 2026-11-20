@@ -1,0 +1,20 @@
+bag=/work/bags/pr07/motion_20261120_044812
+/clock: 11339 messages
+/drive/safe: 73 messages
+/tf: 567 messages
+/tf_static: 3 messages
+/vehicle/camera/image_raw: 216 messages
+/vehicle/gz_cmd_vel: 76 messages
+/vehicle/imu: 1130 messages
+/vehicle/odom: 566 messages
+/vehicle/scan: 113 messages
+displacement_m=0.373592
+peak_odom_speed_mps=0.200000
+final_odom_speed_mps=0.000000
+matched_odom_tf_pairs=566
+odom_tf_match_fraction=1.000000
+odom_without_tf=0
+tf_without_odom=1
+PASS: recorded motion and final stop verified
+PASS: matched odometry/TF stamps and poses agree
+PASS: all sensor static transforms recorded

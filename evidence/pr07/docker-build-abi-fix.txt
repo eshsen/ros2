@@ -1,0 +1,124 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 778B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/course-pr07-base:local
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/3] FROM docker.io/library/course-pr07-base:local@sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe
+#4 resolve docker.io/library/course-pr07-base:local@sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe 0.0s done
+#4 CACHED
+
+#5 [2/3] RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends        ros-lyrical-ackermann-msgs        ros-lyrical-std-msgs        ros-lyrical-builtin-interfaces        ros-lyrical-rosidl-runtime-c        ros-lyrical-rosidl-typesupport-fastrtps-c        ros-lyrical-ros-gz        ros-lyrical-xacro        ros-lyrical-robot-state-publisher        ros-lyrical-tf2-tools        ros-lyrical-rosbag2-storage-mcap        python3-colcon-common-extensions        python3-pytest        python3-yaml        liburdfdom-tools     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#5 0.824 Get:1 http://packages.ros.org/ros2/ubuntu resolute InRelease [4679 B]
+#5 0.915 Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+#5 1.389 Get:3 http://packages.ros.org/ros2/ubuntu resolute/main Sources [719 kB]
+#5 1.392 Get:4 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+#5 3.120 Get:5 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [885 kB]
+#5 3.589 Get:6 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+#5 6.820 Get:7 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+#5 8.133 Get:8 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [20.1 MB]
+#5 8.196 Get:9 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [24.6 kB]
+#5 8.254 Get:10 http://packages.ros.org/ros2/ubuntu resolute/main amd64 Packages [666 kB]
+#5 9.665 Get:11 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [278 kB]
+#5 17.66 Get:12 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [723 kB]
+#5 99.64 Get:13 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [189 kB]
+#5 99.81 Get:14 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1874 kB]
+#5 107.8 Get:15 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [352 kB]
+#5 108.3 Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [1110 kB]
+#5 112.6 Get:17 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [497 kB]
+#5 114.9 Get:18 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [26.1 kB]
+#5 115.1 Get:19 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [773 kB]
+#5 118.6 Get:20 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [3308 B]
+#5 118.6 Fetched 28.8 MB in 1min 58s (243 kB/s)
+#5 118.6 Reading package lists...
+#5 119.2 Reading package lists...
+#5 119.8 Building dependency tree...
+#5 120.0 Reading state information...
+#5 120.0 python3-colcon-common-extensions is already the newest version (0.3.0-100).
+#5 120.0 python3-pytest is already the newest version (9.0.2-4).
+#5 120.0 python3-pytest set to manually installed.
+#5 120.0 python3-yaml is already the newest version (6.0.3-1build1).
+#5 120.0 python3-yaml set to manually installed.
+#5 120.0 Solving dependencies...
+#5 120.2 The following NEW packages will be installed:
+#5 120.2   liburdfdom-tools ros-lyrical-ackermann-msgs ros-lyrical-ros-gz
+#5 120.2 The following packages will be upgraded:
+#5 120.2   ros-lyrical-builtin-interfaces ros-lyrical-robot-state-publisher
+#5 120.2   ros-lyrical-rosbag2-storage-mcap ros-lyrical-rosidl-runtime-c
+#5 120.2   ros-lyrical-rosidl-typesupport-fastrtps-c ros-lyrical-std-msgs
+#5 120.2   ros-lyrical-tf2-tools ros-lyrical-xacro
+#5 121.3 8 upgraded, 3 newly installed, 0 to remove and 546 not upgraded.
+#5 121.3 Need to get 871 kB of archives.
+#5 121.3 After this operation, 840 kB of additional disk space will be used.
+#5 121.3 Get:1 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-builtin-interfaces amd64 2.4.5-1resolute.20260915.031157 [49.9 kB]
+#5 122.1 Get:2 http://archive.ubuntu.com/ubuntu resolute/universe amd64 liburdfdom-tools amd64 5.1.0-1 [14.9 kB]
+#5 122.7 Get:3 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-std-msgs amd64 5.9.3-1resolute.20260915.043001 [273 kB]
+#5 124.9 Get:4 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ackermann-msgs amd64 2.0.2-7resolute.20260915.044443 [57.3 kB]
+#5 125.0 Get:5 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-robot-state-publisher amd64 3.5.6-1resolute.20260915.141620 [208 kB]
+#5 125.9 Get:6 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-ros-gz amd64 3.0.10-1resolute.20260930.020431 [6428 B]
+#5 126.1 Get:7 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosbag2-storage-mcap amd64 0.33.4-1resolute.20260919.190758 [142 kB]
+#5 127.8 Get:8 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-runtime-c amd64 5.2.1-1resolute.20260831.170154 [55.9 kB]
+#5 127.8 Get:9 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-rosidl-typesupport-fastrtps-c amd64 3.9.7-1resolute.20260915.025611 [25.9 kB]
+#5 128.1 Get:10 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-tf2-tools amd64 0.45.10-1resolute.20260915.135840 [10.2 kB]
+#5 128.1 Get:11 http://packages.ros.org/ros2/ubuntu resolute/main amd64 ros-lyrical-xacro amd64 2.1.1-3resolute.20260728.204820 [27.2 kB]
+#5 129.0 Fetched 871 kB in 8s (111 kB/s)
+#5 129.0 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 146823 files and directories currently installed.)
+#5 129.1 Preparing to unpack .../00-ros-lyrical-builtin-interfaces_2.4.5-1resolute.20260915.031157_amd64.deb ...
+#5 129.1 Unpacking ros-lyrical-builtin-interfaces (2.4.5-1resolute.20260915.031157) over (2.4.5-1resolute.20260605.174229) ...
+#5 129.4 Preparing to unpack .../01-ros-lyrical-std-msgs_5.9.3-1resolute.20260915.043001_amd64.deb ...
+#5 129.4 Unpacking ros-lyrical-std-msgs (5.9.3-1resolute.20260915.043001) over (5.9.2-3resolute.20260606.003418) ...
+#5 134.3 Selecting previously unselected package ros-lyrical-ackermann-msgs.
+#5 134.3 Preparing to unpack .../02-ros-lyrical-ackermann-msgs_2.0.2-7resolute.20260915.044443_amd64.deb ...
+#5 134.3 Unpacking ros-lyrical-ackermann-msgs (2.0.2-7resolute.20260915.044443) ...
+#5 134.4 Preparing to unpack .../03-ros-lyrical-robot-state-publisher_3.5.6-1resolute.20260915.141620_amd64.deb ...
+#5 134.4 Unpacking ros-lyrical-robot-state-publisher (3.5.6-1resolute.20260915.141620) over (3.5.5-3resolute.20260606.025604) ...
+#5 134.6 Selecting previously unselected package ros-lyrical-ros-gz.
+#5 134.7 Preparing to unpack .../04-ros-lyrical-ros-gz_3.0.10-1resolute.20260930.020431_amd64.deb ...
+#5 134.7 Unpacking ros-lyrical-ros-gz (3.0.10-1resolute.20260930.020431) ...
+#5 134.7 Preparing to unpack .../05-ros-lyrical-rosbag2-storage-mcap_0.33.4-1resolute.20260919.190758_amd64.deb ...
+#5 134.7 Unpacking ros-lyrical-rosbag2-storage-mcap (0.33.4-1resolute.20260919.190758) over (0.33.3-1resolute.20260606.033621) ...
+#5 134.9 Preparing to unpack .../06-ros-lyrical-rosidl-runtime-c_5.2.1-1resolute.20260831.170154_amd64.deb ...
+#5 134.9 Unpacking ros-lyrical-rosidl-runtime-c (5.2.1-1resolute.20260831.170154) over (5.2.1-1resolute.20260605.171552) ...
+#5 135.2 Preparing to unpack .../07-ros-lyrical-rosidl-typesupport-fastrtps-c_3.9.7-1resolute.20260915.025611_amd64.deb ...
+#5 135.2 Unpacking ros-lyrical-rosidl-typesupport-fastrtps-c (3.9.7-1resolute.20260915.025611) over (3.9.5-3resolute.20260605.173622) ...
+#5 135.4 Preparing to unpack .../08-ros-lyrical-tf2-tools_0.45.10-1resolute.20260915.135840_amd64.deb ...
+#5 135.4 Unpacking ros-lyrical-tf2-tools (0.45.10-1resolute.20260915.135840) over (0.45.7-3resolute.20260606.030509) ...
+#5 135.5 Preparing to unpack .../09-ros-lyrical-xacro_2.1.1-3resolute.20260728.204820_amd64.deb ...
+#5 135.5 Unpacking ros-lyrical-xacro (2.1.1-3resolute.20260728.204820) over (2.1.1-3resolute.20260430.013741) ...
+#5 135.7 Selecting previously unselected package liburdfdom-tools.
+#5 135.8 Preparing to unpack .../10-liburdfdom-tools_5.1.0-1_amd64.deb ...
+#5 135.8 Unpacking liburdfdom-tools (5.1.0-1) ...
+#5 135.9 Setting up ros-lyrical-rosidl-runtime-c (5.2.1-1resolute.20260831.170154) ...
+#5 135.9 Setting up ros-lyrical-rosidl-typesupport-fastrtps-c (3.9.7-1resolute.20260915.025611) ...
+#5 135.9 Setting up liburdfdom-tools (5.1.0-1) ...
+#5 135.9 Setting up ros-lyrical-ros-gz (3.0.10-1resolute.20260930.020431) ...
+#5 135.9 Setting up ros-lyrical-rosbag2-storage-mcap (0.33.4-1resolute.20260919.190758) ...
+#5 135.9 Setting up ros-lyrical-xacro (2.1.1-3resolute.20260728.204820) ...
+#5 136.0 Setting up ros-lyrical-tf2-tools (0.45.10-1resolute.20260915.135840) ...
+#5 136.0 Setting up ros-lyrical-builtin-interfaces (2.4.5-1resolute.20260915.031157) ...
+#5 136.0 Setting up ros-lyrical-std-msgs (5.9.3-1resolute.20260915.043001) ...
+#5 136.0 Setting up ros-lyrical-ackermann-msgs (2.0.2-7resolute.20260915.044443) ...
+#5 136.0 Setting up ros-lyrical-robot-state-publisher (3.5.6-1resolute.20260915.141620) ...
+#5 DONE 136.2s
+
+#6 [3/3] WORKDIR /work
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers
+#7 exporting layers 0.4s done
+#7 exporting manifest sha256:23dec33ef6726d4ae2dd58c5228dc93675b22315b901e7637dd07ba2979b9add 0.0s done
+#7 exporting config sha256:018e45ef55f8007ab947cfefb3de25b52fb6d743378be663b73ca74f556dd973 0.0s done
+#7 exporting attestation manifest sha256:182395da2695ed86bbffda98ecf5059a718526653928849b64673641aec519a2 0.0s done
+#7 exporting manifest list sha256:3288ae6b915a5f229eac30552fcaf705109ae8d5f4e9ae2689f691836e91e968 0.0s done
+#7 naming to docker.io/library/course-pr07:lyrical done
+#7 unpacking to docker.io/library/course-pr07:lyrical
+#7 unpacking to docker.io/library/course-pr07:lyrical 0.2s done
+#7 DONE 0.6s

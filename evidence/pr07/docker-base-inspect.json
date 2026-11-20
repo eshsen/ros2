@@ -1,0 +1,71 @@
+[
+    {
+        "Id": "sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe",
+        "RepoTags": [
+            "course-pr07-base:local",
+            "osrf/ros@sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe"
+        ],
+        "RepoDigests": [
+            "course-pr07-base@sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe",
+            "osrf/ros@sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-08-05T00:58:32.779624118Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "ROS_DISTRO=lyrical"
+            ],
+            "Entrypoint": [
+                "/ros_entrypoint.sh"
+            ],
+            "Cmd": [
+                "bash"
+            ],
+            "Labels": {
+                "org.opencontainers.image.created": "2026-07-24T12:48:28.650696+00:00",
+                "org.opencontainers.image.description": "The Ubuntu container image maintained by Canonical\n\nUbuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things.\nIt is the world's most popular operating system across public clouds and OpenStack clouds.\nIt is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale.\nFast, secure and simple, Ubuntu powers millions of PCs worldwide.\n",
+                "org.opencontainers.image.title": "ubuntu",
+                "org.opencontainers.image.version": "26.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 8069278009,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:24d9bad9efb08e44497f74cc79f9b0400818037a24628fd910db9145e5048649",
+                "sha256:d474aac4fedc48314243c3b7171e47cc0ce524fe5ad4bfb97745d08dafca9325",
+                "sha256:f741de4f1bbc2b92a3a819178acb717d5652b6a11c936d1a29227c1b48c38b5c",
+                "sha256:11484c245f17526509df4afc8ceedba6a54dd441062826c346b4afa6be4cbe18",
+                "sha256:3932ef654e8c70a24b4acbc46d6c79ab98a9834d530c2495f2995a4b1cfbb4a2",
+                "sha256:f0eaa2f1664b175fc4a218dcaef72e987f12e043247b7656ad401f64b93c8962",
+                "sha256:71a4809885ba7d95a944d1037eef6ede0aef83670a0a3e88c2c9ac1edba5bc5f",
+                "sha256:ef8ff16e911250ddb562e781ff8e60f5b452171e90ead30d77bc05abc508df69",
+                "sha256:418d69776f86420218de60700e08360196c90ce1361cb7d50990d6eec08052a8",
+                "sha256:6c94e297b31cfaa393aa8f54571059e28a89441031c042b56c5234708d4299d2",
+                "sha256:4796b881311462d995b320b807a85482c6b93476828cbd1f34a1ed7ed9a6f603",
+                "sha256:238fa5d43a8e1d249305b44c8b824f0cc21af89d5ecb7be0bf505849c9e51492",
+                "sha256:7747f67fe2aea192a0fbc74bd24743b69ce33521200725f1b1db595f73709134"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-20T03:55:53.710231913Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:e6b1cb530b65588279681db53784e264ce5cf83f2cc33e689d27d6024d7f3ebe",
+            "size": 3060
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/osrf/ros"
+                }
+            ]
+        }
+    }
+]

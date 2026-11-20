@@ -1,0 +1,65 @@
+===== NODES =====
+/drive_adapter
+/odom_adapter
+/pr07_bridge
+===== SAFE COMMAND INPUT =====
+Type: ackermann_msgs/msg/AckermannDriveStamped
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: drive_adapter
+Node namespace: /
+Topic type: ackermann_msgs/msg/AckermannDriveStamped
+Topic type hash: RIHS01_48ca7612a08d3bb72744fd98b71b7cf2ea24c6ad50fa4e1aa0bbad963c90d8cf
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.eb.7d.27.00.1f.40.00.00.00.00.00.00.15.04
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+===== GAZEBO COMMAND OUTPUT =====
+Type: geometry_msgs/msg/Twist
+
+Publisher count: 1
+
+Node name: drive_adapter
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Topic type hash: RIHS01_9c45bf16fe0983d80e3cfe750d6835843d265a9a6c46bd2e609fcddde6fb8d2a
+Endpoint type: PUBLISHER
+GID: 01.0f.eb.7d.27.00.1f.40.00.00.00.00.00.00.14.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: pr07_bridge
+Node namespace: /
+Topic type: geometry_msgs/msg/Twist
+Topic type hash: RIHS01_9c45bf16fe0983d80e3cfe750d6835843d265a9a6c46bd2e609fcddde6fb8d2a
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.eb.7d.25.00.10.35.00.00.00.00.00.00.14.04
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+===== SIMULATION TIME =====
+Boolean value is: True

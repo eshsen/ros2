@@ -1,0 +1,1 @@
+[INFO] [1795148779.801923663] [odom_adapter]: Odometry adapter started

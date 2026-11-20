@@ -1,0 +1,23 @@
+Selected bag: /work/bags/pr07/motion_20261120_044812
+
+Files:             0_motion_20261120_044812_2026_11_20-04_48_13.mcap
+Bag size:          144.4 MiB
+Storage id:        mcap
+ROS Distro:        lyrical
+Duration:          11.337000000s
+Start:             Jan  1 1970 00:12:48.551000000 (768.551000000)
+End:               Jan  1 1970 00:12:59.888000000 (779.888000000)
+Messages:          14083
+Topic information: Topic: /clock | Type: rosgraph_msgs/msg/Clock | Count: 11339 | Serialization Format: cdr
+                   Topic: /drive/safe | Type: ackermann_msgs/msg/AckermannDriveStamped | Count: 73 | Serialization Format: cdr
+                   Topic: /tf | Type: tf2_msgs/msg/TFMessage | Count: 567 | Serialization Format: cdr
+                   Topic: /tf_static | Type: tf2_msgs/msg/TFMessage | Count: 3 | Serialization Format: cdr
+                   Topic: /vehicle/camera/image_raw | Type: sensor_msgs/msg/Image | Count: 216 | Serialization Format: cdr
+                   Topic: /vehicle/gz_cmd_vel | Type: geometry_msgs/msg/Twist | Count: 76 | Serialization Format: cdr
+                   Topic: /vehicle/imu | Type: sensor_msgs/msg/Imu | Count: 1130 | Serialization Format: cdr
+                   Topic: /vehicle/odom | Type: nav_msgs/msg/Odometry | Count: 566 | Serialization Format: cdr
+                   Topic: /vehicle/scan | Type: sensor_msgs/msg/LaserScan | Count: 113 | Serialization Format: cdr
+Services:          0
+Service information: 
+Actions:           0
+Action information: 

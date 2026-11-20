@@ -1,0 +1,5 @@
+PASS: fresh command converted
+PASS: timeout produced zero; no old command replay
+PASS: stale command stopped output; no replay
+PASS: non-finite command stopped output; no replay
+PASS: live drive checks completed

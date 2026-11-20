@@ -1,0 +1,6 @@
+Starting >>> course_description
+Finished <<< course_description [1.13s]
+Starting >>> course_simulation
+Finished <<< course_simulation [0.07s]
+
+Summary: 2 packages finished [1.29s]

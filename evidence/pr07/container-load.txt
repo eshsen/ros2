@@ -1,0 +1,12 @@
+2026-11-20T08:00:36+03:00
+CONTAINER ID   NAME       CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O       PIDS
+cf5ed2702f7c   pr07-sim   462.82%   503.3MiB / 7.62GiB   6.45%     3.42kB / 1.78MB   221kB / 426kB   159
+2026-11-20T08:00:39+03:00
+CONTAINER ID   NAME       CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O       PIDS
+cf5ed2702f7c   pr07-sim   189.07%   517.7MiB / 7.62GiB   6.64%     3.42kB / 1.85MB   221kB / 426kB   175
+2026-11-20T08:00:42+03:00
+CONTAINER ID   NAME       CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O       PIDS
+cf5ed2702f7c   pr07-sim   182.50%   518.7MiB / 7.62GiB   6.65%     3.42kB / 1.92MB   221kB / 426kB   175
+2026-11-20T08:00:45+03:00
+CONTAINER ID   NAME       CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O       PIDS
+cf5ed2702f7c   pr07-sim   169.38%   520.7MiB / 7.62GiB   6.67%     3.42kB / 1.99MB   221kB / 426kB   175

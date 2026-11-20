@@ -1,0 +1,33 @@
+Primary recording: bags/pr07/motion_20261120_044812
+Storage: MCAP
+ROS distribution: lyrical
+Duration: 11.337 seconds
+Reported size: 144.4 MiB
+
+Verification evidence:
+  bag-info.txt
+  bag-record-motion.txt
+  bag-motion-content-check.txt
+  motion-during-recording.txt
+
+Verified from recorded messages:
+  All nine selected topics contain messages.
+  Nonzero /drive/safe and /vehicle/gz_cmd_vel commands are present.
+  Recorded odometry displacement: 0.373592 m.
+  Peak recorded longitudinal speed: 0.200000 m/s.
+  Final recorded longitudinal speed: 0.000000 m/s.
+  All 566 odometry messages have matching TF stamps and poses.
+  One additional dynamic TF message has no odometry counterpart.
+  All three expected sensor static transforms are present.
+  Raw /vehicle/odom_gz is not recorded.
+
+Limitations:
+  Odometry is provided by the simulator plugin, not independent ground truth.
+  This check does not establish lossless recording of every sensor sample.
+  Replay has not yet been verified.
+
+Initial diagnostic recording:
+  bags/pr07/run_20261120_044315
+  Contains only zero-speed drive commands.
+  Its recorder reported six transport-layer message losses.
+  It is not the primary motion recording.

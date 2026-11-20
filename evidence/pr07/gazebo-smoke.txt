@@ -1,0 +1,139 @@
+[32m(2026-11-20 04:20:13.836) [info] [gz.cc:407] Gazebo Sim Server v10.4.0
+[m[32m(2026-11-20 04:20:13.917) [info] [ServerPrivate.cc:697] Loading SDF world file[/course-kit/worlds/mcity-minimal.sdf].
+[m[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="camera_link"]/sensor[@name="front_camera"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L88]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="lidar_link"]/sensor[@name="lidar"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L100]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="imu_link"]/sensor[@name="imu"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L110]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[32m(2026-11-20 04:20:15.853) [info] [SystemManager.cc:54] Serving entity system service on [/entity/system/add]
+[m[32m(2026-11-20 04:20:15.864) [info] [SimulationRunner.cc:347] Serving world controls on [/world/mcity_minimal/control], [/world/mcity_minimal/control/state] and [/world/mcity_minimal/playback/control]
+[m[32m(2026-11-20 04:20:15.864) [info] [SimulationRunner.cc:373] Serving GUI information on [/world/mcity_minimal/gui/info]
+[m[32m(2026-11-20 04:20:15.864) [info] [SimulationRunner.cc:376] World [mcity_minimal] initialized with [step] physics profile.
+[m[32m(2026-11-20 04:20:15.865) [info] [SimulationRunner.cc:383] Serving world SDF generation service on [/world/mcity_minimal/generate_world_sdf]
+[m[32m(2026-11-20 04:20:15.866) [info] [ServerPrivate.cc:357] Serving world names on [/gazebo/worlds]
+[m[32m(2026-11-20 04:20:15.866) [info] [ServerPrivate.cc:370] Resource path add service on [/gazebo/resource_paths/add].
+[m[32m(2026-11-20 04:20:15.866) [info] [ServerPrivate.cc:383] Resource path get service on [/gazebo/resource_paths/get].
+[m[32m(2026-11-20 04:20:15.866) [info] [ServerPrivate.cc:398] Resource path resolve service on [/gazebo/resource_paths/resolve].
+[m[32m(2026-11-20 04:20:15.866) [info] [ServerPrivate.cc:412] Resource paths published on [/gazebo/resource_paths].
+[m[32m(2026-11-20 04:20:15.866) [info] [ServerPrivate.cc:425] Server control service on [/server_control].
+[m[32m(2026-11-20 04:20:15.866) [info] [SimulationRunner.cc:865] Found no publishers on /stats, adding root stats topic
+[m[32m(2026-11-20 04:20:15.866) [info] [SimulationRunner.cc:899] Found no publishers on /clock, adding root clock topic
+[m[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="camera_link"]/sensor[@name="front_camera"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L88]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="lidar_link"]/sensor[@name="lidar"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L100]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="course_ackermann"]/link[@name="imu_link"]/sensor[@name="imu"]/gz_frame_id:/course-kit/models/course_ackermann/model.sdf:L110]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[36m(2026-11-20 04:20:16.539) [debug] [Physics.cc:994] Loaded [gz::physics::dartsim::Plugin] from library [/opt/ros/lyrical/opt/gz_physics_vendor/lib/gz-physics-9/engine-plugins/libgz-physics-dartsim-plugin.so]
+[m[36m(2026-11-20 04:20:16.539) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Physics] for entity [1]
+[m[32m(2026-11-20 04:20:16.550) [info] [UserCommands.cc:751] Create service on [/world/mcity_minimal/create_multiple] (async)
+[m[32m(2026-11-20 04:20:16.550) [info] [UserCommands.cc:753] Create service on [/world/mcity_minimal/create_multiple/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.550) [info] [UserCommands.cc:751] Remove service on [/world/mcity_minimal/remove] (async)
+[m[32m(2026-11-20 04:20:16.550) [info] [UserCommands.cc:753] Remove service on [/world/mcity_minimal/remove/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.550) [info] [UserCommands.cc:751] Pose service on [/world/mcity_minimal/set_pose] (async)
+[m[32m(2026-11-20 04:20:16.550) [info] [UserCommands.cc:753] Pose service on [/world/mcity_minimal/set_pose/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.550) [info] [UserCommands.cc:751] Pose service on [/world/mcity_minimal/set_pose_vector] (async)
+[m[32m(2026-11-20 04:20:16.550) [info] [UserCommands.cc:753] Pose service on [/world/mcity_minimal/set_pose_vector/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:751] Light configuration service on [/world/mcity_minimal/light_config] (async)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:753] Light configuration service on [/world/mcity_minimal/light_config/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:751] Physics service on [/world/mcity_minimal/set_physics] (async)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:753] Physics service on [/world/mcity_minimal/set_physics/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:751] SphericalCoordinates service on [/world/mcity_minimal/set_spherical_coordinates] (async)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:753] SphericalCoordinates service on [/world/mcity_minimal/set_spherical_coordinates/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:751] Enable collision service on [/world/mcity_minimal/enable_collision] (async)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:753] Enable collision service on [/world/mcity_minimal/enable_collision/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:751] Disable collision service on [/world/mcity_minimal/disable_collision] (async)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:753] Disable collision service on [/world/mcity_minimal/disable_collision/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:751] Material service on [/world/mcity_minimal/visual_config] (async)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:753] Material service on [/world/mcity_minimal/visual_config/blocking] (blocking)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:751] Material service on [/world/mcity_minimal/wheel_slip] (async)
+[m[32m(2026-11-20 04:20:16.551) [info] [UserCommands.cc:753] Material service on [/world/mcity_minimal/wheel_slip/blocking] (blocking)
+[m[36m(2026-11-20 04:20:16.551) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::UserCommands] for entity [1]
+[m[36m(2026-11-20 04:20:16.553) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::SceneBroadcaster] for entity [1]
+[m[36m(2026-11-20 04:20:16.571) [debug] [Sensors.cc:697] Configuring Sensors system
+[m[36m(2026-11-20 04:20:16.571) [debug] [Sensors.cc:557] SensorsPrivate::Run
+[m[36m(2026-11-20 04:20:16.571) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Sensors] for entity [1]
+[m[36m(2026-11-20 04:20:16.571) [debug] [Sensors.cc:532] SensorsPrivate::RenderThread started
+[m[36m(2026-11-20 04:20:16.571) [debug] [Sensors.cc:337] Waiting for init
+[m[36m(2026-11-20 04:20:16.574) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Imu] for entity [1]
+[m[32m(2026-11-20 04:20:16.575) [info] [AckermannSteering.cc:452] AckermannSteering subscribing to twist messages on [/model/course_ackermann/cmd_vel]
+[m[36m(2026-11-20 04:20:16.575) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::AckermannSteering] for entity [49]
+[m[32m(2026-11-20 04:20:16.575) [info] [LevelManager.cc:646] Loaded level [default]
+[m[32m(2026-11-20 04:20:16.576) [info] [ServerConfig.cc:1027] Copied installed config [/opt/ros/lyrical/opt/gz_sim_vendor/share/gz/gz-sim/server.config] to default config [/root/.gz/sim/10/server.config].
+[m[36m(2026-11-20 04:20:16.576) [debug] [ServerConfig.cc:1042] Loading (3) plugins from file [/root/.gz/sim/10/server.config]
+[m[36m(2026-11-20 04:20:16.576) [debug] [SimulationRunner.cc:1919] Additional plugins to load:
+[m[36m(2026-11-20 04:20:16.576) [debug] [SimulationRunner.cc:652] Creating PostUpdate worker threads: 5
+[m[36m(2026-11-20 04:20:16.576) [debug] [SimulationRunner.cc:663] Creating postupdate worker thread (0)
+[m[36m(2026-11-20 04:20:16.576) [debug] [SimulationRunner.cc:663] Creating postupdate worker thread (1)
+[m[36m(2026-11-20 04:20:16.576) [debug] [SimulationRunner.cc:663] Creating postupdate worker thread (2)
+[m[36m(2026-11-20 04:20:16.576) [debug] [SimulationRunner.cc:663] Creating postupdate worker thread (3)
+[m[36m(2026-11-20 04:20:16.598) [debug] [Sensors.cc:953] Initialization needed
+[m[36m(2026-11-20 04:20:16.598) [debug] [Sensors.cc:349] Initializing render context
+[m[36m(2026-11-20 04:20:16.598) [debug] [ImuSensor.cc:150] IMU data for [course_ackermann::imu_link::imu] advertised on [/vehicle/imu]
+[m[32m(2026-11-20 04:20:16.601) [info] [RenderEngineManager.cc:514] Loading plugin [gz-rendering-ogre2]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:634] Serving scene information on [/world/mcity_minimal/scene/info]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:643] Serving graph information on [/world/mcity_minimal/scene/graph]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:654] Serving full state on [/world/mcity_minimal/state]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:663] Serving full state (async) on [/world/mcity_minimal/state_async]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:671] Publishing scene information on [/world/mcity_minimal/scene/info]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:680] Publishing entity deletions on [/world/mcity_minimal/scene/deletion]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:689] Publishing state changes on [/world/mcity_minimal/state]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:700] Publishing pose messages on [/world/mcity_minimal/pose/info]
+[m[32m(2026-11-20 04:20:16.602) [info] [SceneBroadcaster.cc:711] Publishing dynamic pose messages on [/world/mcity_minimal/dynamic_pose/info]
+[mlibEGL warning: pci id for fd 29: 10de:1f95, driver (null)
+
+pci id for fd 30: 10de:1f95, driver (null)
+pci id for fd 31: 10de:1f95, driver (null)
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: pci id for fd 29: 10de:1f95, driver (null)
+
+pci id for fd 30: 10de:1f95, driver (null)
+pci id for fd 31: 10de:1f95, driver (null)
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: pci id for fd 29: 10de:1f95, driver (null)
+
+libEGL warning: pci id for fd 29: 10de:1f95, driver (null)
+
+pci id for fd 30: 10de:1f95, driver (null)
+pci id for fd 31: 10de:1f95, driver (null)
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: pci id for fd 29: 10de:1f95, driver (null)
+
+pci id for fd 30: 10de:1f95, driver (null)
+pci id for fd 31: 10de:1f95, driver (null)
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: pci id for fd 29: 10de:1f95, driver (null)
+
+[31m[1m(2026-11-20 04:20:17.225) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): eglInitialize failed for device EGL_EXT_device_drm EGL_EXT_device_drm_render_node EGL_EXT_device_query_name EGL_EXT_device_persistent_id #0 /dev/dri/card0 in EGLSupport::getGLDisplay at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/windowing/EGL/PBuffer/OgreEglPBufferSupport.cpp (line 320)
+[m[31m[1m(2026-11-20 04:20:17.226) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.226) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.227) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.227) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.228) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.228) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.228) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.229) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.229) [error] [Ogre2RenderEngine.cc:1267]  Unable to create the rendering window: OGRE EXCEPTION(3:RenderingAPIException): OpenGL 3.3 is not supported. Please update your graphics card drivers. in GL3PlusRenderSystem::initialiseContext at ./.obj-x86_64-linux-gnu/gz_ogre_next_vendor-prefix/src/gz_ogre_next_vendor/RenderSystems/GL3Plus/src/OgreGL3PlusRenderSystem.cpp (line 3434)
+[m[31m[1m(2026-11-20 04:20:17.229) [error] [Ogre2RenderEngine.cc:1275] Unable to create the rendering window after [11] attempts.
+[m[31m[1m(2026-11-20 04:20:17.229) [error] [Ogre2RenderEngine.cc:1156] Failed to create dummy render window.
+[m[31m[1m(2026-11-20 04:20:17.229) [error] [Ogre2RenderEngine.cc:1157] Please see the troubleshooting page for possible fixes: https://gazebosim.org/docs/fortress/troubleshooting
+[mStack trace (most recent call last) in thread 43:
+#21   Object "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2", at 0xffffffffffffffff, in 
+#20   Object "/usr/lib/x86_64-linux-gnu/libc.so.6", at 0x79e104882533, in __clone
+#19   Object "/usr/lib/x86_64-linux-gnu/libc.so.6", at 0x79e1047ef079, in 
+#18   Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35", at 0x79e104a8fef8, in 
+#17   Object "/opt/ros/lyrical/opt/gz_sim_vendor/lib/gz-sim-10/plugins/libgz-sim-sensors-system.so.10.4.0", at 0x79e078669596, in 
+#16   Object "/opt/ros/lyrical/opt/gz_sim_vendor/lib/libgz-sim-rendering.so.10.4.0", at 0x79e0785d3eb1, in gz::sim::v10::RenderUtil::Init()
+#15   Object "/opt/ros/lyrical/opt/gz_rendering_vendor/lib/libgz-rendering.so.10.0.1", at 0x79e07845bd82, in gz::rendering::v10::RenderEngineManager::Engine(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+#14   Object "/opt/ros/lyrical/opt/gz_rendering_vendor/lib/libgz-rendering.so.10.0.1", at 0x79e078466c9e, in 
+#13   Object "/opt/ros/lyrical/opt/gz_rendering_vendor/lib/libgz-rendering.so.10.0.1", at 0x79e07846c0e4, in gz::rendering::v10::BaseRenderEngine::Init()
+#12   Object "/opt/ros/lyrical/opt/gz_rendering_vendor/lib/libgz-rendering-ogre2.so.10.0.1", at 0x79e075a56113, in gz::rendering::v10::Ogre2RenderEngine::InitImpl()
+#11   Object "/opt/ros/lyrical/opt/gz_rendering_vendor/lib/libgz-rendering-ogre2.so.10.0.1", at 0x79e075a591bb, in gz::rendering::v10::Ogre2RenderEngine::InitAttempt()
+#10   Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e0755f8a37, in Ogre::ResourceGroupManager::initialiseAllResourceGroups(bool)
+#9    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e0755f8220, in Ogre::ResourceGroupManager::parseResourceGroupScripts(Ogre::ResourceGroupManager::ResourceGroup*)
+#8    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e075640878, in Ogre::ScriptCompilerManager::parseScript(Ogre::SharedPtr<Ogre::DataStream>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+#7    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e075637a3b, in Ogre::ScriptCompiler::compile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+#6    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e07563777a, in Ogre::ScriptCompiler::compile(Ogre::SharedPtr<std::__cxx11::list<Ogre::SharedPtr<Ogre::ConcreteNode>, Ogre::STLAllocator<Ogre::SharedPtr<Ogre::ConcreteNode>, Ogre::CategorisedAllocPolicy<(Ogre::MemoryCategory)0> > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+#5    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e07564a5b3, in Ogre::MaterialTranslator::translate(Ogre::ScriptCompiler*, Ogre::SharedPtr<Ogre::AbstractNode> const&)
+#4    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e07564b656, in Ogre::TechniqueTranslator::translate(Ogre::ScriptCompiler*, Ogre::SharedPtr<Ogre::AbstractNode> const&)
+#3    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e075651a04, in Ogre::PassTranslator::translate(Ogre::ScriptCompiler*, Ogre::SharedPtr<Ogre::AbstractNode> const&)
+#2    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e0756c8fa6, in Ogre::Technique::createPass()
+#1    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e0755a8e27, in Ogre::Pass::Pass(Ogre::Technique*, unsigned short)
+#0    Object "/opt/ros/lyrical/opt/gz_ogre_next_vendor/lib/libOgreNextMain.so.2.3.3", at 0x79e0754bf7c4, in Ogre::Hlms::createDatablock(Ogre::IdString, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Ogre::HlmsMacroblock const&, Ogre::HlmsBlendblock const&, std::vector<std::pair<Ogre::IdString, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, Ogre::STLAllocator<std::pair<Ogre::IdString, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, Ogre::CategorisedAllocPolicy<(Ogre::MemoryCategory)0> > > const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+Segmentation fault (Address not mapped to object [0x220])
+watf? exit
