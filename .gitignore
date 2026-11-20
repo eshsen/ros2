@@ -31,3 +31,8 @@ __pycache__/
 
 # PR05 local MCAP recording
 /evidence/pr05/bag/
+
+# PR07 build artifacts
+/build-pr07/
+/install-pr07/
+/log-pr07/

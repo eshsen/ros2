@@ -552,3 +552,75 @@ timeout 4s ros2 topic echo /tf_static --once \
 Версия: v1-w08.
 SHA-256:
 aea8efd0a51668af63f2e475b82bfa28bd76c21f20d8afea6b136d43a56a88fb.
+
+
+## PR07 — Симуляция Gazebo и сенсоры
+
+### Окружение и запуск
+
+ПР07 выполняется в Docker: ROS 2 Lyrical, Gazebo Sim 10.4.0.
+На хосте используется Ubuntu 24.04 с ROS 2 Jazzy;
+окружения сборки разделены.
+
+Основной launch: `course_simulation/simulation.launch.py`.
+При подготовленном образе `course-pr07:lyrical` и сборке
+в `install-pr07` запуск выполняется из корня репозитория:
+
+```bash
+bash docker/pr07/run.sh headless:=true namespace:=pr07
+```
+
+Скрипт использует Intel DRM-устройства `/dev/dri/card1`
+и `/dev/dri/renderD128`, проверенные на рабочем компьютере.
+Перед запуском другого экземпляра текущий контейнер `pr07-sim`
+должен быть остановлен.
+
+### Архитектура
+
+- Gazebo моделирует автомобиль и сенсоры.
+- `ros_gz_bridge` переносит команды, одометрию, сенсоры и `/clock`.
+- `drive_adapter.py` преобразует команды Ackermann в Twist.
+- `odom_adapter.py` нормализует frames одометрии и публикует
+  согласованный динамический TF `odom -> base_link`.
+- `robot_state_publisher` публикует статические TF сенсоров
+  из модели `course_description`.
+
+Старый `pr07.launch.py` сохранён как промежуточный вариант;
+основным является `simulation.launch.py`.
+
+### Изменение и дефект
+
+Частота камеры изменена с 20 на 15 Гц.
+После изменения измерены: камера 15.067 Гц,
+лидар 10 Гц, IMU 100 Гц по времени симуляции.
+
+Дефект воспроизводится конфигурацией `bridge-broken-imu.yaml`:
+источник IMU ошибочно указан как `/vehicle/imu_typo`.
+Исправление — запуск с основным `bridge.yaml`.
+Подробности: `evidence/pr07/defect.md`.
+
+### Проверки и запись
+
+Модульные тесты адаптеров: 262 теста одометрии
+и 27 тестов управления, все пройдены.
+
+Итоговая локальная запись: `fixtures/pr07-sensors`,
+MCAP, 43.958 секунды симуляционного времени.
+Проверены движение, конечная остановка, совпадение 2197 пар
+odometry/TF и наличие статических преобразований сенсоров.
+
+Проверка содержимого при работающем контейнере:
+
+```bash
+docker exec pr07-sim /bin/bash -lc '
+source /opt/ros/lyrical/setup.bash
+source /work/install-pr07/setup.bash
+python3 /work/src/course_simulation/test/check_bag.py   /work/fixtures/pr07-sensors
+'
+```
+
+Evidence находится в `evidence/pr07/`.
+Проверка replay итогового fixture пока не выполнена.
+В сохранённом `headless.txt` зафиксировано завершение моста
+с кодом -11 при остановке; чистое завершение этим логом
+не подтверждается.
